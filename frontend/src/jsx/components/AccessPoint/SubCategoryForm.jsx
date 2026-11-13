@@ -904,12 +904,12 @@ const SubCategoryForm = () => {
                 .gate-custom-modal .modal-icon-circle {
                     width: 48px;
                     height: 48px;
-                    background-color: #2ece8a;
+                    background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    box-shadow: 0 4px 10px rgba(46, 206, 138, 0.2);
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
                 }
                 .gate-custom-modal .modal-close-x {
                     border: none;
@@ -988,22 +988,22 @@ const SubCategoryForm = () => {
                 }
                 .quick-add-btn:active { transform: scale(0.96); }
                 .gate-custom-modal .btn-close-custom {
-                    background-color: #7A70BA !important;
-                    color: white !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
-                    border: none !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     cursor: pointer;
                     transition: background-color 0.2s, transform 0.1s;
                 }
                 .gate-custom-modal .btn-close-custom:hover {
-                    background-color: #6357a7 !important;
+                    background-color: var(--cancel-btn-hover-color, #ebd8c5) !important;
                 }
                 .gate-custom-modal .btn-save-custom {
-                    background-color: #2ece8a !important;
-                    color: white !important;
+                    background-color: var(--save-btn-color, #5b0111) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
@@ -1015,7 +1015,7 @@ const SubCategoryForm = () => {
                     align-items: center;
                 }
                 .gate-custom-modal .btn-save-custom:hover:not(:disabled) {
-                    background-color: #25a870 !important;
+                    background-color: var(--save-btn-hover-color, #42010c) !important;
                 }
                 .gate-custom-modal .btn-save-custom:disabled {
                     opacity: 0.65;

@@ -96,6 +96,8 @@ class CompanyViewSet(viewsets.ModelViewSet):
                 'theme_bg_color': '',
                 'theme_font_color': '',
                 'theme_form_icon_color': '',
+                'theme_cancel_btn_color': '',
+                'theme_save_btn_color': '',
                 'theme_version': 'light',
                 'date_format': 'DD/MM/YYYY',
             })
@@ -119,6 +121,8 @@ class CompanyViewSet(viewsets.ModelViewSet):
             'theme_bg_color':         company.theme_bg_color         or '',
             'theme_font_color':       company.theme_font_color       or '',
             'theme_form_icon_color':  company.theme_form_icon_color  or '',
+            'theme_cancel_btn_color': company.theme_cancel_btn_color or '',
+            'theme_save_btn_color':   company.theme_save_btn_color   or '',
             'theme_version':          company.theme_version          or 'light',
         })
 

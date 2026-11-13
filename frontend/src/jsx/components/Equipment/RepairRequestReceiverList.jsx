@@ -263,12 +263,12 @@ const RepairRequestReceiverList = () => {
                     transition: all 0.2s;
                 }
                 .btn-close-custom {
-                    background-color: #f1f5f9;
-                    color: #475569;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                 }
-                .btn-close-custom:hover { background-color: #e2e8f0; }
+                .btn-close-custom:hover { background-color: var(--cancel-btn-hover-color, #ebd8c5) !important; }
                 .btn-save-custom {
-                    color: #fff;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                 }
                 .form-control-custom {
                     border: 1px solid #cbd5e1;

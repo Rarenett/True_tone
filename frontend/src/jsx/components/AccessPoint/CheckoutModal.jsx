@@ -1250,10 +1250,10 @@ const CheckoutModal = ({
                         style={{ 
                             background: mode === 'questions' 
                                 ? 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)' 
-                                : 'linear-gradient(135deg, #2ece8a 0%, #20b876 100%)',
+                                : 'var(--form-icon-color, var(--cc-primary, #5b0111))',
                             boxShadow: mode === 'questions'
                                 ? '0 4px 14px rgba(245, 158, 11, 0.3)'
-                                : '0 4px 14px rgba(46, 206, 138, 0.3)',
+                                : '0 4px 14px rgba(0, 0, 0, 0.14)',
                             width: '52px',
                             height: '52px'
                         }}
@@ -1767,7 +1767,7 @@ const CheckoutModal = ({
                                     <Form.Label className="form-label-custom font-w600 mb-0" style={{ color: isDark ? '#f8fafc' : '#92400e', fontSize: '14.5px' }}>
                                         1. How many people are leaving now? <span className="text-danger">*</span>
                                     </Form.Label>
-                                    <span className="badge" style={{ background: isDark ? '#334155' : '#fef3c7', color: isDark ? '#f8fafc' : '#92400e', fontSize: '11.5px', fontWeight: 600 }}>
+                                    <span className="badge" style={{ background: isDark ? '#334155' : '#FCEBD9', color: isDark ? '#f8fafc' : '#99500C', fontSize: '11.5px', fontWeight: 600 }}>
                                         Max allowed: {currentInside - 1} of {currentInside} inside
                                     </span>
                                 </div>
@@ -2633,7 +2633,7 @@ const CheckoutModal = ({
                                         style={{ accentColor: '#2ece8a' }}
                                     />
                                     {availableVehicles.length > 0 && (
-                                        <span className="badge rounded-pill px-2.5 py-1 ms-2" style={{ fontSize: '11px', fontWeight: 500, backgroundColor: isDark ? '#1e293b' : '#f1f5f9', color: isDark ? '#94a3b8' : '#64748b' }}>
+                                        <span className="badge rounded-pill px-2.5 py-1 ms-2" style={{ fontSize: '11px', fontWeight: 500, backgroundColor: isDark ? '#1e293b' : '#ECEDEF', color: isDark ? '#94a3b8' : '#50545C' }}>
                                             {availableVehicles.map(v => v.vehicle_number).join(', ')}
                                         </span>
                                     )}
@@ -2899,7 +2899,7 @@ const CheckoutModal = ({
                                         style={{ accentColor: '#2ece8a' }}
                                     />
                                     {availableEquipments.length > 0 && (
-                                        <span className="badge rounded-pill px-2.5 py-1 ms-2" style={{ fontSize: '11px', fontWeight: 500, backgroundColor: isDark ? '#1e293b' : '#f1f5f9', color: isDark ? '#94a3b8' : '#64748b' }}>
+                                        <span className="badge rounded-pill px-2.5 py-1 ms-2" style={{ fontSize: '11px', fontWeight: 500, backgroundColor: isDark ? '#1e293b' : '#ECEDEF', color: isDark ? '#94a3b8' : '#50545C' }}>
                                             {availableEquipments.length} on Campus
                                         </span>
                                     )}
@@ -3853,14 +3853,6 @@ const CheckoutModal = ({
                             onClick={onHide}
                             disabled={submitting}
                             style={{
-                                backgroundColor: '#7A70BA',
-                                border: 'none',
-                                color: '#ffffff',
-                                fontWeight: 500,
-                                fontSize: '14.5px',
-                                padding: '12px 30px',
-                                minHeight: '46px',
-                                borderRadius: '10px',
                                 display: 'inline-flex',
                                 alignItems: 'center'
                             }}
@@ -4096,9 +4088,9 @@ const CheckoutModal = ({
 
                 /* ── Theme Buttons ── */
                 .btn-close-custom {
-                    background-color: #7A70BA !important;
-                    border: none !important;
-                    color: #ffffff !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     font-weight: 500 !important;
                     font-size: 14.5px !important;
                     padding: 12px 30px !important;
@@ -4108,8 +4100,8 @@ const CheckoutModal = ({
                     cursor: pointer !important;
                 }
                 .btn-close-custom:hover:not(:disabled) {
-                    background-color: #6357a7 !important;
-                    color: #ffffff !important;
+                    background-color: var(--cancel-btn-hover-color, #ebd8c5) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     transform: translateY(-1px) !important;
                 }
                 .btn-close-custom:disabled {

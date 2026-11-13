@@ -554,9 +554,9 @@ const MeetingList = () => {
     ];
 
     const statusConfig = {
-        approved: { bg: '#dcfce7', color: '#15803d', dot: '#22c55e' },
-        rejected: { bg: '#fee2e2', color: '#dc2626', dot: '#ef4444' },
-        pending: { bg: '#fef9c3', color: '#92400e', dot: '#f59e0b' },
+        approved: { bg: '#DDF3E5', color: '#176B3A', dot: '#176B3A' },
+        rejected: { bg: '#FCE4E4', color: '#A52222', dot: '#A52222' },
+        pending: { bg: '#F5EBD8', color: '#805B20', dot: '#805B20' },
     };
 
     return (
@@ -771,12 +771,12 @@ const MeetingList = () => {
                         width: 48px;
                         height: 48px;
                         border-radius: 12px;
-                        background: #2ece8a;
+                        background: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         flex-shrink: 0;
-                        box-shadow: 0 4px 12px rgba(46, 206, 138, 0.25);
+                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
                     }
                     .mc-modal .modal-close-x {
                         width: 36px;
@@ -836,32 +836,32 @@ const MeetingList = () => {
                         height: 42px;
                         padding: 0 24px;
                         border-radius: 10px;
-                        border: none;
-                        background: #7A70BA;
-                        color: white;
+                        border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
+                        background: var(--cancel-btn-color, #f5e9dc) !important;
+                        color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                         font-weight: 600;
                         font-size: 14px;
                         transition: all 0.2s;
                     }
                     .mc-modal .btn-close-custom:hover {
-                        background: #685ea6;
-                        color: white;
+                        background: var(--cancel-btn-hover-color, #ebd8c5) !important;
+                        color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     }
                     .mc-modal .btn-save-custom {
                         height: 42px;
                         padding: 0 28px;
                         border-radius: 10px;
-                        border: none;
-                        background: #2ece8a;
-                        color: white;
+                        border: none !important;
+                        background: var(--save-btn-color, #5b0111) !important;
+                        color: var(--save-btn-text-color, #ffffff) !important;
                         font-weight: 600;
                         font-size: 14px;
-                        box-shadow: 0 4px 14px rgba(46, 206, 138, 0.25);
+                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
                         transition: all 0.2s;
                     }
                     .mc-modal .btn-save-custom:hover {
-                        background: #25ba7a;
-                        color: white;
+                        background: var(--save-btn-hover-color, #42010c) !important;
+                        color: var(--save-btn-text-color, #ffffff) !important;
                     }
                 `}</style>
                 <div className="modal-header-custom">

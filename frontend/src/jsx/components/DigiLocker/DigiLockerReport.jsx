@@ -182,7 +182,7 @@ const DigiLockerReport = () => {
             case 'denied':
                 return <span className="badge badge-warning"><i className="fa fa-ban me-1"></i> Denied</span>;
             default:
-                return <span className="badge badge-secondary">{status || '—'}</span>;
+                return <span className="badge badge-light">{status || '—'}</span>;
         }
     };
 

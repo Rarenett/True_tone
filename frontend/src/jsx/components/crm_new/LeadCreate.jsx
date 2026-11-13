@@ -746,7 +746,7 @@ const LeadCreate = () => {
                 .form-card-top-header .header-icon-box {
                     width: 44px;
                     height: 44px;
-                    background-color: #2ece8a;
+                    background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 12px;
                     display: flex;
                     align-items: center;
@@ -896,22 +896,23 @@ const LeadCreate = () => {
 
                 /* Action buttons */
                 .btn-close-custom {
-                    background-color: #7A70BA !important;
-                    color: white !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
-                    border: none !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     cursor: pointer;
-                    transition: background-color 0.2s;
+                    transition: background-color 0.2s, border-color 0.2s;
                 }
                 .btn-close-custom:hover {
-                    background-color: #6357a7 !important;
+                    background-color: var(--cancel-btn-hover-color, #ebd8c5) !important;
+                    border-color: var(--cancel-btn-border-hover-color, #d6baa4) !important;
                 }
                 .btn-save-custom {
-                    background-color: #2ece8a !important;
-                    color: white !important;
+                    background-color: var(--save-btn-color, #5b0111) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
@@ -921,11 +922,11 @@ const LeadCreate = () => {
                     transition: background-color 0.2s;
                 }
                 .btn-save-custom:hover {
-                    background-color: #26b579 !important;
+                    background-color: var(--save-btn-hover-color, #42010c) !important;
                 }
                 .btn-save-next-custom {
-                    background-color: #0284c7 !important;
-                    color: white !important;
+                    background-color: var(--save-btn-color, #5b0111) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
@@ -938,7 +939,7 @@ const LeadCreate = () => {
                     gap: 6px;
                 }
                 .btn-save-next-custom:hover {
-                    background-color: #0369a1 !important;
+                    background-color: var(--save-btn-hover-color, #42010c) !important;
                 }
                 .btn-save-next-custom:disabled {
                     opacity: 0.65;
@@ -1058,7 +1059,7 @@ const LeadCreate = () => {
                     {/* ── Active Section Header above the tabs (in place of Create Lead) ── */}
                     <div className="form-card-top-header">
                         <div className="d-flex align-items-center gap-3">
-                            <div className="header-icon-box">
+                            <div className="header-icon-box form-icon-box">
                                 <i className={`fa ${tabHeaders[activeTab]?.icon || 'fa-user'}`} style={{ fontSize: '18px', color: '#ffffff' }}></i>
                             </div>
                             <div>

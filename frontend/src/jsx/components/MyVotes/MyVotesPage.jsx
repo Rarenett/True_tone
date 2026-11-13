@@ -391,7 +391,7 @@ const TaskPanel = ({ item, onClose, onSaved }) => {
                 </Form.Group>
             </Modal.Body>
             <Modal.Footer className="d-flex justify-content-between">
-                <Button variant="secondary" size="sm" onClick={onClose}>Close</Button>
+                <Button variant="secondary" size="sm" onClick={onClose}> className="btn-close-custom"Close</Button>
                 {isVotingActive ? (
                     <div className="d-flex gap-2">
                         <Button size="sm" disabled={busy} variant={vr.my_vote === 'yes' ? 'success' : 'outline-success'} onClick={() => vote('yes')}>
@@ -695,8 +695,8 @@ const EquipmentPanel = ({ item, onClose, onSaved }) => {
                                         const dec = (v.decision || '').toUpperCase();
                                         const isYes = dec === 'YES';
                                         const isNo = dec === 'NO';
-                                        const badgeBg = isYes ? 'rgba(34, 197, 94, 0.12)' : isNo ? 'rgba(239, 68, 68, 0.12)' : 'rgba(245, 158, 11, 0.12)';
-                                        const badgeColor = isYes ? '#16a34a' : isNo ? '#dc2626' : '#d97706';
+                                        const badgeBg = isYes ? '#DDF3E5' : isNo ? '#FCE4E4' : '#FCEBD9';
+                                        const badgeColor = isYes ? '#176B3A' : isNo ? '#A52222' : '#99500C';
 
                                         return (
                                             <div
@@ -966,7 +966,7 @@ const EquipmentPanel = ({ item, onClose, onSaved }) => {
                 )}
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="secondary" size="sm" onClick={onClose}>Close</Button>
+                <Button variant="secondary" size="sm" onClick={onClose}> className="btn-close-custom"Close</Button>
                 {isEvaluator ? (
                     !evalLocked && (
                         <Button size="sm" variant="primary" disabled={busy} onClick={submitEvaluator}>
@@ -1189,16 +1189,16 @@ const FeedbackPanel = ({ item, onClose, onSaved }) => {
                     </div>
                     <div className="d-flex gap-2 align-items-center">
                         {isEvaluator ? (
-                            <span className="badge border" style={{ fontSize: '11px', padding: '5px 9px', color: '#6f42c1', borderColor: '#d3c3eb', background: '#f3e8ff' }}>
+                            <span className="badge border" style={{ fontSize: '11px', padding: '5px 9px', color: '#65428B', borderColor: '#d8cef0', background: '#EEE8F7' }}>
                                 <i className="fa fa-gavel me-1"></i> Final Evaluator
                             </span>
                         ) : (
-                            <span className="badge border" style={{ fontSize: '11px', padding: '5px 9px', color: '#0dcaf0', borderColor: '#b6effb', background: '#e0f7fa' }}>
+                            <span className="badge border" style={{ fontSize: '11px', padding: '5px 9px', color: '#245A91', borderColor: '#b6d4fe', background: '#E2EEFA' }}>
                                 <i className="fa fa-user me-1"></i> Primary Responder
                             </span>
                         )}
                         {c.priority && (
-                            <span className="badge bg-light text-dark border" style={{ fontSize: '11px', padding: '5px 9px' }}>
+                            <span className="badge badge-primary light border" style={{ fontSize: '11px', padding: '5px 9px' }}>
                                 {c.priority} Priority
                             </span>
                         )}
@@ -1277,13 +1277,13 @@ const FeedbackPanel = ({ item, onClose, onSaved }) => {
                                 </div>
                                 {voters.length > 0 && (
                                     <div className="d-flex gap-2 align-items-center flex-wrap">
-                                        <span className="badge" style={{ backgroundColor: 'rgba(25, 135, 84, 0.12)', color: '#198754', border: '1px solid rgba(25, 135, 84, 0.25)', fontSize: '11px', fontWeight: 600 }}>
+                                        <span className="badge" style={{ backgroundColor: '#DDF3E5', color: '#176B3A', border: '1px solid #b7e4c7', fontSize: '11px', fontWeight: 600 }}>
                                             <i className="fa fa-check me-1"></i> YES: {yesCount}
                                         </span>
-                                        <span className="badge" style={{ backgroundColor: 'rgba(220, 53, 69, 0.12)', color: '#dc3545', border: '1px solid rgba(220, 53, 69, 0.25)', fontSize: '11px', fontWeight: 600 }}>
+                                        <span className="badge" style={{ backgroundColor: '#FCE4E4', color: '#A52222', border: '1px solid #f5c2c7', fontSize: '11px', fontWeight: 600 }}>
                                             <i className="fa fa-times me-1"></i> NO: {noCount}
                                         </span>
-                                        <span className="badge" style={{ backgroundColor: 'rgba(13, 202, 240, 0.12)', color: '#0aa2c0', border: '1px solid rgba(13, 202, 240, 0.25)', fontSize: '11px', fontWeight: 600 }}>
+                                        <span className="badge" style={{ backgroundColor: '#E2EEFA', color: '#245A91', border: '1px solid #b6d4fe', fontSize: '11px', fontWeight: 600 }}>
                                             NEUTRAL: {neutralCount}
                                         </span>
                                         <button
@@ -1583,7 +1583,7 @@ const FeedbackPanel = ({ item, onClose, onSaved }) => {
                 )}
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="secondary" size="sm" onClick={onClose}>Close</Button>
+                <Button variant="secondary" size="sm" onClick={onClose}> className="btn-close-custom"Close</Button>
                 {isEvaluator ? (
                     !evalLocked && (
                         <Button size="sm" variant="primary" disabled={busy} onClick={submitEvaluator}>
@@ -1664,7 +1664,7 @@ const AppointmentPanel = ({ item, onClose, onSaved }) => {
                 )}
             </Modal.Body>
             <Modal.Footer className="d-flex justify-content-between">
-                <Button variant="secondary" size="sm" onClick={onClose}>Close</Button>
+                <Button variant="secondary" size="sm" onClick={onClose}> className="btn-close-custom"Close</Button>
                 {a.status === 'pending' ? (
                     <div className="d-flex gap-2">
                         <Button size="sm" variant="outline-success" disabled={busy} onClick={() => act('approve')}>Approve</Button>

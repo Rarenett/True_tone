@@ -14,9 +14,9 @@ const STATUS_BADGE_MAP = {
     APPROVED: 'success',
     PARTIALLY_APPROVED: 'primary',
     REJECTED: 'danger',
-    CANCELLED: 'secondary',
+    CANCELLED: 'danger',
     ACCEPTED: 'primary',
-    DECLINED: 'dark',
+    DECLINED: 'danger',
 };
 
 const formatDays = (days) => {
@@ -152,12 +152,12 @@ const LeaveRequestDetailModal = ({ show, onHide, request, onSuccess, onReview, o
                 .leave-custom-modal .modal-icon-circle {
                     width: 48px;
                     height: 48px;
-                    background-color: #2ece8a;
+                    background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    box-shadow: 0 4px 10px rgba(46, 206, 138, 0.2);
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
                 }
                 .leave-custom-modal .modal-close-x {
                     border: none;
@@ -183,21 +183,21 @@ const LeaveRequestDetailModal = ({ show, onHide, request, onSuccess, onReview, o
                     gap: 12px;
                 }
                 .leave-custom-modal .btn-close-custom {
-                    background-color: #7A70BA !important;
-                    color: white !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
-                    border: none !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     cursor: pointer;
                     transition: background-color 0.2s;
                 }
-                .leave-custom-modal .btn-close-custom:hover { background-color: #6357a7 !important; }
+                .leave-custom-modal .btn-close-custom:hover { background-color: var(--cancel-btn-hover-color, #ebd8c5) !important; }
                 .leave-custom-modal .btn-cancel-request-custom {
-                    background-color: #fff !important;
-                    color: #dc3545 !important;
-                    border: 1px solid #dc3545 !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
@@ -206,8 +206,8 @@ const LeaveRequestDetailModal = ({ show, onHide, request, onSuccess, onReview, o
                     transition: all 0.2s;
                 }
                 .leave-custom-modal .btn-cancel-request-custom:hover {
-                    background-color: #dc3545 !important;
-                    color: white !important;
+                    background-color: var(--cancel-btn-hover-color, #ebd8c5) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                 }
                 .leave-custom-modal .btn-accept-custom {
                     background-color: #2ece8a !important;

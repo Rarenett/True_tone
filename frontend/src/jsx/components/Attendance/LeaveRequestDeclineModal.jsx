@@ -126,17 +126,17 @@ const LeaveRequestDeclineModal = ({ show, onHide, request, onSuccess }) => {
                     gap: 12px;
                 }
                 .leave-custom-modal .btn-cancel-custom {
-                    background-color: #7A70BA !important;
-                    color: white !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 9px 22px !important;
-                    border: none !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     cursor: pointer;
                     transition: background-color 0.2s;
                 }
-                .leave-custom-modal .btn-cancel-custom:hover { background-color: #6357a7 !important; }
+                .leave-custom-modal .btn-cancel-custom:hover { background-color: var(--cancel-btn-hover-color, #ebd8c5) !important; }
                 .leave-custom-modal .btn-confirm-decline {
                     background-color: #ef4444 !important;
                     color: white !important;

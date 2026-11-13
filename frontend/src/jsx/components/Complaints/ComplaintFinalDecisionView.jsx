@@ -233,16 +233,16 @@ const ComplaintFinalDecisionView = () => {
                                     <h5 className="mb-0">Resolution History</h5>
                                     <div className="d-flex gap-3 ms-auto align-items-center">
                                         <div className="d-flex align-items-center gap-1">
-                                            <span className="prio-badge" style={{background: 'rgba(16, 185, 129, 0.1)', color: '#10b981', border: '1px solid rgba(16, 185, 129, 0.2)', fontSize: '0.65rem', padding: '0.3rem 0.6rem'}}>YES</span>
-                                            <span className="fw-bold" style={{fontSize: '0.75rem', color: '#10b981'}}>{Math.round((uniqueActions.filter(a => a.decision === 'YES').length / uniqueActions.length) * 100)}%</span>
+                                            <span className="prio-badge" style={{background: '#DDF3E5', color: '#176B3A', border: '1px solid #b7e4c7', fontSize: '0.65rem', padding: '0.3rem 0.6rem'}}>YES</span>
+                                            <span className="fw-bold" style={{fontSize: '0.75rem', color: '#176B3A'}}>{Math.round((uniqueActions.filter(a => a.decision === 'YES').length / uniqueActions.length) * 100)}%</span>
                                         </div>
                                         <div className="d-flex align-items-center gap-1">
-                                            <span className="prio-badge" style={{background: 'rgba(239, 68, 68, 0.1)', color: '#ef4444', border: '1px solid rgba(239, 68, 68, 0.2)', fontSize: '0.65rem', padding: '0.3rem 0.6rem'}}>NO</span>
-                                            <span className="fw-bold" style={{fontSize: '0.75rem', color: '#ef4444'}}>{Math.round((uniqueActions.filter(a => a.decision === 'NO').length / uniqueActions.length) * 100)}%</span>
+                                            <span className="prio-badge" style={{background: '#FCE4E4', color: '#A52222', border: '1px solid #f5c2c7', fontSize: '0.65rem', padding: '0.3rem 0.6rem'}}>NO</span>
+                                            <span className="fw-bold" style={{fontSize: '0.75rem', color: '#A52222'}}>{Math.round((uniqueActions.filter(a => a.decision === 'NO').length / uniqueActions.length) * 100)}%</span>
                                         </div>
                                         <div className="d-flex align-items-center gap-1">
-                                            <span className="prio-badge" style={{background: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6', border: '1px solid rgba(59, 130, 246, 0.2)', fontSize: '0.65rem', padding: '0.3rem 0.6rem'}}>NEUTRAL</span>
-                                            <span className="fw-bold" style={{fontSize: '0.75rem', color: '#3b82f6'}}>{Math.round((uniqueActions.filter(a => a.decision !== 'YES' && a.decision !== 'NO').length / uniqueActions.length) * 100)}%</span>
+                                            <span className="prio-badge" style={{background: '#E2EEFA', color: '#245A91', border: '1px solid #b6d4fe', fontSize: '0.65rem', padding: '0.3rem 0.6rem'}}>NEUTRAL</span>
+                                            <span className="fw-bold" style={{fontSize: '0.75rem', color: '#245A91'}}>{Math.round((uniqueActions.filter(a => a.decision !== 'YES' && a.decision !== 'NO').length / uniqueActions.length) * 100)}%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -272,11 +272,11 @@ const ComplaintFinalDecisionView = () => {
                                                     <td className="py-2 border-0">{action.created_by_details.first_name || action.created_by_details.email}</td>
                                                     <td className="py-2 border-0">
                                                         {action.decision === 'YES' ? (
-                                                            <span className="prio-badge" style={{background: 'rgba(16, 185, 129, 0.1)', color: '#10b981', border: '1px solid rgba(16, 185, 129, 0.2)', fontSize: '0.65rem', padding: '0.3rem 0.6rem'}}>{action.decision}</span>
+                                                            <span className="prio-badge" style={{background: '#DDF3E5', color: '#176B3A', border: '1px solid #b7e4c7', fontSize: '0.65rem', padding: '0.3rem 0.6rem'}}>{action.decision}</span>
                                                         ) : action.decision === 'NO' ? (
-                                                            <span className="prio-badge" style={{background: 'rgba(239, 68, 68, 0.1)', color: '#ef4444', border: '1px solid rgba(239, 68, 68, 0.2)', fontSize: '0.65rem', padding: '0.3rem 0.6rem'}}>{action.decision}</span>
+                                                            <span className="prio-badge" style={{background: '#FCE4E4', color: '#A52222', border: '1px solid #f5c2c7', fontSize: '0.65rem', padding: '0.3rem 0.6rem'}}>{action.decision}</span>
                                                         ) : (
-                                                            <span className="prio-badge" style={{background: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6', border: '1px solid rgba(59, 130, 246, 0.2)', fontSize: '0.65rem', padding: '0.3rem 0.6rem'}}>{action.decision}</span>
+                                                            <span className="prio-badge" style={{background: '#E2EEFA', color: '#245A91', border: '1px solid #b6d4fe', fontSize: '0.65rem', padding: '0.3rem 0.6rem'}}>{action.decision}</span>
                                                         )}
                                                     </td>
                                                     <td className="py-2 border-0 text-truncate" style={{maxWidth: '180px'}}>{action.notes || '—'}</td>

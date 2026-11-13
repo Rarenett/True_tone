@@ -1399,12 +1399,12 @@ const VisitorRegistration = ({ embedded = false }) => {
                 .item-custom-modal .modal-icon-circle {
                     width: 48px !important;
                     height: 48px !important;
-                    background-color: #2ece8a !important;
+                    background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 50% !important;
                     display: flex !important;
                     align-items: center !important;
                     justify-content: center !important;
-                    box-shadow: 0 4px 10px rgba(46, 206, 138, 0.2) !important;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
                     flex-shrink: 0 !important;
                 }
                 .item-custom-modal .modal-close-x {
@@ -1465,22 +1465,22 @@ const VisitorRegistration = ({ embedded = false }) => {
                     gap: 12px !important;
                 }
                 .item-custom-modal .btn-close-custom {
-                    background-color: #7A70BA !important;
-                    color: white !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
-                    border: none !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     cursor: pointer !important;
                     transition: background-color 0.2s, transform 0.1s !important;
                 }
                 .item-custom-modal .btn-close-custom:hover {
-                    background-color: #6357a7 !important;
+                    background-color: var(--cancel-btn-hover-color, #ebd8c5) !important;
                 }
                 .item-custom-modal .btn-save-custom {
-                    background-color: #2ece8a !important;
-                    color: white !important;
+                    background-color: var(--save-btn-color, #5b0111) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
@@ -1492,7 +1492,7 @@ const VisitorRegistration = ({ embedded = false }) => {
                     align-items: center !important;
                 }
                 .item-custom-modal .btn-save-custom:hover:not(:disabled) {
-                    background-color: #25a870 !important;
+                    background-color: var(--save-btn-hover-color, #42010c) !important;
                 }
                 .item-custom-modal .btn-save-custom:disabled {
                     opacity: 0.65 !important;

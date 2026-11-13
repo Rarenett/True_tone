@@ -82,6 +82,8 @@ const ManageCompany = () => {
     const [activeTab, setActiveTab] = useState('profile');
     const { 
         formIconColor, changeFormIconColor,
+        cancelBtnColor, changeCancelBtnColor,
+        saveBtnColor, changeSaveBtnColor,
         customPrimaryColor, changeCustomPrimaryColor,
         customNavHeaderColor, changeCustomNavHeaderColor,
         customHeaderColor, changeCustomHeaderColor,
@@ -1092,7 +1094,7 @@ const ManageCompany = () => {
                 .fy-custom-modal .modal-icon-circle {
                     width: 48px;
                     height: 48px;
-                    background-color: #c084fc;
+                    background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
@@ -1153,20 +1155,20 @@ const ManageCompany = () => {
                     border-color: #2ece8a;
                 }
                 .fy-custom-modal .btn-close-custom {
-                    background-color: #7A70BA !important;
-                    color: white !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
-                    border: none !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     cursor: pointer;
-                    transition: background-color 0.2s;
+                    transition: background-color 0.2s, border-color 0.2s;
                 }
-                .fy-custom-modal .btn-close-custom:hover { background-color: #6357a7 !important; }
+                .fy-custom-modal .btn-close-custom:hover { background-color: var(--cancel-btn-hover-color, #ebd8c5) !important; border-color: var(--cancel-btn-border-hover-color, #d6baa4) !important; }
                 .fy-custom-modal .btn-save-custom {
-                    background-color: #2ece8a !important;
-                    color: white !important;
+                    background-color: var(--save-btn-color, #5b0111) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
@@ -1175,7 +1177,7 @@ const ManageCompany = () => {
                     cursor: pointer;
                     transition: background-color 0.2s;
                 }
-                .fy-custom-modal .btn-save-custom:hover { background-color: #26b277 !important; }
+                .fy-custom-modal .btn-save-custom:hover { background-color: var(--save-btn-hover-color, #42010c) !important; }
                 .search-input-custom {
                     height: 38px !important;
                     border-radius: 6px !important;
@@ -1284,7 +1286,7 @@ const ManageCompany = () => {
                 .addr-custom-modal .modal-icon-circle {
                     width: 48px;
                     height: 48px;
-                    background-color: #3b82f6;
+                    background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
@@ -1345,20 +1347,20 @@ const ManageCompany = () => {
                     border-color: #2ece8a;
                 }
                 .addr-custom-modal .btn-close-custom {
-                    background-color: #7A70BA !important;
-                    color: white !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
-                    border: none !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     cursor: pointer;
-                    transition: background-color 0.2s;
+                    transition: background-color 0.2s, border-color 0.2s;
                 }
-                .addr-custom-modal .btn-close-custom:hover { background-color: #6357a7 !important; }
+                .addr-custom-modal .btn-close-custom:hover { background-color: var(--cancel-btn-hover-color, #ebd8c5) !important; border-color: var(--cancel-btn-border-hover-color, #d6baa4) !important; }
                 .addr-custom-modal .btn-save-custom {
-                    background-color: #2ece8a !important;
-                    color: white !important;
+                    background-color: var(--save-btn-color, #5b0111) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
@@ -1367,7 +1369,7 @@ const ManageCompany = () => {
                     cursor: pointer;
                     transition: background-color 0.2s;
                 }
-                .addr-custom-modal .btn-save-custom:hover { background-color: #26b277 !important; }
+                .addr-custom-modal .btn-save-custom:hover { background-color: var(--save-btn-hover-color, #42010c) !important; }
 
                 /* ===== CONTACT MODAL ===== */
                 .contact-custom-modal .modal-content {
@@ -1386,7 +1388,7 @@ const ManageCompany = () => {
                 .contact-custom-modal .modal-icon-circle {
                     width: 48px;
                     height: 48px;
-                    background-color: #10b981;
+                    background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
@@ -1447,20 +1449,20 @@ const ManageCompany = () => {
                     border-color: #2ece8a;
                 }
                 .contact-custom-modal .btn-close-custom {
-                    background-color: #7A70BA !important;
-                    color: white !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
-                    border: none !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     cursor: pointer;
-                    transition: background-color 0.2s;
+                    transition: background-color 0.2s, border-color 0.2s;
                 }
-                .contact-custom-modal .btn-close-custom:hover { background-color: #6357a7 !important; }
+                .contact-custom-modal .btn-close-custom:hover { background-color: var(--cancel-btn-hover-color, #ebd8c5) !important; border-color: var(--cancel-btn-border-hover-color, #d6baa4) !important; }
                 .contact-custom-modal .btn-save-custom {
-                    background-color: #2ece8a !important;
-                    color: white !important;
+                    background-color: var(--save-btn-color, #5b0111) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
@@ -1469,7 +1471,7 @@ const ManageCompany = () => {
                     cursor: pointer;
                     transition: background-color 0.2s;
                 }
-                .contact-custom-modal .btn-save-custom:hover { background-color: #26b277 !important; }
+                .contact-custom-modal .btn-save-custom:hover { background-color: var(--save-btn-hover-color, #42010c) !important; }
 
                 /* ===== BRANCH MODAL ===== */
                 .branch-custom-modal .modal-content {
@@ -1488,7 +1490,7 @@ const ManageCompany = () => {
                 .branch-custom-modal .modal-icon-circle {
                     width: 48px;
                     height: 48px;
-                    background-color: #6366f1;
+                    background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
@@ -1549,20 +1551,20 @@ const ManageCompany = () => {
                     border-color: #2ece8a;
                 }
                 .branch-custom-modal .btn-close-custom {
-                    background-color: #7A70BA !important;
-                    color: white !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
-                    border: none !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     cursor: pointer;
-                    transition: background-color 0.2s;
+                    transition: background-color 0.2s, border-color 0.2s;
                 }
-                .branch-custom-modal .btn-close-custom:hover { background-color: #6357a7 !important; }
+                .branch-custom-modal .btn-close-custom:hover { background-color: var(--cancel-btn-hover-color, #ebd8c5) !important; border-color: var(--cancel-btn-border-hover-color, #d6baa4) !important; }
                 .branch-custom-modal .btn-save-custom {
-                    background-color: #2ece8a !important;
-                    color: white !important;
+                    background-color: var(--save-btn-color, #5b0111) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
@@ -1571,7 +1573,7 @@ const ManageCompany = () => {
                     cursor: pointer;
                     transition: background-color 0.2s;
                 }
-                .branch-custom-modal .btn-save-custom:hover { background-color: #26b277 !important; }
+                .branch-custom-modal .btn-save-custom:hover { background-color: var(--save-btn-hover-color, #42010c) !important; }
 
                 /* ===== FACTORY MODAL ===== */
                 .factory-custom-modal .modal-content {
@@ -1590,7 +1592,7 @@ const ManageCompany = () => {
                 .factory-custom-modal .modal-icon-circle {
                     width: 48px;
                     height: 48px;
-                    background-color: #f97316;
+                    background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
@@ -1651,20 +1653,20 @@ const ManageCompany = () => {
                     border-color: #2ece8a;
                 }
                 .factory-custom-modal .btn-close-custom {
-                    background-color: #7A70BA !important;
-                    color: white !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
-                    border: none !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     cursor: pointer;
-                    transition: background-color 0.2s;
+                    transition: background-color 0.2s, border-color 0.2s;
                 }
-                .factory-custom-modal .btn-close-custom:hover { background-color: #6357a7 !important; }
+                .factory-custom-modal .btn-close-custom:hover { background-color: var(--cancel-btn-hover-color, #ebd8c5) !important; border-color: var(--cancel-btn-border-hover-color, #d6baa4) !important; }
                 .factory-custom-modal .btn-save-custom {
-                    background-color: #2ece8a !important;
-                    color: white !important;
+                    background-color: var(--save-btn-color, #5b0111) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
@@ -1673,7 +1675,7 @@ const ManageCompany = () => {
                     cursor: pointer;
                     transition: background-color 0.2s;
                 }
-                .factory-custom-modal .btn-save-custom:hover { background-color: #26b277 !important; }
+                .factory-custom-modal .btn-save-custom:hover { background-color: var(--save-btn-hover-color, #42010c) !important; }
 
                 /* ===== WAREHOUSE MODAL ===== */
                 .warehouse-custom-modal .modal-content {
@@ -1692,7 +1694,7 @@ const ManageCompany = () => {
                 .warehouse-custom-modal .modal-icon-circle {
                     width: 48px;
                     height: 48px;
-                    background-color: #8b5cf6;
+                    background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
@@ -1753,20 +1755,20 @@ const ManageCompany = () => {
                     border-color: #2ece8a;
                 }
                 .warehouse-custom-modal .btn-close-custom {
-                    background-color: #7A70BA !important;
-                    color: white !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
-                    border: none !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     cursor: pointer;
-                    transition: background-color 0.2s;
+                    transition: background-color 0.2s, border-color 0.2s;
                 }
-                .warehouse-custom-modal .btn-close-custom:hover { background-color: #6357a7 !important; }
+                .warehouse-custom-modal .btn-close-custom:hover { background-color: var(--cancel-btn-hover-color, #ebd8c5) !important; border-color: var(--cancel-btn-border-hover-color, #d6baa4) !important; }
                 .warehouse-custom-modal .btn-save-custom {
-                    background-color: #2ece8a !important;
-                    color: white !important;
+                    background-color: var(--save-btn-color, #5b0111) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
@@ -1775,7 +1777,7 @@ const ManageCompany = () => {
                     cursor: pointer;
                     transition: background-color 0.2s;
                 }
-                .warehouse-custom-modal .btn-save-custom:hover { background-color: #26b277 !important; }
+                .warehouse-custom-modal .btn-save-custom:hover { background-color: var(--save-btn-hover-color, #42010c) !important; }
 
                 /* Responsive enhancements for ManageCompany */
                 .manage-company-tabs.nav-tabs {
@@ -3060,6 +3062,37 @@ const ManageCompany = () => {
                                         </div>
                                         <div className="row mt-4">
 
+                                            {/* Template Primary Color */}
+                                            <div className="col-md-6 mb-4">
+                                                <label className="font-w600">Template Primary Color <span className="text-danger">*</span></label>
+                                                <div className="d-flex align-items-center gap-3 mt-2">
+                                                    <input
+                                                        type="color"
+                                                        className="form-control form-control-color border-0 p-0"
+                                                        value={customPrimaryColor || '#2bc155'}
+                                                        onChange={(e) => changeCustomPrimaryColor(e.target.value)}
+                                                        style={{ cursor: 'pointer', width: '60px', height: '45px', borderRadius: '8px' }}
+                                                    />
+                                                    <div>
+                                                        <div className="d-flex align-items-center gap-2">
+                                                            <div className="font-w700 fs-16 mb-0" style={{ textTransform: 'uppercase' }}>{customPrimaryColor || '#2bc155'}</div>
+                                                            {customPrimaryColor && customPrimaryColor.toLowerCase() !== '#2bc155' && (
+                                                                <button
+                                                                    type="button"
+                                                                    className="btn btn-link btn-xs p-0 text-muted"
+                                                                    style={{ fontSize: '11px', textDecoration: 'underline' }}
+                                                                    onClick={() => changeCustomPrimaryColor('')}
+                                                                    title="Reset template primary color to default"
+                                                                >
+                                                                    Reset
+                                                                </button>
+                                                            )}
+                                                        </div>
+                                                        <span className="text-muted small">Pick a global accent color for active tabs, badges, primary buttons, and highlights.</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                             {/* Navigation Header Background */}
                                             <div className="col-md-6 mb-4">
                                                 <label className="font-w600">Navigation Header Background <span className="text-danger">*</span></label>
@@ -3238,8 +3271,83 @@ const ManageCompany = () => {
                                                         style={{ cursor: 'pointer', width: '60px', height: '45px', borderRadius: '8px' }}
                                                     />
                                                     <div>
-                                                        <div className="font-w700 fs-16 mb-0" style={{ textTransform: 'uppercase' }}>{formIconColor}</div>
+                                                        <div className="d-flex align-items-center gap-2">
+                                                            <div className="font-w700 fs-16 mb-0" style={{ textTransform: 'uppercase' }}>{formIconColor}</div>
+                                                            {formIconColor && formIconColor.toLowerCase() !== '#5b0111' && (
+                                                                <button
+                                                                    type="button"
+                                                                    className="btn btn-link btn-xs p-0 text-muted"
+                                                                    style={{ fontSize: '11px', textDecoration: 'underline' }}
+                                                                    onClick={() => changeFormIconColor('#5b0111')}
+                                                                    title="Reset form & modal icon color to default"
+                                                                >
+                                                                    Reset
+                                                                </button>
+                                                            )}
+                                                        </div>
                                                         <span className="text-muted small">Pick a color to globally customize form and modal header icons.</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Cancel / Close Button Color */}
+                                            <div className="col-md-6 mb-4">
+                                                <label className="font-w600">Cancel / Close Button Color <span className="text-danger">*</span></label>
+                                                <div className="d-flex align-items-center gap-3 mt-2">
+                                                    <input 
+                                                        type="color" 
+                                                        className="form-control form-control-color border-0 p-0"
+                                                        value={cancelBtnColor} 
+                                                        onChange={(e) => changeCancelBtnColor(e.target.value)}
+                                                        style={{ cursor: 'pointer', width: '60px', height: '45px', borderRadius: '8px' }}
+                                                    />
+                                                    <div>
+                                                        <div className="d-flex align-items-center gap-2">
+                                                            <div className="font-w700 fs-16 mb-0" style={{ textTransform: 'uppercase' }}>{cancelBtnColor}</div>
+                                                            {cancelBtnColor && cancelBtnColor.toLowerCase() !== '#f5e9dc' && (
+                                                                <button
+                                                                    type="button"
+                                                                    className="btn btn-link btn-xs p-0 text-muted"
+                                                                    style={{ fontSize: '11px', textDecoration: 'underline' }}
+                                                                    onClick={() => changeCancelBtnColor('#f5e9dc')}
+                                                                    title="Reset cancel / close button color to default"
+                                                                >
+                                                                    Reset
+                                                                </button>
+                                                            )}
+                                                        </div>
+                                                        <span className="text-muted small">Pick a color for Cancel and Close buttons across modals and forms.</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Save / Submit Button Color */}
+                                            <div className="col-md-6 mb-4">
+                                                <label className="font-w600">Save / Submit Button Color <span className="text-danger">*</span></label>
+                                                <div className="d-flex align-items-center gap-3 mt-2">
+                                                    <input 
+                                                        type="color" 
+                                                        className="form-control form-control-color border-0 p-0"
+                                                        value={saveBtnColor} 
+                                                        onChange={(e) => changeSaveBtnColor(e.target.value)}
+                                                        style={{ cursor: 'pointer', width: '60px', height: '45px', borderRadius: '8px' }}
+                                                    />
+                                                    <div>
+                                                        <div className="d-flex align-items-center gap-2">
+                                                            <div className="font-w700 fs-16 mb-0" style={{ textTransform: 'uppercase' }}>{saveBtnColor}</div>
+                                                            {saveBtnColor && saveBtnColor.toLowerCase() !== '#5b0111' && (
+                                                                <button
+                                                                    type="button"
+                                                                    className="btn btn-link btn-xs p-0 text-muted"
+                                                                    style={{ fontSize: '11px', textDecoration: 'underline' }}
+                                                                    onClick={() => changeSaveBtnColor('#5b0111')}
+                                                                    title="Reset save / submit button color to default"
+                                                                >
+                                                                    Reset
+                                                                </button>
+                                                            )}
+                                                        </div>
+                                                        <span className="text-muted small">Pick a color for Save and Submit buttons across modals and forms.</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -3446,7 +3554,7 @@ const ManageCompany = () => {
                         </div>
                     </div>
                     <div className="modal-footer-custom">
-                        <Button type="button" className="btn-close-custom" onClick={() => setShowAddressModal(false)}>Cancel</Button>
+                        <Button type="button" variant="secondary" className="btn-close-custom" onClick={() => setShowAddressModal(false)}>Cancel</Button>
                         <Button type="submit" className="btn-save-custom">{editItemId ? 'Save Changes' : 'Save'}</Button>
                     </div>
                 </Form>
@@ -3529,7 +3637,7 @@ const ManageCompany = () => {
                         </div>
                     </div>
                     <div className="modal-footer-custom">
-                        <Button type="button" className="btn-close-custom" onClick={() => setShowContactModal(false)}>Cancel</Button>
+                        <Button type="button" variant="secondary" className="btn-close-custom" onClick={() => setShowContactModal(false)}>Cancel</Button>
                         <Button type="submit" className="btn-save-custom">{editItemId ? 'Save Changes' : 'Save'}</Button>
                     </div>
                 </Form>
@@ -3593,7 +3701,7 @@ const ManageCompany = () => {
                         </div>
                     </div>
                     <div className="modal-footer-custom">
-                        <Button type="button" className="btn-close-custom" onClick={() => setShowFYModal(false)}>Close</Button>
+                        <Button type="button" variant="secondary" className="btn-close-custom" onClick={() => setShowFYModal(false)}>Close</Button>
                         <Button type="submit" className="btn-save-custom">{editItemId ? 'Save Changes' : 'Save'}</Button>
                     </div>
                 </Form>
@@ -3720,7 +3828,7 @@ const ManageCompany = () => {
                         </div>
                     </div>
                     <div className="modal-footer-custom">
-                        <Button type="button" className="btn-close-custom" onClick={() => setShowBranchModal(false)}>Cancel</Button>
+                        <Button type="button" variant="secondary" className="btn-close-custom" onClick={() => setShowBranchModal(false)}>Cancel</Button>
                         <Button type="submit" className="btn-save-custom">{editItemId ? 'Save Changes' : 'Save'}</Button>
                     </div>
                 </Form>
@@ -3791,7 +3899,7 @@ const ManageCompany = () => {
                         </div>
                     </div>
                     <div className="modal-footer-custom">
-                        <Button type="button" className="btn-close-custom" onClick={() => setShowFactoryModal(false)}>Cancel</Button>
+                        <Button type="button" variant="secondary" className="btn-close-custom" onClick={() => setShowFactoryModal(false)}>Cancel</Button>
                         <Button type="submit" className="btn-save-custom">{editItemId ? 'Save Changes' : 'Save'}</Button>
                     </div>
                 </Form>
@@ -3996,7 +4104,7 @@ const ManageCompany = () => {
                         </div>
                     </div>
                     <div className="modal-footer-custom">
-                        <Button type="button" className="btn-close-custom" onClick={() => setShowWarehouseModal(false)}>Cancel</Button>
+                        <Button type="button" variant="secondary" className="btn-close-custom" onClick={() => setShowWarehouseModal(false)}>Cancel</Button>
                         <Button type="submit" className="btn-save-custom">{editItemId ? 'Save Changes' : 'Save'}</Button>
                     </div>
                 </Form>
@@ -4099,7 +4207,7 @@ const ManageCompany = () => {
             <Modal show={showLicenseModal} onHide={() => setShowLicenseModal(false)} dialogClassName="branch-custom-modal" centered size="lg">
                 <div className="modal-header-custom">
                     <div className="d-flex align-items-center gap-3">
-                        <div className="modal-icon-circle" style={{ backgroundColor: '#6c5ce7', width: '45px', height: '45px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <div className="modal-icon-circle form-icon-circle" style={{ width: '45px', height: '45px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <i className="fa fa-id-card text-white fs-4"></i>
                         </div>
                         <div>
@@ -4154,7 +4262,7 @@ const ManageCompany = () => {
                         </div>
                     </div>
                     <div className="modal-footer-custom">
-                        <Button type="button" className="btn-close-custom" onClick={() => setShowLicenseModal(false)}>Cancel</Button>
+                        <Button type="button" variant="secondary" className="btn-close-custom" onClick={() => setShowLicenseModal(false)}>Cancel</Button>
                         <Button type="submit" className="btn-save-custom">{editItemId ? 'Save Changes' : 'Save'}</Button>
                     </div>
                 </Form>

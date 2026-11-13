@@ -418,7 +418,7 @@ const SalesPendingOrdersReportList = () => {
             case 'Pending': return 'badge badge-warning light';
             case 'Cancelled': return 'badge badge-danger light';
             case 'Shipped': return 'badge badge-info light';
-            case 'On Hold': return 'badge badge-secondary light';
+            case 'On Hold': return 'badge badge-orange light';
             default: return 'badge bg-light text-dark';
         }
     };

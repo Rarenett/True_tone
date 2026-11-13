@@ -247,12 +247,12 @@ const LeadList = ({ embedded }) => {
                     display: inline-block;
                 }
 
-                .badge-success { background: rgba(16, 185, 129, 0.1); color: #10b981; }
-                .badge-warning { background: rgba(245, 158, 11, 0.1); color: #f59e0b; }
-                .badge-info { background: rgba(59, 130, 246, 0.1); color: #3b82f6; }
-                .badge-danger { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
-                .badge-secondary { background: rgba(100, 116, 139, 0.1); color: #64748b; }
-                .badge-primary { background: var(--crm-accent-soft); color: var(--crm-accent); }
+                .badge-success { background: var(--badge-green-bg, #DDF3E5); color: var(--badge-green-text, #176B3A); }
+                .badge-warning { background: var(--badge-gold-bg, #F5EBD8); color: var(--badge-gold-text, #805B20); }
+                .badge-info { background: var(--badge-blue-bg, #E2EEFA); color: var(--badge-blue-text, #245A91); }
+                .badge-danger { background: var(--badge-red-bg, #FCE4E4); color: var(--badge-red-text, #A52222); }
+                .badge-secondary { background: var(--badge-grey-bg, #ECEDEF); color: var(--badge-grey-text, #50545C); }
+                .badge-primary { background: var(--badge-burgundy-bg, #F5E1E5); color: var(--badge-burgundy-text, #780116); }
 
                 .crm-action-btn {
                     width: 34px;

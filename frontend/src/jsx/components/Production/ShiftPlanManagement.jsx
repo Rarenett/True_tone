@@ -1346,8 +1346,8 @@ const ShiftPlanManagement = () => {
                     )}
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={() => setShowEditModal(false)}>Cancel</Button>
-                    <Button variant="primary" onClick={handleSaveEdit} disabled={loading}>
+                    <Button variant="secondary" className="btn-close-custom" onClick={() => setShowEditModal(false)}>Cancel</Button>
+                    <Button variant="primary" className="btn-save-custom" onClick={handleSaveEdit} disabled={loading}>
                         {loading ? <Spinner as="span" animation="border" size="sm" /> : 'Save Changes'}
                     </Button>
                 </Modal.Footer>

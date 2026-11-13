@@ -1433,17 +1433,14 @@ const UploadFiles = () => {
             </div>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="danger light" onClick={handleCloseUploadModal}>
+            <Button variant="secondary" className="btn-close-custom" onClick={handleCloseUploadModal}>
               Cancel
             </Button>
             <Button
               variant="primary"
+              className="btn-save-custom"
               type="submit"
               disabled={uploading}
-              style={{
-                backgroundColor: "rgb(61, 53, 119)",
-                borderColor: "rgb(61, 53, 119)",
-              }}
             >
               {uploading ? (
                 <>
@@ -1934,17 +1931,14 @@ const UploadFiles = () => {
             </div>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="danger light" onClick={handleCloseEditModal}>
+            <Button variant="secondary" className="btn-close-custom" onClick={handleCloseEditModal}>
               Cancel
             </Button>
             <Button
               variant="primary"
+              className="btn-save-custom"
               type="submit"
               disabled={updating}
-              style={{
-                backgroundColor: "rgb(61, 53, 119)",
-                borderColor: "rgb(61, 53, 119)",
-              }}
             >
               {updating ? (
                 <>
@@ -2004,7 +1998,8 @@ const UploadFiles = () => {
           </Modal.Body>
           <Modal.Footer>
             <Button
-              variant="light"
+              variant="secondary"
+              className="btn-close-custom"
               onClick={() => setShowRequestEditModal(false)}
               disabled={requestEditLoading}
             >
@@ -2097,7 +2092,7 @@ const UploadFiles = () => {
           )}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="danger light" onClick={handleClosePreviewModal}>
+          <Button variant="secondary" className="btn-close-custom" onClick={handleClosePreviewModal}>
             Close Preview
           </Button>
         </Modal.Footer>

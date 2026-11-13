@@ -467,8 +467,7 @@ const BillSettlementPopup = ({ show, onHide, invoices, ledgerName, totalAmount, 
                         variant="secondary"
                         size="sm"
                         onClick={onHide}
-                        className="px-4 py-2 border-0 rounded-3 text-dark fw-semibold"
-                        style={{ backgroundColor: '#e2e8f0', color: '#1e293b' }}
+                        className="btn-close-custom px-4 py-2 border-0 rounded-3 fw-semibold"
                     >
                         Cancel
                     </Button>
@@ -485,8 +484,7 @@ const BillSettlementPopup = ({ show, onHide, invoices, ledgerName, totalAmount, 
                                 handleSave();
                             }
                         }}
-                        className="px-4 py-2 border-0 rounded-3 fw-bold shadow-sm"
-                        style={{ backgroundColor: '#3b6fd4', color: '#fff' }}
+                        className="btn-save-custom px-4 py-2 border-0 rounded-3 fw-bold shadow-sm"
                     >
                         <i className="fa fa-check me-1"></i> Apply {billCount > 0 ? `(${billCount} Bill${billCount > 1 ? 's' : ''})` : ''}
                     </Button>

@@ -231,7 +231,7 @@ const LeadList = () => {
                                 <button 
                                     type="button" 
                                     id="close-missing-data-modal-btn" 
-                                    style="padding: 6px 16px; font-size: 12px; font-weight: 600; background: #3d3577; color: #ffffff; border: none; border-radius: 6px; cursor: pointer;"
+                                    style="padding: 6px 16px; font-size: 12px; font-weight: 600; background: var(--cancel-btn-color, #f5e9dc); color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)); border: 1px solid var(--cancel-btn-border-color, #e2cbba); border-radius: 6px; cursor: pointer;"
                                 >
                                     Close
                                 </button>
@@ -515,7 +515,7 @@ const LeadList = () => {
             case 'Not Qualified':
                 return 'badge-danger light';
             default:
-                return 'badge-secondary light';
+                return 'badge-light';
         }
     };
 
@@ -524,11 +524,11 @@ const LeadList = () => {
             case 'Critical':
                 return 'badge badge-danger light';
             case 'High':
-                return 'badge badge-warning light';
+                return 'badge badge-primary light';
             case 'Medium':
-                return 'badge badge-info light';
+                return 'badge badge-warning light';
             case 'Low':
-                return 'badge badge-success light';
+                return 'badge badge-info light';
             default:
                 return 'badge badge-info light';
         }
@@ -981,7 +981,7 @@ const LeadList = () => {
                     )}
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" size="sm" onClick={() => setShowPendingModal(false)}>
+                    <Button variant="secondary" size="sm" className="btn-close-custom" onClick={() => setShowPendingModal(false)}>
                         Close
                     </Button>
                 </Modal.Footer>

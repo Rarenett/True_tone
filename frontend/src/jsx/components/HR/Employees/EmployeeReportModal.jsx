@@ -925,12 +925,12 @@ const EmployeeReportModal = ({ show, onHide, candidateId, employeeId, employeeNa
                 .emp-custom-modal .modal-icon-circle {
                     width: 48px;
                     height: 48px;
-                    background-color: #2ece8a;
+                    background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    box-shadow: 0 4px 10px rgba(46, 206, 138, 0.2);
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
                 }
                 .emp-custom-modal .modal-close-x {
                     border: none;

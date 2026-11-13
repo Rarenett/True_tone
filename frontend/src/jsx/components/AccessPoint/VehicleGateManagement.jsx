@@ -349,7 +349,7 @@ const VehicleGateManagement = ({ embedded = false }) => {
 
                     {(vehicleData || isNewVehicle) && (
                         <div className="p-4 rounded-4 shadow-sm" style={{ background: isDark ? 'rgba(0,210,255,0.03)' : '#f8f9fa', border: `1px solid ${isDark ? 'rgba(0,210,255,0.1)' : '#eee'}` }}>
-                            {isNewVehicle && <Badge bg="warning" className="mb-3 text-dark px-3 py-2 rounded-pill shadow-sm"><i className="fa fa-star me-1"></i> New Vehicle Registration</Badge>}
+                            {isNewVehicle && <Badge bg="warning" className="mb-3 px-3 py-2 rounded-pill shadow-sm"><i className="fa fa-star me-1"></i> New Vehicle Registration</Badge>}
                             <Row className="g-3">
                                 <Col md={6}>
                                     <Form.Group>
@@ -418,7 +418,7 @@ const VehicleGateManagement = ({ embedded = false }) => {
                     )}
                 </Modal.Body>
                 <Modal.Footer className="border-0">
-                    <Button variant="light" onClick={() => setShowFormModal(false)} className="rounded-pill px-4 fw-bold">Cancel</Button>
+                    <Button variant="light" onClick={() => setShowFormModal(false)} className="btn-close-custom rounded-pill px-4 fw-bold">Cancel</Button>
                     <Button variant="primary" onClick={handleSubmitEntry} disabled={formLoading || (!vehicleData && !isNewVehicle)} className="rounded-pill px-4 shadow-sm fw-bold">
                         {formLoading ? <Spinner size="sm" /> : 'Log Entry'}
                     </Button>

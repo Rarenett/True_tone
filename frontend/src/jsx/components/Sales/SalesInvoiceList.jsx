@@ -78,9 +78,9 @@ const SalesInvoiceList = ({
             case 'Shipped':
                 return 'badge badge-info light';
             case 'On Hold':
-                return 'badge badge-secondary light';
+                return 'badge badge-orange light';
             default:
-                return 'badge bg-light text-dark';
+                return 'badge badge-light';
         }
     };
 

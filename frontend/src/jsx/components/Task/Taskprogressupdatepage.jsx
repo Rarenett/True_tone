@@ -420,7 +420,7 @@ const ViewDetailModal = ({ show, onHide, entry }) => {
             <div className="item-custom-modal" style={{ ...modalCardStyle, maxWidth: '560px', width: '100%', boxShadow: '0 20px 60px rgba(0, 0, 0, 0.28)' }}>
                 <div className="modal-header-custom">
                     <div className="d-flex align-items-center gap-3">
-                        <div className="modal-icon-circle" style={{ backgroundColor: '#0284c7', boxShadow: '0 4px 10px rgba(2, 132, 199, 0.25)' }}>
+                        <div className="modal-icon-circle">
                             <FileText size={20} color="#fff" />
                         </div>
                         <div>
@@ -434,7 +434,7 @@ const ViewDetailModal = ({ show, onHide, entry }) => {
                                     <>
                                         <span className="mx-1">•</span>
                                         <span className="text-muted" style={{ fontSize: '12px' }}>Assigned to:</span>
-                                        <span className="badge" style={{ background: '#f0fdf4', color: '#16a34a', fontWeight: 600 }}>{entry.assigned_to_name}</span>
+                                        <span className="badge" style={{ background: '#EEE8F7', color: '#65428B', fontWeight: 600 }}>{entry.assigned_to_name}</span>
                                     </>
                                 )}
                                 {entry.created_by_name && (
@@ -469,9 +469,9 @@ const ViewDetailModal = ({ show, onHide, entry }) => {
                                     +{Number(entry.percentage)}%
                                 </Badge>
                                 {entry.is_editable ? (
-                                    <span style={{ background: '#d1fae5', color: '#065f46', borderRadius: '20px', fontSize: '11px', fontWeight: 600, padding: '3px 10px' }}>Editable</span>
+                                    <span style={{ background: '#DDF3E5', color: '#176B3A', borderRadius: '20px', fontSize: '11px', fontWeight: 600, padding: '3px 10px' }}>Editable</span>
                                 ) : (
-                                    <span style={{ background: '#fee2e2', color: '#991b1b', borderRadius: '20px', fontSize: '11px', fontWeight: 600, padding: '3px 10px', display: 'inline-flex', alignItems: 'center', gap: '3px' }}>
+                                    <span style={{ background: '#FCE4E4', color: '#A52222', borderRadius: '20px', fontSize: '11px', fontWeight: 600, padding: '3px 10px', display: 'inline-flex', alignItems: 'center', gap: '3px' }}>
                                         <Lock size={10} /> Locked
                                     </span>
                                 )}
@@ -724,7 +724,7 @@ const ProgressHistoryModal = ({ show, onHide, assignment, history, overview, loa
                 <div className="item-custom-modal" style={{ ...modalCardStyle, maxWidth: '96vw', width: '1150px' }}>
                     <div className="modal-header-custom" style={{ padding: '16px 24px' }}>
                         <div className="d-flex align-items-center gap-3">
-                            <div className="modal-icon-circle" style={{ backgroundColor: '#6366f1', boxShadow: '0 4px 10px rgba(99, 102, 241, 0.2)' }}>
+                            <div className="modal-icon-circle">
                                 <Clock size={20} color="#fff" />
                             </div>
                             <div>
@@ -1010,7 +1010,7 @@ const ProgressHistoryModal = ({ show, onHide, assignment, history, overview, loa
                                                                 </td>
                                                                 <td style={{ padding: '12px 14px' }}>
                                                                     {entry.assigned_to_name ? (
-                                                                        <span className="badge" style={{ background: '#f0fdf4', color: '#16a34a', fontWeight: 600, fontSize: '11px', borderRadius: '20px', padding: '3px 8px' }}>
+                                                                        <span className="badge" style={{ background: '#EEE8F7', color: '#65428B', fontWeight: 600, fontSize: '11px', borderRadius: '20px', padding: '3px 8px' }}>
                                                                             {entry.assigned_to_name}
                                                                         </span>
                                                                     ) : '—'}
@@ -1115,25 +1115,25 @@ const TaskCard = ({ assignment, onUpdate, onDetails, colorIndex = 0, isOpen, onT
     const timeRemaining = getTimeRemainingInfo(startDate, dueDate, assignment.created_at);
 
     let statusBadgeText = 'Pending';
-    let statusBadgeBg = '#ede9fe';
-    let statusBadgeColor = '#6f42c1';
+    let statusBadgeBg = '#F5EBD8';
+    let statusBadgeColor = '#805B20';
 
     if (isDelegatedTab) {
         statusBadgeText = 'Delegated';
-        statusBadgeBg = '#e8f5e9';
-        statusBadgeColor = '#2e7d32';
+        statusBadgeBg = '#EEE8F7';
+        statusBadgeColor = '#65428B';
     } else if (completed >= 100) {
         statusBadgeText = 'Completed';
-        statusBadgeBg = '#dcfce7';
-        statusBadgeColor = '#15803d';
+        statusBadgeBg = '#DDF3E5';
+        statusBadgeColor = '#176B3A';
     } else if (completed > 0) {
         statusBadgeText = 'In Progress';
-        statusBadgeBg = '#e0f2fe';
-        statusBadgeColor = '#0369a1';
+        statusBadgeBg = '#E2EEFA';
+        statusBadgeColor = '#245A91';
     } else {
         statusBadgeText = 'Pending';
-        statusBadgeBg = '#ede9fe';
-        statusBadgeColor = '#6f42c1';
+        statusBadgeBg = '#F5EBD8';
+        statusBadgeColor = '#805B20';
     }
 
     return (
@@ -1719,12 +1719,12 @@ const TaskProgressUpdatePage = () => {
                 .item-custom-modal .modal-icon-circle {
                     width: 44px;
                     height: 44px;
-                    background-color: #2ece8a;
+                    background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    box-shadow: 0 4px 10px rgba(46, 206, 138, 0.2);
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
                     flex-shrink: 0;
                 }
                 .item-custom-modal .modal-close-x {
@@ -1787,13 +1787,13 @@ const TaskProgressUpdatePage = () => {
                     border-color: #2ece8a;
                 }
                 .item-custom-modal .btn-close-custom {
-                    background-color: #7A70BA !important;
-                    color: white !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
-                    border: none !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     cursor: pointer;
                     transition: background-color 0.2s, transform 0.1s;
                     display: inline-flex;
@@ -1801,11 +1801,11 @@ const TaskProgressUpdatePage = () => {
                     justify-content: center;
                 }
                 .item-custom-modal .btn-close-custom:hover {
-                    background-color: #6357a7 !important;
+                    background-color: var(--cancel-btn-hover-color, #ebd8c5) !important;
                 }
                 .item-custom-modal .btn-save-custom {
-                    background-color: #2ece8a !important;
-                    color: white !important;
+                    background-color: var(--save-btn-color, #5b0111) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
@@ -1818,7 +1818,7 @@ const TaskProgressUpdatePage = () => {
                     justify-content: center;
                 }
                 .item-custom-modal .btn-save-custom:hover {
-                    background-color: #26b97b !important;
+                    background-color: var(--save-btn-hover-color, #42010c) !important;
                 }
                 .item-custom-modal .btn-save-custom:disabled {
                     opacity: 0.6;

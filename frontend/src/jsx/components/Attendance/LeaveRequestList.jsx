@@ -23,9 +23,9 @@ const STATUS_BADGE_MAP = {
     APPROVED: 'success',
     PARTIALLY_APPROVED: 'primary',
     REJECTED: 'danger',
-    CANCELLED: 'secondary',
+    CANCELLED: 'danger',
     ACCEPTED: 'primary',
-    DECLINED: 'dark',
+    DECLINED: 'danger',
 };
 
 const formatDays = (days) => {

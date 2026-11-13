@@ -129,7 +129,9 @@ class Company(models.Model):
     theme_primary_color    = models.CharField(max_length=20, default='#2bc155', blank=True)
     theme_bg_color         = models.CharField(max_length=20, default='',        blank=True)
     theme_font_color       = models.CharField(max_length=20, default='',        blank=True)
-    theme_form_icon_color  = models.CharField(max_length=20, default='#2bc155', blank=True)
+    theme_form_icon_color  = models.CharField(max_length=20, default='#5b0111', blank=True)
+    theme_cancel_btn_color = models.CharField(max_length=20, default='#f5e9dc', blank=True)
+    theme_save_btn_color   = models.CharField(max_length=20, default='#5b0111', blank=True)
     theme_version          = models.CharField(max_length=10, default='light',   blank=True)
 
     has_branches = models.BooleanField(

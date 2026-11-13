@@ -335,12 +335,12 @@ const AdjustmentModal = ({ show, onHide, onSuccess, adjustment = null }) => {
                 .adj-modal .modal-icon-circle {
                     width: 48px;
                     height: 48px;
-                    background: #2ece8a;
+                    background: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    box-shadow: 0 4px 10px rgba(46,206,138,.2);
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
                 }
                 .adj-modal .modal-close-x {
                     border: none;
@@ -385,24 +385,33 @@ const AdjustmentModal = ({ show, onHide, onSuccess, adjustment = null }) => {
                     box-shadow: 0 0 0 3px rgba(46,206,138,.15);
                 }
                 .adj-modal .btn-close-custom {
-                    background: #7A70BA !important;
-                    color: white !important;
+                    background: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
-                    border: none !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     cursor: pointer;
+                    transition: background-color 0.2s, border-color 0.2s;
+                }
+                .adj-modal .btn-close-custom:hover:not(:disabled) {
+                    background: var(--cancel-btn-hover-color, #ebd8c5) !important;
+                    border-color: var(--cancel-btn-border-hover-color, #d6baa4) !important;
                 }
                 .adj-modal .btn-save-custom {
-                    background: #2ece8a !important;
-                    color: white !important;
+                    background: var(--save-btn-color, #5b0111) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
                     border: none !important;
                     cursor: pointer;
+                    transition: background-color 0.2s;
+                }
+                .adj-modal .btn-save-custom:hover:not(:disabled) {
+                    background: var(--save-btn-hover-color, #42010c) !important;
                 }
                 .adj-modal .btn-save-custom:disabled {
                     opacity: 0.6 !important;

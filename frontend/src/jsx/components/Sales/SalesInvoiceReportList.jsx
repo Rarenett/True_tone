@@ -103,7 +103,7 @@ const InvoiceDetailModal = ({ invoice, show, onHide }) => {
             </Modal.Body>
 
             <Modal.Footer style={{ borderTop: '1px solid #e9ecef', background: '#f8f9fa' }}>
-                <Button variant="secondary" size="sm" onClick={onHide} style={{ borderRadius: 8 }}>
+                <Button variant="secondary" size="sm" onClick={onHide} className="btn-close-custom" style={{ borderRadius: 8 }}>
                     Close
                 </Button>
             </Modal.Footer>
@@ -838,7 +838,7 @@ const SalesInvoiceReportList = () => {
             case 'Pending': return 'badge badge-warning light';
             case 'Cancelled': return 'badge badge-danger light';
             case 'Shipped': return 'badge badge-info light';
-            case 'On Hold': return 'badge badge-secondary light';
+            case 'On Hold': return 'badge badge-orange light';
             default: return 'badge bg-light text-dark';
         }
     };

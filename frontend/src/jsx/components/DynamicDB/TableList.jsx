@@ -404,7 +404,7 @@ const ConfirmInput = ({ expected, onConfirm, onCancel, loading }) => {
         onChange={(e) => setValue(e.target.value)}
       />
       <div className="d-flex justify-content-end gap-2">
-        <Button variant="light" onClick={onCancel} disabled={loading}>
+        <Button variant="light" onClick={onCancel} disabled={loading}> className="btn-close-custom"
           Cancel
         </Button>
         <Button

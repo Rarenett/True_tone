@@ -452,9 +452,9 @@ const TeleCallingDashboard = () => {
                     text-transform: uppercase;
                 }
 
-                .status-in-progress { background: #f0f7ff; color: #0080ff; }
-                .status-complete { background: #ecfdf5; color: #10b981; }
-                .status-pending { background: #fffef0; color: #d97706; }
+                .status-in-progress { background: var(--badge-blue-bg, #E2EEFA); color: var(--badge-blue-text, #245A91); }
+                .status-complete { background: var(--badge-green-bg, #DDF3E5); color: var(--badge-green-text, #176B3A); }
+                .status-pending { background: var(--badge-gold-bg, #F5EBD8); color: var(--badge-gold-text, #805B20); }
 
                 /* Category Filters */
                 .cat-pill-container {

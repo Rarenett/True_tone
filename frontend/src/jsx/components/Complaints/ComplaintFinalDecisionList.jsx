@@ -37,21 +37,21 @@ const ComplaintFinalDecisionList = () => {
     const getPriorityBadgeClass = (priority) => {
         const classes = {
             'Critical': 'badge-danger light',
-            'High': 'badge-warning light',
-            'Medium': 'badge-info light',
-            'Low': 'badge-success light',
+            'High': 'badge-primary light',
+            'Medium': 'badge-warning light',
+            'Low': 'badge-info light',
         };
         return classes[priority] || 'badge-info light';
     };
 
     const getAdminStatusBadgeClass = (status) => {
         const classes = {
-            'Pending': 'badge-secondary light',
+            'Pending': 'badge-warning light',
             'Approved': 'badge-success light',
             'Rejected': 'badge-danger light',
-            'On Hold': 'badge-warning light',
+            'On Hold': 'badge-orange light',
         };
-        return classes[status] || 'badge-secondary light';
+        return classes[status] || 'badge-warning light';
     };
 
     // Filter and slice data

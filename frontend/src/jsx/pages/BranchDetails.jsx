@@ -464,8 +464,8 @@ const BranchDetails = () => {
             color: #444 !important;
         }
         .badge-primary-custom {
-            background-color: #58d68d !important;
-            color: #fff !important;
+            background-color: var(--badge-burgundy-bg, #F5E1E5) !important;
+            color: var(--badge-burgundy-text, #780116) !important;
             font-weight: 600 !important;
             font-size: 14px !important;
             padding: 6px 16px !important;
@@ -535,23 +535,23 @@ const BranchDetails = () => {
             justify-content: center;
         }
         .addr-custom-modal .modal-icon-circle {
-            background-color: #3b82f6;
+            background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
             box-shadow: 0 4px 10px rgba(59,130,246,0.25);
         }
         .contact-custom-modal .modal-icon-circle {
-            background-color: #10b981;
+            background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
             box-shadow: 0 4px 10px rgba(16,185,129,0.25);
         }
         .bank-custom-modal .modal-icon-circle {
-            background-color: #f59e0b;
+            background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
             box-shadow: 0 4px 10px rgba(245,158,11,0.25);
         }
         .factory-custom-modal .modal-icon-circle {
-            background-color: #f97316;
+            background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
             box-shadow: 0 4px 10px rgba(249,115,22,0.25);
         }
         .warehouse-custom-modal .modal-icon-circle {
-            background-color: #8b5cf6;
+            background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
             box-shadow: 0 4px 10px rgba(139,92,246,0.25);
         }
         .modal-close-x {
@@ -606,21 +606,21 @@ const BranchDetails = () => {
         .form-control-custom::placeholder { color: #94a3b8; }
         
         .btn-close-custom {
-            background-color: #7A70BA !important;
-            color: white !important;
+            background-color: var(--cancel-btn-color, #f5e9dc) !important;
+            color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
             border-radius: 8px !important;
             font-weight: 500 !important;
             font-size: 14px !important;
             padding: 10px 24px !important;
-            border: none !important;
+            border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
             cursor: pointer;
             transition: background-color 0.2s;
         }
-        .btn-close-custom:hover { background-color: #6357a7 !important; }
+        .btn-close-custom:hover { background-color: var(--cancel-btn-hover-color, #ebd8c5) !important; }
         
         .btn-save-custom {
-            background-color: #2ece8a !important;
-            color: white !important;
+            background-color: var(--save-btn-color, #5b0111) !important;
+            color: var(--save-btn-text-color, #ffffff) !important;
             border-radius: 8px !important;
             font-weight: 500 !important;
             font-size: 14px !important;
@@ -629,7 +629,7 @@ const BranchDetails = () => {
             cursor: pointer;
             transition: background-color 0.2s;
         }
-        .btn-save-custom:hover { background-color: #26b277 !important; }
+        .btn-save-custom:hover { background-color: var(--save-btn-hover-color, #42010c) !important; }
 
         /* ===== DARK MODE SUPPORT ===== */
         [data-theme-version="dark"] .modal-content {
@@ -1624,7 +1624,7 @@ const BranchDetails = () => {
                 <Modal show={showLicenseModal} onHide={() => setShowLicenseModal(false)} dialogClassName="branch-custom-modal" centered size="xl">
                     <div className="modal-header-custom">
                         <div className="d-flex align-items-center gap-3">
-                            <div className="modal-icon-circle" style={{ backgroundColor: '#6c5ce7', width: '45px', height: '45px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <div className="modal-icon-circle form-icon-circle" style={{ width: '45px', height: '45px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                 <i className="fa fa-id-card text-white fs-4"></i>
                             </div>
                             <div>

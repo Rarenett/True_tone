@@ -278,7 +278,7 @@ const ShiftEmployeeModal = ({
                 )}
             </Modal.Body>
             <Modal.Footer className="border-0">
-                <Button variant="secondary" onClick={onHide}>Save</Button>
+                <Button variant="primary" className="btn-save-custom" onClick={onHide}>Save</Button>
             </Modal.Footer>
         </Modal>
     );

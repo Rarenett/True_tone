@@ -1007,8 +1007,8 @@ const RepairPartForm = () => {
                     </Row>
 
                     <div className="d-flex justify-content-end gap-2">
-                        <Button variant="secondary" onClick={() => navigate('/repair-part-list')}>Cancel</Button>
-                        <Button variant="primary" type="submit">Submit</Button>
+                        <Button variant="secondary" className="btn-close-custom" onClick={() => navigate('/repair-part-list')}>Cancel</Button>
+                        <Button variant="primary" className="btn-save-custom" type="submit">Submit</Button>
                     </div>
                 </Form>
             </Card.Body>

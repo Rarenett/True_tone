@@ -145,23 +145,23 @@ const RepairRequestReviewList = () => {
     };
 
     const getResponderDecisionBadgeColor = (decision) => {
-    if (decision === 'YES') return { bg: 'rgba(34, 197, 94, 0.12)', color: '#16a34a' };   // green
-    if (decision === 'NO') return { bg: 'rgba(239, 68, 68, 0.12)', color: '#dc2626' };    // red
-    if (decision === 'NEUTRAL') return { bg: 'rgba(245, 158, 11, 0.12)', color: '#d97706' }; // orange
-    return { bg: 'rgba(107, 114, 128, 0.12)', color: '#4b5563' };
+    if (decision === 'YES') return { bg: '#DDF3E5', color: '#176B3A' };   // green
+    if (decision === 'NO') return { bg: '#FCE4E4', color: '#A52222' };    // red
+    if (decision === 'NEUTRAL') return { bg: '#FCEBD9', color: '#99500C' }; // orange
+    return { bg: '#ECEDEF', color: '#50545C' };
 };
 
     const getPriorityBadgeStyle = (priority) => {
-        if (priority === 'High') return { bg: 'rgba(239, 68, 68, 0.12)', color: '#dc2626' };
-        if (priority === 'Medium') return { bg: 'rgba(245, 158, 11, 0.12)', color: '#d97706' };
-        return { bg: 'rgba(59, 130, 246, 0.12)', color: '#2563eb' }; // Low / default
+        if (priority === 'High') return { bg: '#F5E1E5', color: '#780116' };
+        if (priority === 'Medium') return { bg: '#F5EBD8', color: '#805B20' };
+        return { bg: '#E2EEFA', color: '#245A91' }; // Low / default
     };
 
     const getStatusBadgeStyle = (status) => {
-        if (status === 'Accepted') return { bg: 'rgba(34, 197, 94, 0.12)', color: '#16a34a' };
-        if (status === 'Rejected') return { bg: 'rgba(239, 68, 68, 0.12)', color: '#dc2626' };
-        if (status === 'Hold') return { bg: 'rgba(245, 158, 11, 0.12)', color: '#d97706' };
-        return { bg: 'rgba(59, 130, 246, 0.12)', color: '#2563eb' };
+        if (status === 'Accepted') return { bg: '#DDF3E5', color: '#176B3A' };
+        if (status === 'Rejected') return { bg: '#FCE4E4', color: '#A52222' };
+        if (status === 'Hold') return { bg: '#FCEBD9', color: '#99500C' };
+        return { bg: '#E2EEFA', color: '#245A91' };
     };
 
 
@@ -230,12 +230,12 @@ const RepairRequestReviewList = () => {
                     transition: all 0.2s;
                 }
                 .btn-close-custom {
-                    background-color: #f1f5f9;
-                    color: #475569;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                 }
-                .btn-close-custom:hover { background-color: #e2e8f0; }
+                .btn-close-custom:hover { background-color: var(--cancel-btn-hover-color, #ebd8c5) !important; }
                 .btn-save-custom {
-                    color: #fff;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                 }
                 .feedback-panel-header {
                     font-weight: 600;
@@ -458,7 +458,7 @@ const RepairRequestReviewList = () => {
                 >
                     <div className="modal-header-custom d-flex justify-content-between align-items-center">
                         <div className="d-flex align-items-center gap-3">
-                            <div className="modal-icon-circle bg-primary" style={{ backgroundColor: '#20c997' }}>
+                            <div className="modal-icon-circle form-icon-circle">
                                 <i className="fa fa-eye fa-lg"></i>
                             </div>
                             <div>
@@ -749,12 +749,12 @@ const RepairRequestReviewList = () => {
                 .item-custom-modal .modal-icon-circle {
                     width: 48px;
                     height: 48px;
-                    background-color: #2ece8a;
+                    background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    box-shadow: 0 4px 10px rgba(46, 206, 138, 0.2);
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
                 }
                 .item-custom-modal .modal-close-x {
                     border: none;
@@ -802,18 +802,18 @@ const RepairRequestReviewList = () => {
                     color: #94a3b8;
                 }
                 .item-custom-modal .btn-close-custom {
-                    background-color: #7A70BA !important;
-                    color: white !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
-                    border: none !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     cursor: pointer;
                     transition: background-color 0.2s;
                 }
                 .item-custom-modal .btn-close-custom:hover {
-                    background-color: #6357a7 !important;
+                    background-color: var(--cancel-btn-hover-color, #ebd8c5) !important;
                 }
                 .item-custom-modal .modal-footer-custom {
                     display: flex;
@@ -825,8 +825,8 @@ const RepairRequestReviewList = () => {
                     gap: 12px;
                 }
                 .item-custom-modal .btn-save-custom {
-                    background-color: #2ece8a !important;
-                    color: white !important;
+                    background-color: var(--save-btn-color, #5b0111) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
@@ -836,7 +836,7 @@ const RepairRequestReviewList = () => {
                     transition: background-color 0.2s;
                 }
                 .item-custom-modal .btn-save-custom:hover {
-                    background-color: #26b277 !important;
+                    background-color: var(--save-btn-hover-color, #42010c) !important;
                 }
             `}</style>
         </div>

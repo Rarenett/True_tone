@@ -52,27 +52,27 @@ const ComplaintList = ({ myOnly }) => {
     const getPriorityBadgeClass = (priority) => {
         const classes = {
             'Critical': 'badge-danger light',
-            'High': 'badge-warning light',
-            'Medium': 'badge-info light',
-            'Low': 'badge-success light',
+            'High': 'badge-primary light',
+            'Medium': 'badge-warning light',
+            'Low': 'badge-info light',
         };
         return classes[priority] || 'badge-info light';
     };
 
     const getAdminStatusBadgeClass = (status) => {
         const classes = {
-            'Pending': 'badge-secondary light',
+            'Pending': 'badge-warning light',
             'Approved': 'badge-success light',
             'Rejected': 'badge-danger light',
-            'On Hold': 'badge-warning light',
+            'On Hold': 'badge-orange light',
         };
-        return classes[status] || 'badge-secondary light';
+        return classes[status] || 'badge-warning light';
     };
 
     const getDecisionBadge = (decision) => {
-        if (decision === 'YES') return { bg: 'rgba(16, 185, 129, 0.1)', color: '#10b981', border: '1px solid rgba(16, 185, 129, 0.2)' };
-        if (decision === 'NO') return { bg: 'rgba(239, 68, 68, 0.1)', color: '#ef4444', border: '1px solid rgba(239, 68, 68, 0.2)' };
-        return { bg: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6', border: '1px solid rgba(59, 130, 246, 0.2)' };
+        if (decision === 'YES') return { bg: '#DDF3E5', color: '#176B3A', border: '1px solid #b7e4c7' };
+        if (decision === 'NO') return { bg: '#FCE4E4', color: '#A52222', border: '1px solid #f5c2c7' };
+        return { bg: '#E2EEFA', color: '#245A91', border: '1px solid #b6d4fe' };
     };
 
     let displayedComplaints = currentUser

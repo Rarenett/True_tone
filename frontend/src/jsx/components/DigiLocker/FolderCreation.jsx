@@ -902,17 +902,14 @@ const FolderCreation = () => {
             </Form.Group>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="danger light" onClick={handleCloseModal}>
+            <Button variant="secondary" className="btn-close-custom" onClick={handleCloseModal}>
               Cancel
             </Button>
             <Button
               variant="primary"
+              className="btn-save-custom"
               type="submit"
               disabled={submitting}
-              style={{
-                backgroundColor: "rgb(61, 53, 119)",
-                borderColor: "rgb(61, 53, 119)",
-              }}
             >
               {submitting
                 ? "Saving..."
@@ -986,19 +983,16 @@ const FolderCreation = () => {
             </div>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" size="sm" onClick={() => setShowSettingsModal(false)} disabled={savingSettings}>
+            <Button variant="secondary" className="btn-close-custom" size="sm" onClick={() => setShowSettingsModal(false)} disabled={savingSettings}>
               {isAdmin ? "Cancel" : "Close"}
             </Button>
             {isAdmin && (
               <Button
                 variant="primary"
+                className="btn-save-custom"
                 size="sm"
                 type="submit"
                 disabled={savingSettings || !editingDefaultEmail.trim()}
-                style={{
-                  backgroundColor: 'rgb(61, 53, 119)',
-                  borderColor: 'rgb(61, 53, 119)',
-                }}
               >
                 {savingSettings ? 'Saving...' : 'Save Default Email'}
               </Button>

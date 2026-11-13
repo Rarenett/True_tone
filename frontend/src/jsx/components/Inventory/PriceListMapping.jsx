@@ -828,22 +828,22 @@ const PriceListMapping = () => {
                     </Row>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleCloseFormModal}>
+                    <Button variant="secondary" className="btn-close-custom" onClick={handleCloseFormModal}>
                         Cancel
                     </Button>
                     {bulkEditMode ? (
                         <Button
-                            variant="success"
+                            variant="primary"
                             onClick={handleSaveBulkUpdate}
                             disabled={submitting || !selectedPriceList || !applicableDate}
-                            className="text-white"
-                            style={{ backgroundColor: '#2bc155', borderColor: '#2bc155' }}
+                            className="btn-save-custom"
                         >
                             {submitting ? 'Updating...' : 'Update'}
                         </Button>
                     ) : (
                         <Button
                             variant="primary"
+                            className="btn-save-custom"
                             onClick={handleSaveMapping}
                             disabled={submitting || !selectedPriceList || !applicableDate}
                         >
@@ -916,7 +916,7 @@ const PriceListMapping = () => {
                     )}
                 </Modal.Body>
                 <Modal.Footer style={{ backgroundColor: isDark ? '#2F363E' : '#ffffff', borderTop: isDark ? '1px solid #444' : '1px solid #dee2e6' }}>
-                    <Button variant="secondary" onClick={() => { setShowViewLedgersModal(false); setViewLedgersSearchTerm(''); }}>
+                    <Button variant="secondary" className="btn-close-custom" onClick={() => { setShowViewLedgersModal(false); setViewLedgersSearchTerm(''); }}>
                         Close
                     </Button>
                 </Modal.Footer>

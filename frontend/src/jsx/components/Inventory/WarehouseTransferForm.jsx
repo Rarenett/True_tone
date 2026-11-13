@@ -1394,7 +1394,7 @@ const ItemEntryPopup = ({ item, isInterState, warehouses, stockItems, units = []
                     <div className="d-flex align-items-center gap-3">
                         <div style={{
                             width: '48px', height: '48px', borderRadius: '50%',
-                            background: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)',
+                            background: 'var(--form-icon-color, var(--cc-primary, #5b0111))',
                             display: 'flex', alignItems: 'center', justifyContent: 'center',
                             flexShrink: 0,
                         }}>
@@ -1658,8 +1658,8 @@ const ItemEntryPopup = ({ item, isInterState, warehouses, stockItems, units = []
                 {/* footer */}
                 <div className="sof-modal-footer">
                     <div className="d-flex justify-content-end w-100 gap-2">
-                        <button type="button" className="btn btn-secondary" style={{ padding: '6px 20px' }} onClick={onClose}>Cancel</button>
-                        <button type="button" className="btn btn-primary" style={{ padding: '6px 20px' }} onClick={handleSave}>Save</button>
+                        <button type="button" className="btn btn-secondary btn-close-custom" style={{ padding: '6px 20px' }} onClick={onClose}>Cancel</button>
+                        <button type="button" className="btn btn-primary btn-save-custom" style={{ padding: '6px 20px' }} onClick={handleSave}>Save</button>
                     </div>
                 </div>
             </div>
@@ -1688,7 +1688,7 @@ const ItemViewPopup = ({ item, isInterState, onClose, productConfig }) => {
                     <div className="d-flex align-items-center gap-3">
                         <div style={{
                             width: '48px', height: '48px', borderRadius: '50%',
-                            background: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)',
+                            background: 'var(--form-icon-color, var(--cc-primary, #5b0111))',
                             display: 'flex', alignItems: 'center', justifyContent: 'center',
                             flexShrink: 0,
                         }}>
@@ -2665,7 +2665,7 @@ const WarehouseTransferForm = ({ formData, setFormData, onSave, onCancel, isEdit
 
                 {/* ── FOOTER ACTIONS ─────────────────────────────────────────── */}
                 <div className="sof-footer d-flex justify-content-end gap-3 mt-4 mb-5">
-                    <button id="main-cancel-btn" type="button" className="btn btn-light px-4 py-2 fw-bold" onClick={onCancel} style={{ borderRadius: '8px' }} onKeyDown={(e) => {
+                    <button id="main-cancel-btn" type="button" className="btn btn-light btn-close-custom px-4 py-2 fw-bold" onClick={onCancel} style={{ borderRadius: '8px' }} onKeyDown={(e) => {
                         if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
                             e.preventDefault();
                             document.getElementById('main-save-btn')?.focus();
@@ -2673,7 +2673,7 @@ const WarehouseTransferForm = ({ formData, setFormData, onSave, onCancel, isEdit
                     }}>
                         Cancel
                     </button>
-                    <button id="main-save-btn" type="submit" className="btn btn-primary px-4 py-2 fw-bold shadow-sm" style={{ borderRadius: '8px', background: 'var(--fd-accent)' }} onKeyDown={(e) => {
+                    <button id="main-save-btn" type="submit" className="btn btn-primary btn-save-custom px-4 py-2 fw-bold shadow-sm" style={{ borderRadius: '8px' }} onKeyDown={(e) => {
                         if (e.key === 'Enter') {
                             // Default submit action fires automatically for type="submit", but we ensure it clicks
                             e.currentTarget.click();

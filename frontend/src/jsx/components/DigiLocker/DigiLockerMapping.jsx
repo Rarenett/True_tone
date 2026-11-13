@@ -1451,14 +1451,14 @@ const DigiLockerMapping = () => {
             </div>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="danger light" onClick={handleCloseEditEmailModal} disabled={savingOtpEmail}>
+            <Button variant="secondary" className="btn-close-custom" onClick={handleCloseEditEmailModal} disabled={savingOtpEmail}>
               Cancel
             </Button>
             <Button
               variant="primary"
+              className="btn-save-custom"
               type="submit"
               disabled={savingOtpEmail}
-              style={{ backgroundColor: "rgb(61, 53, 119)", borderColor: "rgb(61, 53, 119)" }}
             >
               {savingOtpEmail ? (
                 <>
@@ -1581,18 +1581,15 @@ const DigiLockerMapping = () => {
             </div>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="danger light" size="sm" onClick={handleCloseTransferModal} disabled={transferSubmitting}>
+            <Button variant="secondary" className="btn-close-custom" size="sm" onClick={handleCloseTransferModal} disabled={transferSubmitting}>
               Cancel
             </Button>
             <Button
               variant="primary"
+              className="btn-save-custom"
               size="sm"
               type="submit"
               disabled={transferSubmitting || !newOwnerEmployeeId}
-              style={{
-                backgroundColor: "rgb(61, 53, 119)",
-                borderColor: "rgb(61, 53, 119)",
-              }}
             >
               {transferSubmitting ? "Transferring..." : "Transfer Ownership"}
             </Button>
@@ -1657,7 +1654,7 @@ const DigiLockerMapping = () => {
           )}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" size="sm" onClick={() => setShowHistoryModal(false)}>
+          <Button variant="secondary" size="sm" className="btn-close-custom" onClick={() => setShowHistoryModal(false)}>
             Close
           </Button>
         </Modal.Footer>
@@ -1872,17 +1869,14 @@ const DigiLockerMapping = () => {
             </div>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="danger light" onClick={handleCloseModal}>
+            <Button variant="secondary" className="btn-close-custom" onClick={handleCloseModal}>
               Cancel
             </Button>
             <Button
               variant="primary"
+              className="btn-save-custom"
               type="submit"
               disabled={submitting}
-              style={{
-                backgroundColor: "rgb(61, 53, 119)",
-                borderColor: "rgb(61, 53, 119)",
-              }}
             >
               {submitting
                 ? "Saving..."

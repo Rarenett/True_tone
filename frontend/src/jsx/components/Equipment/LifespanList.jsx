@@ -178,12 +178,12 @@ const LifespanList = () => {
                 .sgfm-modal .modal-icon-circle {
                     width: 48px;
                     height: 48px;
-                    background-color: #2ece8a;
+                    background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    box-shadow: 0 4px 10px rgba(46, 206, 138, 0.2);
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
                 }
                 .sgfm-modal .modal-close-x {
                     border: none;
@@ -231,20 +231,20 @@ const LifespanList = () => {
                 }
                 .sgfm-modal .form-control-custom::placeholder { color: #94a3b8; }
                 .sgfm-modal .btn-close-custom {
-                    background-color: #7A70BA !important;
-                    color: white !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
-                    border: none !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     cursor: pointer;
                     transition: background-color 0.2s;
                 }
-                .sgfm-modal .btn-close-custom:hover { background-color: #6357a7 !important; }
+                .sgfm-modal .btn-close-custom:hover { background-color: var(--cancel-btn-hover-color, #ebd8c5) !important; }
                 .sgfm-modal .btn-save-custom {
-                    background-color: #2ece8a !important;
-                    color: white !important;
+                    background-color: var(--save-btn-color, #5b0111) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
@@ -253,7 +253,7 @@ const LifespanList = () => {
                     cursor: pointer;
                     transition: background-color 0.2s;
                 }
-                .sgfm-modal .btn-save-custom:hover { background-color: #26b277 !important; }
+                .sgfm-modal .btn-save-custom:hover { background-color: var(--save-btn-hover-color, #42010c) !important; }
                 @keyframes modalFeedback {
                     0%, 100% { transform: scale(1); }
                     20%, 60% { transform: scale(0.99) translateX(-4px); }
@@ -420,7 +420,7 @@ const LifespanList = () => {
             >
                 <div className="modal-header-custom">
                     <div className="d-flex align-items-center gap-3">
-                        <div className="modal-icon-circle" style={{ backgroundColor: '#2ece8a' }}>
+                        <div className="modal-icon-circle">
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" fill="white"/>
                             </svg>

@@ -290,7 +290,7 @@ const ParticipantManagement = ({ show, onHide, meetingId, meetingTitle }) => {
  <h6 className="fw-bold mb-3 text-uppercase ls-1" style={{ fontSize: '0.75rem', color: '#ef4444' }}>
  <i className="fa fa-ban me-1"></i>
  Unavailable — Already Booked
- <span style={{ background: '#fee2e2', color: '#ef4444', borderRadius: 50, padding: '1px 8px', fontSize: 11, fontWeight: 700, marginLeft: 6 }}>
+ <span style={{ background: '#FCE4E4', color: '#A52222', borderRadius: 50, padding: '1px 8px', fontSize: 11, fontWeight: 700, marginLeft: 6 }}>
  {bookedParticipants.length}
  </span>
  </h6>
@@ -336,7 +336,7 @@ const ParticipantManagement = ({ show, onHide, meetingId, meetingTitle }) => {
  <Button
  variant="light"
  onClick={() => onHide(false)}
- className="px-5 py-2 fw-bold border rounded-3"
+ className="btn-close-custom px-5 py-2 fw-bold border rounded-3"
  >
  Cancel
  </Button>

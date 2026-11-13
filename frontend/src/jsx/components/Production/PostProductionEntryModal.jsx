@@ -384,7 +384,7 @@ const PostProductionEntryModal = ({ show, onHide, productionLine, onSuccess }) =
             <style>{`
                 .pl-modal .modal-content { border-radius: 16px !important; border: none !important; box-shadow: 0 10px 40px rgba(0,0,0,0.12) !important; overflow: hidden; }
                 .pl-modal .modal-header-custom { display:flex; align-items:center; justify-content:space-between; padding:24px 28px 16px; border-bottom:1px solid #f1f5f9; }
-                .pl-modal .modal-icon-circle { width:48px; height:48px; background:#2ece8a; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 10px rgba(46,206,138,.2); }
+                .pl-modal .modal-icon-circle { width:48px; height:48px; background: var(--form-icon-color, var(--cc-primary, #5b0111)) !important; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12); }
                 .pl-modal .modal-close-x { border:none; background:transparent; font-size:24px; color:#aaa; cursor:pointer; }
                 .pl-modal .modal-close-x:hover { color:#555; }
                 .pl-modal .modal-body-custom { padding:24px 28px; }
@@ -393,8 +393,8 @@ const PostProductionEntryModal = ({ show, onHide, productionLine, onSuccess }) =
                 .pl-modal .form-control-custom { border:1px solid #cbd5e1; border-radius:10px; padding:12px 16px; font-size:14px; color:inherit; width:100%; transition:border-color .2s,box-shadow .2s; }
                 .pl-modal .form-select-custom { border:1px solid #cbd5e1; border-radius:10px; padding:12px 16px; font-size:14px; color:inherit; width:100%; transition:border-color .2s,box-shadow .2s; }
                 .pl-modal .form-control-custom:focus, .pl-modal .form-select-custom:focus { outline:none; border-color:#2ece8a; box-shadow:0 0 0 3px rgba(46,206,138,.15); }
-                .pl-modal .btn-close-custom { background:#7A70BA !important; color:white !important; border-radius:8px !important; font-weight:500 !important; font-size:14px !important; padding:10px 24px !important; border:none !important; cursor:pointer; }
-                .pl-modal .btn-save-custom { background:#2ece8a !important; color:white !important; border-radius:8px !important; font-weight:500 !important; font-size:14px !important; padding:10px 24px !important; border:none !important; cursor:pointer; }
+                .pl-modal .btn-close-custom { background: var(--cancel-btn-color, #f5e9dc) !important; color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important; border-radius:8px !important; font-weight:500 !important; font-size:14px !important; padding:10px 24px !important; border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important; cursor:pointer; }
+                .pl-modal .btn-save-custom { background: var(--save-btn-color, #5b0111) !important; color: var(--save-btn-text-color, #ffffff) !important; border-radius:8px !important; font-weight:500 !important; font-size:14px !important; padding:10px 24px !important; border: none !important; cursor:pointer; }
                 .pl-modal-table-header { background-color: #f8fafc; border-bottom: 1px solid #e2e8f0; }
                 .pl-modal-table-container { border: 1px solid #f1f5f9; border-radius: 10px; overflow: hidden; }
                 .pl-modal-table-row { border-bottom: 1px solid #f1f5f9; }

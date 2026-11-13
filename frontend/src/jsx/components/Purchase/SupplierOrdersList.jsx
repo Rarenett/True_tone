@@ -134,36 +134,45 @@ const SupplierOrdersList = () => {
         const s = status.toLowerCase();
         if (s.includes('deliver') || s.includes('complet')) {
             return {
-                bg: '#ecfdf5',
-                color: '#047857',
-                border: '#a7f3d0',
-                dot: '#10b981',
+                bg: '#DDF3E5',
+                color: '#176B3A',
+                border: '#b7e4c7',
+                dot: '#176B3A',
                 label: status
             };
         }
         if (s.includes('cancel') || s.includes('reject') || s.includes('not approved')) {
             return {
-                bg: '#fff1f2',
-                color: '#be123c',
-                border: '#fecdd3',
-                dot: '#f43f5e',
+                bg: '#FCE4E4',
+                color: '#A52222',
+                border: '#f5c2c7',
+                dot: '#A52222',
                 label: status
             };
         }
-        if (s.includes('approv') || s.includes('ship')) {
+        if (s.includes('approv')) {
             return {
-                bg: '#eff6ff',
-                color: '#1d4ed8',
-                border: '#bfdbfe',
-                dot: '#3b82f6',
+                bg: '#DDF3E5',
+                color: '#176B3A',
+                border: '#b7e4c7',
+                dot: '#176B3A',
+                label: status
+            };
+        }
+        if (s.includes('ship')) {
+            return {
+                bg: '#E2EEFA',
+                color: '#245A91',
+                border: '#b6d4fe',
+                dot: '#245A91',
                 label: status
             };
         }
         return {
-            bg: '#fffbeb',
-            color: '#b45309',
-            border: '#fde68a',
-            dot: '#f59e0b',
+            bg: '#F5EBD8',
+            color: '#805B20',
+            border: '#e6d5b8',
+            dot: '#805B20',
             label: status || 'Pending'
         };
     };
@@ -951,8 +960,8 @@ const SupplierOrdersList = () => {
                                                 <span style={{
                                                     fontSize: '0.72rem',
                                                     fontWeight: '600',
-                                                    color: order.approval_status === 'Approved' ? '#059669' : '#e11d48',
-                                                    background: order.approval_status === 'Approved' ? '#d1fae5' : '#ffe4e6',
+                                                    color: order.approval_status === 'Approved' ? '#176B3A' : '#A52222',
+                                                    background: order.approval_status === 'Approved' ? '#DDF3E5' : '#FCE4E4',
                                                     padding: '2px 8px',
                                                     borderRadius: '6px',
                                                 }}>

@@ -450,10 +450,8 @@ const ApprovelessEntryConfig = () => {
                                             setNotes('');
                                             setIsEnabled(true);
                                         }}
-                                        className="btn text-white fw-medium shadow-sm"
+                                        className="btn btn-close-custom fw-medium shadow-sm"
                                         style={{
-                                            backgroundColor: '#7A70BA',
-                                            borderColor: '#7A70BA',
                                             borderRadius: '8px',
                                             fontSize: '14px',
                                             padding: '8px 22px'
@@ -463,11 +461,9 @@ const ApprovelessEntryConfig = () => {
                                     </button>
                                     <button
                                         type="submit"
-                                        className="btn text-white fw-medium shadow-sm d-flex align-items-center justify-content-center"
+                                        className="btn btn-save-custom fw-medium shadow-sm d-flex align-items-center justify-content-center"
                                         disabled={submitting || !selectedDepartment || !selectedEmployee}
                                         style={{
-                                            backgroundColor: '#2ece8a',
-                                            borderColor: '#2ece8a',
                                             borderRadius: '8px',
                                             fontSize: '14px',
                                             padding: '8px 24px',

@@ -58,6 +58,62 @@ const hexDarken = (hex, amount) => {
   return hslToHex(h, s, Math.max(0, l - amount));
 };
 
+const DEFAULT_FORM_ICON_COLOR = '#5b0111';
+const DEFAULT_CANCEL_BTN_COLOR = '#f5e9dc';
+const DEFAULT_SAVE_BTN_COLOR = '#5b0111';
+
+const normalizeHex = (hex, fallback) => {
+  if (!hex || typeof hex !== 'string' || !hex.startsWith('#')) return fallback;
+  if (hex.length === 4) {
+    return `#${hex[1]}${hex[1]}${hex[2]}${hex[2]}${hex[3]}${hex[3]}`;
+  }
+  return hex.length === 7 ? hex : fallback;
+};
+
+const getHexBrightness = (hex) => {
+  const fullHex = normalizeHex(hex, '#ffffff');
+  const r = parseInt(fullHex.slice(1, 3), 16);
+  const g = parseInt(fullHex.slice(3, 5), 16);
+  const b = parseInt(fullHex.slice(5, 7), 16);
+  if (Number.isNaN(r) || Number.isNaN(g) || Number.isNaN(b)) return 255;
+  return (r * 299 + g * 587 + b * 114) / 1000;
+};
+
+const applyCancelBtnVars = (color) => {
+  if (typeof document === 'undefined') return;
+  const resolved = normalizeHex(color, DEFAULT_CANCEL_BTN_COLOR);
+  const isDefault = resolved.toLowerCase() === DEFAULT_CANCEL_BTN_COLOR;
+  const hoverColor = isDefault ? '#ebd8c5' : hexDarken(resolved, 6);
+  const activeColor = isDefault ? '#e2cbba' : hexDarken(resolved, 11);
+  const brightness = getHexBrightness(resolved);
+  const textColor = brightness < 145 ? '#ffffff' : 'var(--cc-primary, #5b0111)';
+  const borderColor = isDefault ? '#e2cbba' : hexDarken(resolved, 10);
+  const borderHoverColor = isDefault ? '#d6baa4' : hexDarken(resolved, 16);
+
+  const root = document.documentElement.style;
+  root.setProperty('--cancel-btn-color', resolved);
+  root.setProperty('--cancel-btn-hover-color', hoverColor);
+  root.setProperty('--cancel-btn-active-color', activeColor);
+  root.setProperty('--cancel-btn-text-color', textColor);
+  root.setProperty('--cancel-btn-border-color', borderColor);
+  root.setProperty('--cancel-btn-border-hover-color', borderHoverColor);
+};
+
+const applySaveBtnVars = (color) => {
+  if (typeof document === 'undefined') return;
+  const resolved = normalizeHex(color, DEFAULT_SAVE_BTN_COLOR);
+  const hoverColor = hexDarken(resolved, 6);
+  const activeColor = hexDarken(resolved, 11);
+  const brightness = getHexBrightness(resolved);
+  const textColor = brightness >= 185 ? '#1e293b' : '#ffffff';
+
+  const root = document.documentElement.style;
+  root.setProperty('--save-btn-color', resolved);
+  root.setProperty('--save-btn-hover-color', hoverColor);
+  root.setProperty('--save-btn-active-color', activeColor);
+  root.setProperty('--save-btn-text-color', textColor);
+};
+
 const applyCustomThemeStyles = (primaryHex, navHeaderHex, headerHex, sidebarHex) => {
   if (typeof window === 'undefined') return;
   const root = document.documentElement;
@@ -65,6 +121,11 @@ const applyCustomThemeStyles = (primaryHex, navHeaderHex, headerHex, sidebarHex)
   // Primary
   root.style.setProperty('--cc-primary', primaryHex);
   root.style.setProperty('--cc-primary-dark', hexDarken(primaryHex, 8));
+  const primaryBrightness = getHexBrightness(primaryHex);
+  const isDarkPrimary = primaryBrightness < 115;
+  root.style.setProperty('--cc-primary-on-dark', isDarkPrimary ? '#e2e8f0' : primaryHex);
+  root.style.setProperty('--cc-primary-on-dark-hover', isDarkPrimary ? '#ffffff' : primaryHex);
+  root.style.setProperty('--cc-primary-border-on-dark', isDarkPrimary ? '#94a3b8' : primaryHex);
   const pr = parseInt(primaryHex.slice(1, 3), 16);
   const pg = parseInt(primaryHex.slice(3, 5), 16);
   const pb = parseInt(primaryHex.slice(5, 7), 16);
@@ -142,7 +203,15 @@ const ThemeContextProvider = (props) => {
   const [windowWidth, setWindowWidth] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);
   const [formIconColor, setFormIconColor] = useState(
-    localStorage.getItem("formIconColor") || "#2bc155"
+    localStorage.getItem("formIconColor") || DEFAULT_FORM_ICON_COLOR
+  );
+
+  const [cancelBtnColor, setCancelBtnColor] = useState(
+    localStorage.getItem("cancelBtnColor") || DEFAULT_CANCEL_BTN_COLOR
+  );
+
+  const [saveBtnColor, setSaveBtnColor] = useState(
+    localStorage.getItem("saveBtnColor") || DEFAULT_SAVE_BTN_COLOR
   );
 
     const changeFormIconColor = (color) => {
@@ -151,9 +220,33 @@ const ThemeContextProvider = (props) => {
       patchThemeToBackend({ theme_form_icon_color: color });
     };
 
+    const changeCancelBtnColor = (color) => {
+      const nextColor = color || DEFAULT_CANCEL_BTN_COLOR;
+      setCancelBtnColor(nextColor);
+      localStorage.setItem("cancelBtnColor", nextColor);
+      applyCancelBtnVars(nextColor);
+      patchThemeToBackend({ theme_cancel_btn_color: color });
+    };
+
+    const changeSaveBtnColor = (color) => {
+      const nextColor = color || DEFAULT_SAVE_BTN_COLOR;
+      setSaveBtnColor(nextColor);
+      localStorage.setItem("saveBtnColor", nextColor);
+      applySaveBtnVars(nextColor);
+      patchThemeToBackend({ theme_save_btn_color: color });
+    };
+
   useEffect(() => {
     document.documentElement.style.setProperty('--form-icon-color', formIconColor);
   }, [formIconColor]);
+
+  useEffect(() => {
+    applyCancelBtnVars(cancelBtnColor);
+  }, [cancelBtnColor]);
+
+  useEffect(() => {
+    applySaveBtnVars(saveBtnColor);
+  }, [saveBtnColor]);
 
   const [customPrimaryColor, setCustomPrimaryColor] = useState(
     localStorage.getItem("customPrimaryColor") || "#2bc155"
@@ -317,9 +410,31 @@ const ThemeContextProvider = (props) => {
           localStorage.setItem('formIconColor', data.theme_form_icon_color);
           document.documentElement.style.setProperty('--form-icon-color', data.theme_form_icon_color);
         } else {
-          setFormIconColor('#2bc155');
-          localStorage.setItem('formIconColor', '#2bc155');
-          document.documentElement.style.setProperty('--form-icon-color', '#2bc155');
+          setFormIconColor(DEFAULT_FORM_ICON_COLOR);
+          localStorage.setItem('formIconColor', DEFAULT_FORM_ICON_COLOR);
+          document.documentElement.style.setProperty('--form-icon-color', DEFAULT_FORM_ICON_COLOR);
+        }
+
+        // Cancel / Close Button Color
+        if (data.theme_cancel_btn_color) {
+          setCancelBtnColor(data.theme_cancel_btn_color);
+          localStorage.setItem('cancelBtnColor', data.theme_cancel_btn_color);
+          applyCancelBtnVars(data.theme_cancel_btn_color);
+        } else {
+          setCancelBtnColor(DEFAULT_CANCEL_BTN_COLOR);
+          localStorage.setItem('cancelBtnColor', DEFAULT_CANCEL_BTN_COLOR);
+          applyCancelBtnVars(DEFAULT_CANCEL_BTN_COLOR);
+        }
+
+        // Save / Submit Button Color
+        if (data.theme_save_btn_color) {
+          setSaveBtnColor(data.theme_save_btn_color);
+          localStorage.setItem('saveBtnColor', data.theme_save_btn_color);
+          applySaveBtnVars(data.theme_save_btn_color);
+        } else {
+          setSaveBtnColor(DEFAULT_SAVE_BTN_COLOR);
+          localStorage.setItem('saveBtnColor', DEFAULT_SAVE_BTN_COLOR);
+          applySaveBtnVars(DEFAULT_SAVE_BTN_COLOR);
         }
       })
       .catch(() => { /* silently ignore — localStorage values remain */ });
@@ -441,6 +556,13 @@ const ThemeContextProvider = (props) => {
       localStorage.setItem("primaryColor", name);
     };
     const changeCustomPrimaryColor = (color) => {
+      if (!color) {
+        setCustomPrimaryColor("#2bc155");
+        localStorage.setItem("customPrimaryColor", "#2bc155");
+        changePrimaryColor("color_1");
+        patchThemeToBackend({ theme_primary_color: "" });
+        return;
+      }
       setCustomPrimaryColor(color);
       localStorage.setItem("customPrimaryColor", color);
       changePrimaryColor("color_custom");
@@ -552,13 +674,23 @@ const ThemeContextProvider = (props) => {
         theme_bg_color: '',
         theme_font_color: '',
         theme_form_icon_color: '',
+        theme_cancel_btn_color: '',
+        theme_save_btn_color: '',
         login_panel_color: '#1a3a72',
       });
 
-      // 7. Reset formIconColor state
-      setFormIconColor('#2bc155');
-      localStorage.setItem('formIconColor', '#2bc155');
-      document.documentElement.style.setProperty('--form-icon-color', '#2bc155');
+      // 7. Reset formIconColor, cancelBtnColor, and saveBtnColor state
+      setFormIconColor(DEFAULT_FORM_ICON_COLOR);
+      localStorage.setItem('formIconColor', DEFAULT_FORM_ICON_COLOR);
+      document.documentElement.style.setProperty('--form-icon-color', DEFAULT_FORM_ICON_COLOR);
+
+      setCancelBtnColor(DEFAULT_CANCEL_BTN_COLOR);
+      localStorage.setItem('cancelBtnColor', DEFAULT_CANCEL_BTN_COLOR);
+      applyCancelBtnVars(DEFAULT_CANCEL_BTN_COLOR);
+
+      setSaveBtnColor(DEFAULT_SAVE_BTN_COLOR);
+      localStorage.setItem('saveBtnColor', DEFAULT_SAVE_BTN_COLOR);
+      applySaveBtnVars(DEFAULT_SAVE_BTN_COLOR);
 
       // 8. Reset login panel color in companySettings localStorage
       const settings = JSON.parse(localStorage.getItem('companySettings') || '{}');
@@ -817,21 +949,34 @@ const ThemeContextProvider = (props) => {
         retries++;
       }, 200);
 
-      // Set CSS variables on documentElement
-      const r = parseInt(customPrimaryColor.slice(1, 3), 16);
-      const g = parseInt(customPrimaryColor.slice(3, 5), 16);
-      const b = parseInt(customPrimaryColor.slice(5, 7), 16);
-      
-      document.documentElement.style.setProperty('--primary', customPrimaryColor);
-      document.documentElement.style.setProperty('--rgba-primary-1', `rgba(${r}, ${g}, ${b}, 0.1)`);
-      document.documentElement.style.setProperty('--rgba-primary-2', `rgba(${r}, ${g}, ${b}, 0.2)`);
-      document.documentElement.style.setProperty('--rgba-primary-3', `rgba(${r}, ${g}, ${b}, 0.3)`);
-      document.documentElement.style.setProperty('--rgba-primary-4', `rgba(${r}, ${g}, ${b}, 0.4)`);
-      document.documentElement.style.setProperty('--rgba-primary-5', `rgba(${r}, ${g}, ${b}, 0.5)`);
-      document.documentElement.style.setProperty('--rgba-primary-6', `rgba(${r}, ${g}, ${b}, 0.6)`);
-      document.documentElement.style.setProperty('--rgba-primary-7', `rgba(${r}, ${g}, ${b}, 0.7)`);
-      document.documentElement.style.setProperty('--rgba-primary-8', `rgba(${r}, ${g}, ${b}, 0.8)`);
-      document.documentElement.style.setProperty('--rgba-primary-9', `rgba(${r}, ${g}, ${b}, 0.9)`);
+      // Set CSS variables on documentElement only when custom primary color is active
+      if (primaryColor === "color_custom" && customPrimaryColor && customPrimaryColor.startsWith('#') && customPrimaryColor.length >= 7) {
+        const r = parseInt(customPrimaryColor.slice(1, 3), 16);
+        const g = parseInt(customPrimaryColor.slice(3, 5), 16);
+        const b = parseInt(customPrimaryColor.slice(5, 7), 16);
+
+        document.documentElement.style.setProperty('--primary', customPrimaryColor);
+        document.documentElement.style.setProperty('--primary-hover', hexDarken(customPrimaryColor, 8));
+        document.documentElement.style.setProperty('--primary-dark', hexDarken(customPrimaryColor, 18));
+        document.documentElement.style.setProperty('--bs-primary', customPrimaryColor);
+        document.documentElement.style.setProperty('--rgba-primary-1', `rgba(${r}, ${g}, ${b}, 0.1)`);
+        document.documentElement.style.setProperty('--rgba-primary-2', `rgba(${r}, ${g}, ${b}, 0.2)`);
+        document.documentElement.style.setProperty('--rgba-primary-3', `rgba(${r}, ${g}, ${b}, 0.3)`);
+        document.documentElement.style.setProperty('--rgba-primary-4', `rgba(${r}, ${g}, ${b}, 0.4)`);
+        document.documentElement.style.setProperty('--rgba-primary-5', `rgba(${r}, ${g}, ${b}, 0.5)`);
+        document.documentElement.style.setProperty('--rgba-primary-6', `rgba(${r}, ${g}, ${b}, 0.6)`);
+        document.documentElement.style.setProperty('--rgba-primary-7', `rgba(${r}, ${g}, ${b}, 0.7)`);
+        document.documentElement.style.setProperty('--rgba-primary-8', `rgba(${r}, ${g}, ${b}, 0.8)`);
+        document.documentElement.style.setProperty('--rgba-primary-9', `rgba(${r}, ${g}, ${b}, 0.9)`);
+      } else {
+        document.documentElement.style.removeProperty('--primary');
+        document.documentElement.style.removeProperty('--primary-hover');
+        document.documentElement.style.removeProperty('--primary-dark');
+        document.documentElement.style.removeProperty('--bs-primary');
+        for (let i = 1; i <= 9; i++) {
+          document.documentElement.style.removeProperty(`--rgba-primary-${i}`);
+        }
+      }
 
       return () => {
         clearInterval(interval);
@@ -840,6 +985,13 @@ const ThemeContextProvider = (props) => {
       const styleTag = document.getElementById('custom-theme-styles');
       if (styleTag) {
         styleTag.remove();
+      }
+      document.documentElement.style.removeProperty('--primary');
+      document.documentElement.style.removeProperty('--primary-hover');
+      document.documentElement.style.removeProperty('--primary-dark');
+      document.documentElement.style.removeProperty('--bs-primary');
+      for (let i = 1; i <= 9; i++) {
+        document.documentElement.style.removeProperty(`--rgba-primary-${i}`);
       }
     }
   }, [
@@ -864,24 +1016,41 @@ const ThemeContextProvider = (props) => {
   }, [customBgColor]);
 
   useEffect(() => {
+    const isDarkSurface = customBgColor
+      ? getHexBrightness(customBgColor) < 128
+      : background?.value === 'dark';
+
     if (customFontColor) {
+      const effectiveFontColor =
+        isDarkSurface && getHexBrightness(customFontColor) < 145
+          ? '#e2e8f0'
+          : customFontColor;
       body.classList.add('has-custom-font-color');
-      document.documentElement.style.setProperty('--custom-font-color', customFontColor);
+      document.documentElement.style.setProperty('--custom-font-color', effectiveFontColor);
     } else {
       body.classList.remove('has-custom-font-color');
       document.documentElement.style.removeProperty('--custom-font-color');
     }
-  }, [customFontColor]);
+  }, [customFontColor, customBgColor, background]);
 
   useEffect(() => {
+    const isSidebarDark =
+      sidebarColor === 'color_custom'
+        ? getHexBrightness(customSidebarColor) < 150
+        : background?.value === 'dark';
+
     if (customSidebarFontColor) {
+      const effectiveSidebarFontColor =
+        isSidebarDark && getHexBrightness(customSidebarFontColor) < 165
+          ? '#e2e8f0'
+          : customSidebarFontColor;
       body.classList.add('has-custom-sidebar-font');
-      document.documentElement.style.setProperty('--custom-sidebar-font-color', customSidebarFontColor);
+      document.documentElement.style.setProperty('--custom-sidebar-font-color', effectiveSidebarFontColor);
     } else {
       body.classList.remove('has-custom-sidebar-font');
       document.documentElement.style.removeProperty('--custom-sidebar-font-color');
     }
-  }, [customSidebarFontColor]);
+  }, [customSidebarFontColor, sidebarColor, customSidebarColor, background]);
 
   return (
     <ThemeContext.Provider
@@ -930,6 +1099,10 @@ const ThemeContextProvider = (props) => {
         chatBoxToggle,
         formIconColor,
         changeFormIconColor,
+        cancelBtnColor,
+        changeCancelBtnColor,
+        saveBtnColor,
+        changeSaveBtnColor,
         bodyFont,
         changeBodyFont,
         customPrimaryColor,

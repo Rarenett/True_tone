@@ -47,7 +47,7 @@ const QuickAddDepartmentModal = ({ onSave, onCancel }) => {
             </Form.Group>
 
             <div className="modal-actions" style={{ marginTop: '20px', display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
-                <Button variant="secondary" onClick={onCancel}>Cancel</Button>
+                <Button variant="secondary" onClick={onCancel}> className="btn-close-custom"Cancel</Button>
                 <Button variant="primary" type="submit" disabled={loading}>
                     {loading ? 'Saving...' : 'Save'}
                 </Button>

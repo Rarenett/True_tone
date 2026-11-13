@@ -123,26 +123,26 @@ const renderOfferBenefitLines = (offer, onSelectTier) => {
 };
 
 const OUTCOME_META = {
-    'Contacted': { label: 'Contacted', badgeClass: 'badge-info light', color: '#0284c7', bg: '#f5fafe', icon: 'fa-phone' },
-    'Interested': { label: 'Interested', badgeClass: 'badge-success light', color: '#68CF29', bg: '#ecfae4', icon: 'fa-star' },
-    'Call Back Later': { label: 'Call Back Later', badgeClass: 'badge-warning light', color: '#FFAC30', bg: '#fff2dd', icon: 'fa-clock' },
-    'Converted': { label: 'Converted to Opportunity', badgeClass: 'badge-success light', color: '#68CF29', bg: '#ecfae4', icon: 'fa-trophy' },
-    'Converted to Opportunity': { label: 'Converted to Opportunity', badgeClass: 'badge-success light', color: '#68CF29', bg: '#ecfae4', icon: 'fa-trophy' },
-    'Busy': { label: 'Busy', badgeClass: 'badge-warning light', color: '#FFAC30', bg: '#fff2dd', icon: 'fa-hourglass-half' },
-    'Not Answered': { label: 'Not Answered', badgeClass: 'badge-dark light', color: '#6e6e6e', bg: '#eeeeee', icon: 'fa-phone' },
-    'Not Interested': { label: 'Not Interested', badgeClass: 'badge-danger light', color: '#FF4C41', bg: '#ffefee', icon: 'fa-thumbs-down' },
-    'Wrong Number': { label: 'Wrong Number', badgeClass: 'badge-danger light', color: '#FF4C41', bg: '#ffefee', icon: 'fa-times-circle' },
+    'Contacted': { label: 'Contacted', badgeClass: 'badge-info light', color: '#245A91', bg: '#E2EEFA', icon: 'fa-phone' },
+    'Interested': { label: 'Interested', badgeClass: 'badge-success light', color: '#176B3A', bg: '#DDF3E5', icon: 'fa-star' },
+    'Call Back Later': { label: 'Call Back Later', badgeClass: 'badge-warning light', color: '#805B20', bg: '#F5EBD8', icon: 'fa-clock' },
+    'Converted': { label: 'Converted to Opportunity', badgeClass: 'badge-success light', color: '#176B3A', bg: '#DDF3E5', icon: 'fa-trophy' },
+    'Converted to Opportunity': { label: 'Converted to Opportunity', badgeClass: 'badge-success light', color: '#176B3A', bg: '#DDF3E5', icon: 'fa-trophy' },
+    'Busy': { label: 'Busy', badgeClass: 'badge-orange light', color: '#99500C', bg: '#FCEBD9', icon: 'fa-hourglass-half' },
+    'Not Answered': { label: 'Not Answered', badgeClass: 'badge-dark light', color: '#50545C', bg: '#ECEDEF', icon: 'fa-phone' },
+    'Not Interested': { label: 'Not Interested', badgeClass: 'badge-danger light', color: '#A52222', bg: '#FCE4E4', icon: 'fa-thumbs-down' },
+    'Wrong Number': { label: 'Wrong Number', badgeClass: 'badge-danger light', color: '#A52222', bg: '#FCE4E4', icon: 'fa-times-circle' },
 };
 
 const getOutcomeBadgeClass = (outcome) => {
-    return OUTCOME_META[outcome]?.badgeClass || 'badge-secondary light';
+    return OUTCOME_META[outcome]?.badgeClass || 'badge-light';
 };
 
 const PRIORITY_META = {
-    'Critical': { label: 'Critical', color: '#FF4C41', bg: '#ffefee', badgeClass: 'badge-danger light' },
-    'High':     { label: 'High',     color: '#FFAC30', bg: '#fff2dd', badgeClass: 'badge-warning light' },
-    'Medium':   { label: 'Medium',   color: '#51A6F5', bg: '#f5fafe', badgeClass: 'badge-info light' },
-    'Low':      { label: 'Low',      color: '#68CF29', bg: '#ecfae4', badgeClass: 'badge-success light' },
+    'Critical': { label: 'Critical', color: '#A52222', bg: '#FCE4E4', badgeClass: 'badge-danger light' },
+    'High':     { label: 'High',     color: '#780116', bg: '#F5E1E5', badgeClass: 'badge-primary light' },
+    'Medium':   { label: 'Medium',   color: '#805B20', bg: '#F5EBD8', badgeClass: 'badge-warning light' },
+    'Low':      { label: 'Low',      color: '#245A91', bg: '#E2EEFA', badgeClass: 'badge-info light' },
 };
 
 const getPriorityBadgeClass = (priority) => {
@@ -2026,7 +2026,7 @@ const CallerMyLeads = () => {
                     )}
                 </Modal.Body>
                 <Modal.Footer style={{ borderTop: '1px solid #e2e8f0' }}>
-                    <Button variant="light" size="sm" onClick={() => setHistoryTarget(null)} style={{ borderRadius: '6px' }}>
+                    <Button variant="light" size="sm" className="btn-close-custom" onClick={() => setHistoryTarget(null)} style={{ borderRadius: '6px' }}>
                         Close
                     </Button>
                     <Button
@@ -2746,7 +2746,7 @@ const CallerMyLeads = () => {
                                 )}
                             </Modal.Body>
                             <Modal.Footer style={{ borderTop: '1px solid #e2e8f0' }}>
-                                <Button variant="secondary" onClick={handleCloseReassignModal} disabled={reassignSubmitting} style={{ borderRadius: '6px', fontSize: '12px' }}>
+                                <Button variant="secondary" onClick={handleCloseReassignModal} className="btn-close-custom" disabled={reassignSubmitting} style={{ borderRadius: '6px', fontSize: '12px' }}>
                                     Cancel
                                 </Button>
                                 {isManagerTarget ? (
@@ -2882,7 +2882,7 @@ const CallerMyLeads = () => {
                                                 <tr>
                                                     <td className="text-muted font-w600" style={{ padding: '10px 12px' }}>Status:</td>
                                                     <td style={{ padding: '10px 12px' }}>
-                                                        <span className="badge" style={{ backgroundColor: '#ede9fe', color: '#6d28d9', border: '1px solid #ddd6fe' }}>
+                                                        <span className="badge" style={{ backgroundColor: '#EEE8F7', color: '#65428B', border: '1px solid #ddd6fe' }}>
                                                             {viewReassignTarget.reassignment_status === 'REQUESTED' ? 'Reassignment Requested' : 'Reassigned'}
                                                         </span>
                                                     </td>

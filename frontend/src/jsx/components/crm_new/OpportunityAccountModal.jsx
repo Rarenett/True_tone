@@ -1555,6 +1555,7 @@ const OpportunityAccountModal = ({
                 <div className="d-flex align-items-center gap-2">
                     <Button
                         variant="secondary"
+                        className="btn-close-custom"
                         onClick={closeModal}
                         disabled={saving}
                         style={{ borderRadius: '8px', fontSize: '13px', minWidth: '90px' }}
@@ -1576,6 +1577,7 @@ const OpportunityAccountModal = ({
                     {!readOnly && (
                         <Button
                             variant="success"
+                            className="btn-save-custom"
                             onClick={handleSave}
                             disabled={saving}
                             style={{ borderRadius: '8px', fontSize: '13px', fontWeight: 600 }}

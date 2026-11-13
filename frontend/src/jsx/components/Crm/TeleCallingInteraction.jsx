@@ -572,7 +572,7 @@ const TeleCallingInteraction = () => {
                             </div>
                             <div className="d-flex gap-3">
                                 <button type="submit" className="primary-flow-btn btn-ready w-100 py-4">SYNC TO PIPELINE</button>
-                                <button type="button" className="btn btn-light px-4" style={{ borderRadius: '20px' }} onClick={() => setShowUpdateModal(false)}>CANCEL</button>
+                                <button type="button" className="btn btn-light px-4 btn-close-custom" style={{ borderRadius: '20px' }} onClick={() => setShowUpdateModal(false)}>CANCEL</button>
                             </div>
                         </form>
                     </div>

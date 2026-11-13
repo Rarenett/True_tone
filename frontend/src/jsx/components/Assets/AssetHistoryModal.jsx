@@ -21,12 +21,12 @@ const AssetHistoryModal = ({
         .scfm-modal .modal-icon-circle {
             width: 48px;
             height: 48px;
-            background-color: var(--fd-accent, #7A70BA);
+            background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 10px rgba(122, 112, 186, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
         }
         .scfm-modal .modal-close-x {
             border: none;
@@ -53,17 +53,17 @@ const AssetHistoryModal = ({
             border-radius: 0 0 16px 16px;
         }
         .scfm-modal .btn-close-custom {
-            background-color: #7A70BA !important;
-            color: white !important;
+            background-color: var(--cancel-btn-color, #f5e9dc) !important;
+            color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
             border-radius: 8px !important;
             font-weight: 500 !important;
             font-size: 14px !important;
             padding: 10px 24px !important;
-            border: none !important;
+            border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
             cursor: pointer;
             transition: background-color 0.2s;
         }
-        .scfm-modal .btn-close-custom:hover { background-color: #6357a7 !important; }
+        .scfm-modal .btn-close-custom:hover { background-color: var(--cancel-btn-hover-color, #ebd8c5) !important; }
     `;
 
     const Icons = {
@@ -293,22 +293,22 @@ const AssetHistoryModal = ({
                                                 {(ev.dueDate || ev.overdueDays || ev.returnedDate !== undefined) && (
                                                     <div className="d-flex flex-wrap gap-2 mb-3">
                                                         {ev.dueDate && (
-                                                            <span className="badge" style={{ backgroundColor: '#f1f5f9', color: '#475569', fontWeight: '500', padding: '6px 10px', fontSize: '0.8rem' }}>
+                                                            <span className="badge" style={{ backgroundColor: '#ECEDEF', color: '#50545C', fontWeight: '500', padding: '6px 10px', fontSize: '0.8rem' }}>
                                                                 {Icons.Calendar} Due: {ev.dueDate}
                                                             </span>
                                                         )}
                                                         {ev.returnedDate && (
-                                                            <span className="badge" style={{ backgroundColor: '#f1f5f9', color: '#475569', fontWeight: '500', padding: '6px 10px', fontSize: '0.8rem' }}>
+                                                            <span className="badge" style={{ backgroundColor: '#ECEDEF', color: '#50545C', fontWeight: '500', padding: '6px 10px', fontSize: '0.8rem' }}>
                                                                 {Icons.Calendar} Returned: {ev.returnedDate} <span style={{opacity: 0.7, fontWeight: '400', marginLeft: '4px'}}>({ev.heldDays} day{ev.heldDays !== 1 ? 's' : ''} held)</span>
                                                             </span>
                                                         )}
                                                         {!ev.returnedDate && ev.type !== 'Returned' && (
-                                                            <span className="badge" style={{ backgroundColor: '#f1f5f9', color: '#475569', fontWeight: '500', padding: '6px 10px', fontSize: '0.8rem' }}>
+                                                            <span className="badge" style={{ backgroundColor: '#ECEDEF', color: '#50545C', fontWeight: '500', padding: '6px 10px', fontSize: '0.8rem' }}>
                                                                 {Icons.Clock} Held for: {ev.heldDays} day{ev.heldDays !== 1 ? 's' : ''}
                                                             </span>
                                                         )}
                                                         {ev.overdueDays && (
-                                                            <span className="badge" style={{ backgroundColor: '#fef2f2', color: '#ef4444', fontWeight: '600', padding: '6px 10px', fontSize: '0.8rem' }}>
+                                                            <span className="badge" style={{ backgroundColor: '#FCE4E4', color: '#A52222', fontWeight: '600', padding: '6px 10px', fontSize: '0.8rem' }}>
                                                                 {Icons.AlertCircle} Overdue: {ev.overdueDays} day(s)
                                                             </span>
                                                         )}

@@ -305,7 +305,7 @@ const ManageLanguage = () => {
                 .language-custom-modal .modal-icon-circle {
                     width: 48px;
                     height: 48px;
-                    background-color: #38bdf8;
+                    background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
@@ -366,20 +366,20 @@ const ManageLanguage = () => {
                     border-color: #2ece8a;
                 }
                 .language-custom-modal .btn-close-custom {
-                    background-color: #7A70BA !important;
-                    color: white !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
-                    border: none !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     cursor: pointer;
                     transition: background-color 0.2s;
                 }
-                .language-custom-modal .btn-close-custom:hover { background-color: #6357a7 !important; }
+                .language-custom-modal .btn-close-custom:hover { background-color: var(--cancel-btn-hover-color, #ebd8c5) !important; }
                 .language-custom-modal .btn-save-custom {
-                    background-color: #2ece8a !important;
-                    color: white !important;
+                    background-color: var(--save-btn-color, #5b0111) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
@@ -388,7 +388,7 @@ const ManageLanguage = () => {
                     cursor: pointer;
                     transition: background-color 0.2s;
                 }
-                .language-custom-modal .btn-save-custom:hover { background-color: #26b277 !important; }
+                .language-custom-modal .btn-save-custom:hover { background-color: var(--save-btn-hover-color, #42010c) !important; }
                 .search-input-custom {
                     height: 38px !important;
                     border-radius: 6px !important;

@@ -281,9 +281,9 @@ table tbody tr:hover,
 
 /* Universal Save and Close Button styling */
 .btn-universal-close {
-  background-color: #7A70BA !important;
-  border-color: #7A70BA !important;
-  color: #fff !important;
+  background-color: var(--cancel-btn-color, #f5e9dc) !important;
+  border-color: var(--cancel-btn-border-color, #e2cbba) !important;
+  color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
   height: 42px !important;
   padding: 0 24px !important;
   border-radius: 10px !important;
@@ -293,19 +293,18 @@ table tbody tr:hover,
   align-items: center !important;
   justify-content: center !important;
   transition: all 0.2s ease !important;
-  border: none !important;
+  border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
 }
 .btn-universal-close:hover {
-  background-color: #695fa3 !important;
-  border-color: #695fa3 !important;
-  color: #fff !important;
-  opacity: 0.9;
+  background-color: var(--cancel-btn-hover-color, #ebd8c5) !important;
+  border-color: var(--cancel-btn-border-hover-color, #d6baa4) !important;
+  color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
 }
 
 .btn-universal-save {
-  background-color: #2bc155 !important;
-  border-color: #2bc155 !important;
-  color: #fff !important;
+  background-color: var(--save-btn-color, #5b0111) !important;
+  border-color: var(--save-btn-color, #5b0111) !important;
+  color: var(--save-btn-text-color, #ffffff) !important;
   height: 42px !important;
   padding: 0 24px !important;
   border-radius: 10px !important;
@@ -318,10 +317,9 @@ table tbody tr:hover,
   border: none !important;
 }
 .btn-universal-save:hover {
-  background-color: #22a844 !important;
-  border-color: #22a844 !important;
-  color: #fff !important;
-  opacity: 0.9;
+  background-color: var(--save-btn-hover-color, #42010c) !important;
+  border-color: var(--save-btn-hover-color, #42010c) !important;
+  color: var(--save-btn-text-color, #ffffff) !important;
 }
 
 /* =====================================================

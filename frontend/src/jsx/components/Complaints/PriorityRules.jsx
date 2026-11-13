@@ -182,8 +182,8 @@ const PriorityRules = () => {
                                             borderRadius: '20px', 
                                             fontSize: '0.8rem', 
                                             fontWeight: '700',
-                                            backgroundColor: r.priority_level === 'Critical' ? '#fee2e2' : r.priority_level === 'High' ? '#fff7ed' : r.priority_level === 'Medium' ? '#f0f9ff' : '#f0fdf4',
-                                            color: r.priority_level === 'Critical' ? '#991b1b' : r.priority_level === 'High' ? '#9a3412' : r.priority_level === 'Medium' ? '#075985' : '#166534'
+                                            backgroundColor: r.priority_level === 'Critical' ? '#FCE4E4' : r.priority_level === 'High' ? '#F5E1E5' : r.priority_level === 'Medium' ? '#E2EEFA' : '#DDF3E5',
+                                            color: r.priority_level === 'Critical' ? '#A52222' : r.priority_level === 'High' ? '#780116' : r.priority_level === 'Medium' ? '#245A91' : '#176B3A'
                                         }}>
                                             {r.priority_level}
                                         </span>
@@ -195,8 +195,8 @@ const PriorityRules = () => {
                                             borderRadius: '20px', 
                                             fontSize: '0.8rem', 
                                             fontWeight: '700',
-                                            backgroundColor: r.is_active ? '#ecfdf5' : '#fef2f2',
-                                            color: r.is_active ? '#10b981' : '#ef4444'
+                                            backgroundColor: r.is_active ? '#F5E1E5' : '#ECEDEF',
+                                            color: r.is_active ? '#780116' : '#50545C'
                                         }}>
                                             {r.is_active ? 'Active' : 'Inactive'}
                                         </span>

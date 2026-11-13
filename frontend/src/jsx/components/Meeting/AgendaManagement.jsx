@@ -957,41 +957,36 @@ const AgendaManagement = ({ show, onHide, meetingId, meetingTitle }) => {
 
                 {/* ── FOOTER ── */}
                 <Modal.Footer style={{ background: '#fff', borderTop: '1px solid #f1f5f9', padding: '16px 28px' }}>
-                    <button onClick={() => onHide(false)} type="button"
+                    <button onClick={() => onHide(false)} type="button" className="btn-close-custom"
                         style={{
-                            background: '#f3f4f6', border: 'none', borderRadius: 8, padding: '8px 20px',
-                            fontSize: 13, fontWeight: 500, color: '#374151', cursor: 'pointer',
+                            borderRadius: 8, padding: '8px 20px',
+                            fontSize: 13, fontWeight: 500, cursor: 'pointer',
                             transition: 'all 0.2s'
                         }}
-                        onMouseEnter={e => e.currentTarget.style.background = '#e5e7eb'}
-                        onMouseLeave={e => e.currentTarget.style.background = '#f3f4f6'}
                     >
                         Close
                     </button>
 
                     {showForm ? (
                         <>
-                            <button onClick={() => setShowForm(false)} type="button"
+                            <button onClick={() => setShowForm(false)} type="button" className="btn-close-custom"
                                 style={{
-                                    background: '#f3f4f6', border: 'none', borderRadius: 8, padding: '8px 20px',
-                                    fontSize: 13, fontWeight: 500, color: '#374151', cursor: 'pointer',
+                                    borderRadius: 8, padding: '8px 20px',
+                                    fontSize: 13, fontWeight: 500, cursor: 'pointer',
                                     transition: 'all 0.2s'
                                 }}
-                                onMouseEnter={e => e.currentTarget.style.background = '#e5e7eb'}
-                                onMouseLeave={e => e.currentTarget.style.background = '#f3f4f6'}
                             >
                                  Back
                             </button>
                             <button
+                                className="btn-save-custom"
                                 style={{
-                                    background: 'linear-gradient(135deg, #6366f1, #4f46e5)',
-                                    border: 'none', borderRadius: 8, padding: '8px 24px',
-                                    fontSize: 13, fontWeight: 600, color: '#fff', cursor: 'pointer',
-                                    boxShadow: '0 4px 14px #6366f140',
+                                    borderRadius: 8, padding: '8px 24px',
+                                    fontSize: 13, fontWeight: 600, cursor: 'pointer',
                                     transition: 'all 0.2s cubic-bezier(0.34,1.56,0.64,1)',
                                 }}
-                                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 20px #6366f155'; }}
-                                onMouseLeave={e => { e.currentTarget.style.transform = 'none'; e.currentTarget.style.boxShadow = '0 4px 14px #6366f140'; }}
+                                onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; }}
+                                onMouseLeave={e => { e.currentTarget.style.transform = 'none'; }}
                                 onClick={handleSubmitAll}
                                 disabled={loading}
                             >

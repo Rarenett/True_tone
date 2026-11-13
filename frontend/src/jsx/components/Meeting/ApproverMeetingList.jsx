@@ -75,9 +75,9 @@ const ApproverMeetingList = () => {
     const [viewAgendas, setViewAgendas] = useState([]);
 
     const statusConfig = {
-        approved: { bg: '#dcfce7', color: '#15803d', dot: '#22c55e' },
-        rejected: { bg: '#fee2e2', color: '#dc2626', dot: '#ef4444' },
-        pending: { bg: '#fef9c3', color: '#92400e', dot: '#f59e0b' },
+        approved: { bg: '#DDF3E5', color: '#176B3A', dot: '#176B3A' },
+        rejected: { bg: '#FCE4E4', color: '#A52222', dot: '#A52222' },
+        pending: { bg: '#F5EBD8', color: '#805B20', dot: '#805B20' },
     };
 
     // Per-meeting hasContent cache: { [meetingId]: bool }
@@ -606,7 +606,7 @@ const ApproverMeetingList = () => {
                 </Modal.Body>
 
                 <Modal.Footer style={{ borderTop: '1px solid #f1f5f9', padding: '12px 20px' }}>
-                    <Button variant="secondary" size="sm" onClick={() => setViewModal(false)}>
+                    <Button variant="secondary" size="sm" className="btn-close-custom" onClick={() => setViewModal(false)}>
                         Close
                     </Button>
                 </Modal.Footer>

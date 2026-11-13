@@ -418,9 +418,9 @@ const BatchEntryModal = ({
                     background: #fafbfc;
                 }
                 .batch-modal .btn-cancel-bm {
-                    background: #7A70BA !important;
-                    color: white !important;
-                    border: none !important;
+                    background: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     border-radius: 8px !important;
                     font-size: 13px !important;
                     font-weight: 500 !important;

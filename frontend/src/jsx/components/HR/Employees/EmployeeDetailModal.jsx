@@ -1780,12 +1780,12 @@ const EmployeeDetailModal = ({ show, onHide, candidateId, employeeId, employeeNa
                 .emp-custom-modal .modal-icon-circle {
                     width: 48px;
                     height: 48px;
-                    background-color: #2ece8a;
+                    background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    box-shadow: 0 4px 10px rgba(46, 206, 138, 0.2);
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
                 }
                 .emp-custom-modal .modal-close-x {
                     border: none;
@@ -1873,22 +1873,22 @@ const EmployeeDetailModal = ({ show, onHide, candidateId, employeeId, employeeNa
                     border-color: #2ece8a;
                 }
                 .emp-custom-modal .btn-close-custom {
-                    background-color: #7A70BA !important;
-                    color: white !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
-                    border: none !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     cursor: pointer;
                     transition: background-color 0.2s, transform 0.1s;
                 }
                 .emp-custom-modal .btn-close-custom:hover {
-                    background-color: #6357a7 !important;
+                    background-color: var(--cancel-btn-hover-color, #ebd8c5) !important;
                 }
                 .emp-custom-modal .btn-save-custom {
-                    background-color: #2ece8a !important;
-                    color: white !important;
+                    background-color: var(--save-btn-color, #5b0111) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
@@ -1898,7 +1898,7 @@ const EmployeeDetailModal = ({ show, onHide, candidateId, employeeId, employeeNa
                     transition: background-color 0.2s, transform 0.1s;
                 }
                 .emp-custom-modal .btn-save-custom:hover {
-                    background-color: #26b277 !important;
+                    background-color: var(--save-btn-hover-color, #42010c) !important;
                 }
                 
                 /* Extra styles for Employee forms */
@@ -2243,17 +2243,17 @@ const EmployeeDetailModal = ({ show, onHide, candidateId, employeeId, employeeNa
                                                                     </td>
                                                                     <td style={{ padding: '10px 14px' }}>
                                                                         {item.status === 'active' ? (
-                                                                            <span className="badge" style={{ backgroundColor: 'rgba(46, 206, 138, 0.15)', color: '#0d9488', border: '1px solid rgba(46, 206, 138, 0.3)', padding: '5px 9px', borderRadius: '6px', fontWeight: 600, fontSize: '11px', display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-                                                                                <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#0d9488' }} />
+                                                                            <span className="badge" style={{ backgroundColor: '#F5E1E5', color: '#780116', border: '1px solid #e8c2ca', padding: '5px 9px', borderRadius: '6px', fontWeight: 600, fontSize: '11px', display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+                                                                                <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#780116' }} />
                                                                                 Active
                                                                             </span>
                                                                         ) : item.status === 'upcoming' ? (
-                                                                            <span className="badge" style={{ backgroundColor: 'rgba(109, 74, 255, 0.12)', color: '#6d4aff', border: '1px solid rgba(109, 74, 255, 0.25)', padding: '5px 9px', borderRadius: '6px', fontWeight: 600, fontSize: '11px', display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-                                                                                <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#6d4aff' }} />
+                                                                            <span className="badge" style={{ backgroundColor: '#EEE8F7', color: '#65428B', border: '1px solid #d8cef0', padding: '5px 9px', borderRadius: '6px', fontWeight: 600, fontSize: '11px', display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+                                                                                <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#65428B' }} />
                                                                                 Upcoming
                                                                             </span>
                                                                         ) : (
-                                                                            <span className="badge" style={{ backgroundColor: '#f1f5f9', color: '#64748b', border: '1px solid #e2e8f0', padding: '5px 9px', borderRadius: '6px', fontWeight: 500, fontSize: '11px' }}>
+                                                                            <span className="badge" style={{ backgroundColor: '#ECEDEF', color: '#50545C', border: '1px solid #d1d5db', padding: '5px 9px', borderRadius: '6px', fontWeight: 500, fontSize: '11px' }}>
                                                                                 Past
                                                                             </span>
                                                                         )}

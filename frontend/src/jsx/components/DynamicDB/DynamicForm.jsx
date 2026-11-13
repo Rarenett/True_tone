@@ -174,12 +174,11 @@ const DynamicForm = ({ fields, values, onChange, onSubmit, onCancel, saving, mod
 
       <div className="d-flex justify-content-end gap-2 mt-4 pt-3 border-top">
         <Button
+          variant="secondary"
+          className="btn-close-custom"
           onClick={onCancel}
           disabled={saving}
           style={{
-            backgroundColor: '#7e76cb',
-            borderColor: '#7e76cb',
-            color: 'white',
             height: '38px',
             borderRadius: '8px',
             fontSize: '14px',

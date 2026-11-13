@@ -26,10 +26,10 @@ const formatDateTime = (iso) => {
 };
 
 const PRIORITY_META = {
-    'Critical': { label: 'Critical', color: '#FF4C41', bg: '#ffefee', badgeClass: 'badge-danger light' },
-    'High':     { label: 'High',     color: '#FFAC30', bg: '#fff2dd', badgeClass: 'badge-warning light' },
-    'Medium':   { label: 'Medium',   color: '#51A6F5', bg: '#f5fafe', badgeClass: 'badge-info light' },
-    'Low':      { label: 'Low',      color: '#68CF29', bg: '#ecfae4', badgeClass: 'badge-success light' },
+    'Critical': { label: 'Critical', color: '#A52222', bg: '#FCE4E4', badgeClass: 'badge-danger light' },
+    'High':     { label: 'High',     color: '#780116', bg: '#F5E1E5', badgeClass: 'badge-primary light' },
+    'Medium':   { label: 'Medium',   color: '#805B20', bg: '#F5EBD8', badgeClass: 'badge-warning light' },
+    'Low':      { label: 'Low',      color: '#245A91', bg: '#E2EEFA', badgeClass: 'badge-info light' },
 };
 
 const getPriorityBadgeClass = (priority) => {
@@ -37,15 +37,15 @@ const getPriorityBadgeClass = (priority) => {
 };
 
 const OUTCOME_META = {
-    'Contacted': { label: 'Contacted', badgeClass: 'badge-info light', color: '#0284c7', bg: '#f5fafe' },
-    'Interested': { label: 'Interested', badgeClass: 'badge-success light', color: '#68CF29', bg: '#ecfae4' },
-    'Call Back Later': { label: 'Call Back Later', badgeClass: 'badge-warning light', color: '#FFAC30', bg: '#fff2dd' },
-    'Converted': { label: 'Converted to Opportunity', badgeClass: 'badge-success light', color: '#68CF29', bg: '#ecfae4' },
-    'Converted to Opportunity': { label: 'Converted to Opportunity', badgeClass: 'badge-success light', color: '#68CF29', bg: '#ecfae4' },
-    'Busy': { label: 'Busy', badgeClass: 'badge-warning light', color: '#FFAC30', bg: '#fff2dd' },
-    'Not Answered': { label: 'Not Answered', badgeClass: 'badge-dark light', color: '#6e6e6e', bg: '#eeeeee' },
-    'Not Interested': { label: 'Not Interested', badgeClass: 'badge-danger light', color: '#FF4C41', bg: '#ffefee' },
-    'Wrong Number': { label: 'Wrong Number', badgeClass: 'badge-danger light', color: '#FF4C41', bg: '#ffefee' },
+    'Contacted': { label: 'Contacted', badgeClass: 'badge-info light', color: '#245A91', bg: '#E2EEFA' },
+    'Interested': { label: 'Interested', badgeClass: 'badge-success light', color: '#176B3A', bg: '#DDF3E5' },
+    'Call Back Later': { label: 'Call Back Later', badgeClass: 'badge-warning light', color: '#805B20', bg: '#F5EBD8' },
+    'Converted': { label: 'Converted to Opportunity', badgeClass: 'badge-success light', color: '#176B3A', bg: '#DDF3E5' },
+    'Converted to Opportunity': { label: 'Converted to Opportunity', badgeClass: 'badge-success light', color: '#176B3A', bg: '#DDF3E5' },
+    'Busy': { label: 'Busy', badgeClass: 'badge-orange light', color: '#99500C', bg: '#FCEBD9' },
+    'Not Answered': { label: 'Not Answered', badgeClass: 'badge-dark light', color: '#50545C', bg: '#ECEDEF' },
+    'Not Interested': { label: 'Not Interested', badgeClass: 'badge-danger light', color: '#A52222', bg: '#FCE4E4' },
+    'Wrong Number': { label: 'Wrong Number', badgeClass: 'badge-danger light', color: '#A52222', bg: '#FCE4E4' },
 };
 
 const getOutcomeBadgeClass = (outcome) => {
@@ -1156,7 +1156,7 @@ const ConvertedOpportunities = () => {
                     )}
                 </Modal.Body>
                 <Modal.Footer style={{ borderTop: '1px solid #e2e8f0' }}>
-                    <Button variant="light" size="sm" onClick={() => setHistoryTarget(null)} style={{ borderRadius: '6px' }}>
+                    <Button variant="light" size="sm" className="btn-close-custom" onClick={() => setHistoryTarget(null)} style={{ borderRadius: '6px' }}>
                         Close
                     </Button>
                 </Modal.Footer>

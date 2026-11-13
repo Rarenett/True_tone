@@ -2392,8 +2392,8 @@ const DriverOperationsScreen = () => {
                                     <span style={fieldLabel}>Status</span>
                                     <div style={{ 
                                         display: 'inline-block',
-                                        background: viewingOrder.status === 'Pending' ? '#fef3c7' : '#d1fae5', 
-                                        color: viewingOrder.status === 'Pending' ? '#b45309' : '#047857',
+                                        background: viewingOrder.status === 'Pending' ? '#F5EBD8' : '#DDF3E5', 
+                                        color: viewingOrder.status === 'Pending' ? '#805B20' : '#176B3A',
                                         padding: '2px 8px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: '700'
                                     }}>{viewingOrder.status || 'Pending'}</div>
                                 </div>

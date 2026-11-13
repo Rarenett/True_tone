@@ -37,10 +37,10 @@ const CandidateDetailModal = ({ show, onHide, viewId }) => {
             'Pending': 'warning',
             'Selected': 'success',
             'Rejected': 'danger',
-            'Waitlisted': 'info',
-            'Resigned': 'secondary'
+            'Waitlisted': 'orange',
+            'Resigned': 'light'
         };
-        return <Badge bg={badgeMap[status] || 'secondary'} className="fs-6">{status}</Badge>;
+        return <Badge bg={badgeMap[status] || 'light'} className="fs-6">{status}</Badge>;
     };
 
     const InfoField = ({ label, value }) => (

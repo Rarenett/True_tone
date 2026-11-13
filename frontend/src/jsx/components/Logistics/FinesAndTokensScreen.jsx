@@ -372,8 +372,8 @@ const FinesAndTokensScreen = () => {
                                             <td>
                                                 <span 
                                                     style={{ 
-                                                        background: f.status === 'Paid' ? 'rgba(16, 185, 129, 0.1)' : 'rgba(245, 159, 0, 0.1)', 
-                                                        color: f.status === 'Paid' ? '#10b981' : '#f59f00', 
+                                                        background: f.status === 'Paid' ? '#DDF3E5' : '#F5EBD8', 
+                                                        color: f.status === 'Paid' ? '#176B3A' : '#805B20', 
                                                         padding: '4px 10px', 
                                                         borderRadius: '6px', 
                                                         fontWeight: '600', 
@@ -486,22 +486,23 @@ const FinesAndTokensScreen = () => {
                     <form onSubmit={handleSubmit} onKeyDown={handleFormKeyDown}>
                         <style>{`
                             .pkg-close-btn {
-                                background-color: #7A70BA !important;
-                                color: white !important;
+                                background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                                color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                                 border-radius: 8px !important;
                                 font-weight: 500 !important;
                                 font-size: 14px !important;
                                 padding: 10px 24px !important;
-                                border: none !important;
+                                border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                                 cursor: pointer;
-                                transition: background-color 0.2s, transform 0.1s !important;
+                                transition: background-color 0.2s, border-color 0.2s, transform 0.1s !important;
                             }
                             .pkg-close-btn:hover {
-                                background-color: #6357a7 !important;
+                                background-color: var(--cancel-btn-hover-color, #ebd8c5) !important;
+                                border-color: var(--cancel-btn-border-hover-color, #d6baa4) !important;
                             }
                             .pkg-submit-btn {
-                                background-color: #2ece8a !important;
-                                color: white !important;
+                                background-color: var(--save-btn-color, #5b0111) !important;
+                                color: var(--save-btn-text-color, #ffffff) !important;
                                 border-radius: 8px !important;
                                 font-weight: 500 !important;
                                 font-size: 14px !important;
@@ -511,8 +512,8 @@ const FinesAndTokensScreen = () => {
                                 transition: background-color 0.2s, transform 0.1s !important;
                             }
                             .pkg-submit-btn:hover, .pkg-submit-btn:focus {
-                                background-color: #26b277 !important;
-                                box-shadow: 0 0 0 4px rgba(46, 206, 138, 0.4) !important;
+                                background-color: var(--save-btn-hover-color, #42010c) !important;
+                                box-shadow: 0 0 0 4px rgba(var(--cc-primary-rgb, 91, 1, 17), 0.2) !important;
                                 outline: none !important;
                             }
                         `}</style>

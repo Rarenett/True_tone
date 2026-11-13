@@ -181,8 +181,8 @@ const EmployeeList = () => {
                                                         <td>
                                                             {emp.has_login
                                                                 ? (emp.user_is_active === false
-                                                                    ? <span className="badge badge-warning light" style={{ color: '#d97706', backgroundColor: '#fef3c7' }}>Inactive</span>
-                                                                    : <span className="badge badge-success light">Active</span>)
+                                                                    ? <span className="badge badge-light">Inactive</span>
+                                                                    : <span className="badge badge-primary light">Active</span>)
                                                                 : <span className="badge badge-danger light">None</span>
                                                             }
                                                         </td>

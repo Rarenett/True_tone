@@ -34,7 +34,7 @@ const AssetDetailModal = ({
                         </div>
                         <div className="detail-item mb-3">
                             <label className="text-muted small fw-semibold mb-1 d-block">Asset Code</label>
-                            <div className="badge bg-soft-primary text-primary px-2 py-1" style={{ fontSize: '0.9rem', background: '#eff6ff' }}>{formData.asset_code || '—'}</div>
+                            <div className="badge px-2 py-1" style={{ fontSize: '0.9rem', background: '#F5E1E5', color: '#780116' }}>{formData.asset_code || '—'}</div>
                         </div>
                     </div>
 
@@ -48,7 +48,7 @@ const AssetDetailModal = ({
                         </div>
                         <div className="detail-item mb-3">
                             <label className="text-muted small fw-semibold mb-1 d-block">Condition</label>
-                            <span className={`status-badge badge-${formData.condition?.toLowerCase() || 'good'}`} style={{ backgroundColor: '#f8fafc', color: '#475569', border: '1px solid #e2e8f0' }}>
+                            <span className={`status-badge badge-${formData.condition?.toLowerCase() || 'good'}`} style={{ backgroundColor: '#ECEDEF', color: '#50545C', border: '1px solid #d1d5db' }}>
                                 {formData.condition || 'Good'}
                             </span>
                         </div>
@@ -190,7 +190,7 @@ const AssetDetailModal = ({
                 </div>
 
                 <div className="d-flex justify-content-end mt-5 pt-3" style={{ borderTop: '1px solid #f1f5f9' }}>
-                    <button type="button" onClick={onClose} className="btn btn-primary px-5 py-2 fw-bold" style={{ borderRadius: '10px' }}>Close</button>
+                    <button type="button" onClick={onClose} className="btn btn-secondary btn-close-custom px-5 py-2 fw-bold" style={{ borderRadius: '10px' }}>Close</button>
                 </div>
             </div>
         </div>

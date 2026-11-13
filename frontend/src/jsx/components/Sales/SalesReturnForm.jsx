@@ -992,11 +992,11 @@ const ItemEntryPopup = ({ item, isInterState, warehouses, stockItems, units, onS
             <div className="sof-modal" style={{ maxWidth: `${dynamicMaxWidth}px`, width: '95%' }} onClick={e => e.stopPropagation()}>
                 <div className="sof-modal-header d-flex align-items-center justify-content-between gap-3" style={{ background: '#ffffff', borderBottom: 'none', padding: '20px 24px 0 24px' }}>
                     <div className="d-flex align-items-center gap-3">
-                        <div style={{
+                        <div className="modal-icon-circle form-icon-circle" style={{
                             width: '48px',
                             height: '48px',
                             borderRadius: '50%',
-                            background: 'linear-gradient(135deg, #4f46e5 0%, #3730a3 100%)',
+                            background: 'var(--form-icon-color, var(--cc-primary, #5b0111))',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
@@ -1261,8 +1261,6 @@ const ItemEntryPopup = ({ item, isInterState, warehouses, stockItems, units, onS
                         onClick={handleSave}
                         ref={saveBtnRef}
                         style={{
-                            background: 'linear-gradient(135deg, #4f46e5, #3730a3)',
-                            boxShadow: '0 4px 16px rgba(79, 70, 229, 0.35)',
                             padding: '8px 20px',
                             fontSize: '0.85rem'
                         }}
@@ -1301,11 +1299,11 @@ const ItemViewPopup = ({ item, isInterState, onClose, productConfig, stockItems 
             <div className="sof-modal" style={{ maxWidth: `${dynamicMaxWidth}px`, width: '90%' }} onClick={e => e.stopPropagation()}>
                 <div className="sof-modal-header d-flex align-items-center justify-content-between gap-3" style={{ background: '#ffffff', borderBottom: 'none', padding: '18px 24px 0 24px' }}>
                     <div className="d-flex align-items-center gap-3">
-                        <div style={{
+                        <div className="modal-icon-circle form-icon-circle" style={{
                             width: '48px',
                             height: '48px',
                             borderRadius: '50%',
-                            background: 'linear-gradient(135deg, #4f46e5 0%, #3730a3 100%)',
+                            background: 'var(--form-icon-color, var(--cc-primary, #5b0111))',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
@@ -2790,8 +2788,6 @@ const SalesReturnForm = ({ formData = {}, setFormData, onSave, onCancel, isEditi
                         className="sof-btn-save"
                         disabled={isSubmitting}
                         style={{
-                            background: 'linear-gradient(135deg, #4f46e5, #3730a3)',
-                            boxShadow: '0 4px 16px rgba(79, 70, 229, 0.35)',
                             opacity: isSubmitting ? 0.7 : 1,
                             cursor: isSubmitting ? 'not-allowed' : 'pointer'
                         }}
@@ -3212,9 +3208,9 @@ const SalesReturnForm = ({ formData = {}, setFormData, onSave, onCancel, isEditi
                 }
 
                 .sof-btn-cancel {
-                    background: #ffffff;
-                    border: 1.5px solid #cbd5e1;
-                    color: #475569;
+                    background: var(--cancel-btn-color, #f5e9dc);
+                    border: 1.5px solid var(--cancel-btn-border-color, #e2cbba);
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111));
                     font-weight: 600;
                     font-size: 0.85rem;
                     height: 38px;
@@ -3225,13 +3221,15 @@ const SalesReturnForm = ({ formData = {}, setFormData, onSave, onCancel, isEditi
                 }
 
                 .sof-btn-cancel:hover {
-                    background-color: #f8fafc;
-                    border-color: #94a3b8;
+                    background-color: var(--cancel-btn-hover-color, #ebd8c5);
+                    border-color: var(--cancel-btn-border-hover-color, #d5b69f);
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111));
                 }
 
                 .sof-btn-save {
+                    background: var(--save-btn-color, #5b0111);
                     border: none;
-                    color: #ffffff;
+                    color: var(--save-btn-text-color, #ffffff);
                     font-weight: 700;
                     font-size: 0.85rem;
                     height: 38px;
@@ -3242,6 +3240,10 @@ const SalesReturnForm = ({ formData = {}, setFormData, onSave, onCancel, isEditi
                     display: inline-flex;
                     align-items: center;
                     justify-content: center;
+                }
+                .sof-btn-save:hover:not(:disabled) {
+                    background: var(--save-btn-hover-color, #42010c);
+                    color: var(--save-btn-text-color, #ffffff);
                 }
 
                 /* Popup Modal styles */

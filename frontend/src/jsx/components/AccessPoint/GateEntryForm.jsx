@@ -4042,9 +4042,9 @@ const GateEntryForm = ({ embedded = false, inModal = false, onClose = null, onSu
                                                     fontWeight: 600,
                                                     letterSpacing: '0.4px',
                                                     padding: '3px 10px',
-                                                    backgroundColor: (selectedAppointmentData.status === 'approved' || isApprovelessEligible) ? '#dcfce7' : '#fef3c7',
-                                                    color: (selectedAppointmentData.status === 'approved' || isApprovelessEligible) ? '#166534' : '#92400e',
-                                                    border: `1px solid ${(selectedAppointmentData.status === 'approved' || isApprovelessEligible) ? '#bbf7d0' : '#fde68a'}`,
+                                                    backgroundColor: (selectedAppointmentData.status === 'approved' || isApprovelessEligible) ? '#DDF3E5' : '#F5EBD8',
+                                                    color: (selectedAppointmentData.status === 'approved' || isApprovelessEligible) ? '#176B3A' : '#805B20',
+                                                    border: `1px solid ${(selectedAppointmentData.status === 'approved' || isApprovelessEligible) ? '#b7e4c7' : '#e6d5b8'}`,
                                                     whiteSpace: 'nowrap'
                                                 }}
                                             >
@@ -6838,22 +6838,22 @@ const GateEntryForm = ({ embedded = false, inModal = false, onClose = null, onSu
                     <form onSubmit={handleConfirmSwitchVehicle}>
                         <style>{`
                             .pkg-close-btn {
-                                background-color: #7A70BA !important;
-                                color: white !important;
+                                background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                                color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                                 border-radius: 8px !important;
                                 font-weight: 500 !important;
                                 font-size: 14px !important;
                                 padding: 10px 24px !important;
-                                border: none !important;
+                                border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                                 cursor: pointer;
                                 transition: background-color 0.2s, transform 0.1s !important;
                             }
                             .pkg-close-btn:hover {
-                                background-color: #6357a7 !important;
+                                background-color: var(--cancel-btn-hover-color, #ebd8c5) !important;
                             }
                             .pkg-submit-btn {
-                                background-color: #2ece8a !important;
-                                color: white !important;
+                                background-color: var(--save-btn-color, #5b0111) !important;
+                                color: var(--save-btn-text-color, #ffffff) !important;
                                 border-radius: 8px !important;
                                 font-weight: 500 !important;
                                 font-size: 14px !important;
@@ -6863,8 +6863,8 @@ const GateEntryForm = ({ embedded = false, inModal = false, onClose = null, onSu
                                 transition: background-color 0.2s, transform 0.1s !important;
                             }
                             .pkg-submit-btn:hover, .pkg-submit-btn:focus {
-                                background-color: #26b277 !important;
-                                box-shadow: 0 0 0 4px rgba(46, 206, 138, 0.4) !important;
+                                background-color: var(--save-btn-hover-color, #42010c) !important;
+                                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
                                 outline: none !important;
                             }
                             .veh-tab-btn {
@@ -6897,9 +6897,9 @@ const GateEntryForm = ({ embedded = false, inModal = false, onClose = null, onSu
                         <div style={{ marginBottom: '0' }}>
                             <div className="d-flex align-items-center justify-content-between gap-3 mb-1" style={{ paddingBottom: '4px' }}>
                                 <div className="d-flex align-items-center gap-3">
-                                    <div style={{
+                                    <div className="modal-icon-circle form-icon-circle" style={{
                                         width: '48px', height: '48px', borderRadius: '50%',
-                                        background: '#2ece8a',
+                                        background: 'var(--form-icon-color, var(--cc-primary, #5b0111))',
                                         display: 'flex', alignItems: 'center', justifyContent: 'center',
                                         flexShrink: 0,
                                     }}>
@@ -7124,9 +7124,9 @@ const GateEntryForm = ({ embedded = false, inModal = false, onClose = null, onSu
                 <div className="modal-header-custom" style={{ padding: '20px 24px 16px 24px' }}>
                     <div className="d-flex align-items-center gap-3">
                         <div 
-                            className="modal-icon-circle"
+                            className="modal-icon-circle form-icon-circle"
                             style={{
-                                background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)',
+                                background: 'var(--form-icon-color, var(--cc-primary, #5b0111))',
                                 width: '42px',
                                 height: '42px',
                                 borderRadius: '12px',
@@ -7650,32 +7650,32 @@ const GateEntryForm = ({ embedded = false, inModal = false, onClose = null, onSu
                 }
                 .quick-add-btn:active { transform: scale(0.96); }
                 .btn-close-custom {
-                    background-color: #7A70BA !important;
-                    border-color: #7A70BA !important;
-                    color: #fff !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    border-color: var(--cancel-btn-border-color, #e2cbba) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     font-weight: 500;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
                     border-radius: 8px;
                 }
                 .btn-close-custom:hover {
-                    background-color: #6357a7 !important;
-                    border-color: #6357a7 !important;
-                    color: #fff !important;
+                    background-color: var(--cancel-btn-hover-color, #ebd8c5) !important;
+                    border-color: var(--cancel-btn-border-hover-color, #d6baa4) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                 }
                 .btn-save-custom {
-                    background-color: #2ece8a !important;
-                    border-color: #2ece8a !important;
-                    color: #fff !important;
+                    background-color: var(--save-btn-color, #5b0111) !important;
+                    border-color: var(--save-btn-color, #5b0111) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                     font-weight: 500;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
                     border-radius: 8px;
                 }
                 .btn-save-custom:hover {
-                    background-color: #25b87a !important;
-                    border-color: #25b87a !important;
-                    color: #fff !important;
+                    background-color: var(--save-btn-hover-color, #42010c) !important;
+                    border-color: var(--save-btn-hover-color, #42010c) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                 }
                 .appointment-custom-modal .modal-content,
                 .item-custom-modal .modal-content {
@@ -7705,12 +7705,12 @@ const GateEntryForm = ({ embedded = false, inModal = false, onClose = null, onSu
                 .item-custom-modal .modal-icon-circle {
                     width: 48px;
                     height: 48px;
-                    background-color: #2ece8a;
+                    background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    box-shadow: 0 4px 10px rgba(46, 206, 138, 0.2);
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
                     flex-shrink: 0;
                 }
                 .appointment-custom-modal .modal-close-x,

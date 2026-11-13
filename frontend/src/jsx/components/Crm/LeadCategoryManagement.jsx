@@ -221,7 +221,7 @@ const LeadCategoryManagement = () => {
                                 {editingId ? 'UPDATE CONFIG' : 'SYNCHRONIZE'}
                             </button>
                             {editingId && (
-                                <button type="button" className="btn btn-outline-secondary" onClick={() => {setEditingId(null); setNewCategory({name:'', description:''})}}>
+                                <button type="button" className="btn btn-outline-secondary btn-close-custom" onClick={() => {setEditingId(null); setNewCategory({name:'', description:''})}}>
                                     Cancel
                                 </button>
                             )}

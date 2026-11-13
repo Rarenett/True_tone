@@ -223,12 +223,12 @@ const CrmOfferModal = ({ show, onHide }) => {
                 .offer-quick-modal .modal-icon-circle {
                     width: 44px;
                     height: 44px;
-                    background: linear-gradient(135deg, #2ece8a 0%, #20b073 100%);
+                    background: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 12px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    box-shadow: 0 4px 12px rgba(46, 206, 138, 0.25);
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
                 }
                 .offer-quick-modal .modal-close-x {
                     border: none;
@@ -485,7 +485,7 @@ const CrmOfferModal = ({ show, onHide }) => {
                                                     : (o.discount_amount ? `₹${parseFloat(o.discount_amount)}` : '—')}
                                             </td>
                                             <td>
-                                                <span className={`badge badge-sm badge-${o.status === 'Active' ? 'success' : o.status === 'Draft' ? 'secondary' : 'warning'} light`}>
+                                                <span className={`badge badge-sm badge-${o.status === 'Active' ? 'primary' : o.status === 'Draft' ? 'light' : (o.status === 'Expired' || o.status === 'Cancelled') ? 'danger' : 'warning'} light`}>
                                                     {o.status}
                                                 </span>
                                             </td>
@@ -518,7 +518,7 @@ const CrmOfferModal = ({ show, onHide }) => {
                 )}
             </div>
             <div className="modal-footer p-2 bg-light d-flex justify-content-end">
-                <button type="button" className="btn btn-secondary btn-sm" onClick={onHide} style={{ borderRadius: '6px' }}>
+                <button type="button" className="btn btn-secondary btn-sm btn-close-custom" onClick={onHide} style={{ borderRadius: '6px' }}>
                     Close
                 </button>
             </div>

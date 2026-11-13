@@ -937,8 +937,8 @@ const TaskAdminDashboard = () => {
             <Row>
               <Col md="12" className="d-flex justify-content-end mt-3">
                 <Button
-                  variant="danger light"
-                  className="me-2"
+                  variant="secondary"
+                  className="btn-close-custom me-2"
                   onClick={() => {
                     setShowModal(false);
                     setEditTaskId(null);
@@ -949,10 +949,7 @@ const TaskAdminDashboard = () => {
                 <Button
                   variant="primary"
                   type="submit"
-                  style={{
-                    backgroundColor: "rgb(61, 53, 119)",
-                    borderColor: "rgb(61, 53, 119)",
-                  }}
+                  className="btn-save-custom"
                 >
                   {editTaskId ? "Update Task" : "Assign Task"}
                 </Button>
@@ -1041,7 +1038,7 @@ const TaskAdminDashboard = () => {
               <div className="modal-footer">
                 <button
                   type="button"
-                  className="btn btn-danger light"
+                  className="btn btn-close-custom"
                   onClick={() => setViewTask(null)}
                 >
                   Close

@@ -654,13 +654,13 @@ function Header({ onNote }) {
                         width: '45px',
                         height: '45px',
                         borderRadius: '1.25rem',
-                        background: 'linear-gradient(135deg, #43dc80 0%, #2bb673 100%)',
+                        background: 'linear-gradient(135deg, var(--primary, #43dc80) 0%, var(--primary-hover, #2bb673) 100%)',
                         fontSize: '15px',
                         fontWeight: '700',
                         letterSpacing: '0.5px',
                         flexShrink: 0,
                         userSelect: 'none',
-                        boxShadow: '0 4px 12px rgba(43, 182, 115, 0.25)'
+                        boxShadow: '0 4px 12px var(--rgba-primary-3, rgba(43, 182, 115, 0.25))'
                       }}
                     >
                       {userInitials}

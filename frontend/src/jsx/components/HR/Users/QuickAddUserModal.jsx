@@ -253,7 +253,7 @@ const QuickAddUserModal = ({ onSave, onCancel, initialDepartment }) => {
                     </Col>
                 </Row>
                 <div className="modal-actions" style={{ marginTop: '20px', display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
-                    <Button variant="secondary" onClick={onCancel} disabled={loading}>Cancel</Button>
+                    <Button variant="secondary" onClick={onCancel} disabled={loading}> className="btn-close-custom"Cancel</Button>
                     <Button variant="primary" type="submit" disabled={loading}>{loading ? 'Saving...' : 'Save User'}</Button>
                 </div>
             </Form>
@@ -271,7 +271,7 @@ const QuickAddUserModal = ({ onSave, onCancel, initialDepartment }) => {
                                 <Form.Control type="text" value={newDesignationName} onChange={(e) => setNewDesignationName(e.target.value)} placeholder="Enter designation name" required />
                             </Form.Group>
                             <div className="modal-actions" style={{ marginTop: '20px', display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
-                                <Button variant="secondary" onClick={() => setShowQuickAddDesignationModal(false)} disabled={loading}>Cancel</Button>
+                                <Button variant="secondary" className="btn-close-custom" onClick={() => setShowQuickAddDesignationModal(false)} disabled={loading}>Cancel</Button>
                                 <Button variant="primary" type="submit" disabled={loading}>{loading ? 'Saving...' : 'Save'}</Button>
                             </div>
                         </Form>

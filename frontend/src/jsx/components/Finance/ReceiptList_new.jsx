@@ -341,12 +341,12 @@ const ReceiptList = () => {
                             text-transform: uppercase;
                         }
                         .badge-dr {
-                            background-color: #e2f7ed;
-                            color: #2dce89;
+                            background-color: #DDF3E5;
+                            color: #176B3A;
                         }
                         .badge-cr {
-                            background-color: #fdebeb;
-                            color: #f5365c;
+                            background-color: #FCE4E4;
+                            color: #A52222;
                         }
                         .amount-col {
                             text-align: right;

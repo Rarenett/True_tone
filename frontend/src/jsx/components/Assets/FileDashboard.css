@@ -377,23 +377,23 @@
 }
 
 .status-allocated {
-    background: rgba(245, 158, 11, 0.1);
-    color: #f59e0b;
+    background: var(--badge-gold-bg, #F5EBD8);
+    color: var(--badge-gold-text, #805B20);
 }
 
 .status-in-use {
-    background: rgba(139, 92, 246, 0.1);
-    color: #8b5cf6;
+    background: var(--badge-purple-bg, #EEE8F7);
+    color: var(--badge-purple-text, #65428B);
 }
 
 .status-returned {
-    background: rgba(16, 185, 129, 0.1);
-    color: #10b981;
+    background: var(--badge-green-bg, #DDF3E5);
+    color: var(--badge-green-text, #176B3A);
 }
 
 .status-overdue {
-    background: rgba(239, 68, 68, 0.1);
-    color: #ef4444;
+    background: var(--badge-red-bg, #FCE4E4);
+    color: var(--badge-red-text, #A52222);
 }
 
 @media (max-width: 1200px) {
@@ -560,51 +560,51 @@
 /* File status badges */
 .badge-available,
 .badge-success {
-    background: rgba(16, 185, 129, 0.1);
-    color: #10b981;
+    background: var(--badge-green-bg, #DDF3E5);
+    color: var(--badge-green-text, #176B3A);
 }
 
 .badge-allocated,
 .badge-warning {
-    background: rgba(245, 158, 11, 0.1);
-    color: #f59e0b;
+    background: var(--badge-gold-bg, #F5EBD8);
+    color: var(--badge-gold-text, #805B20);
 }
 
 .badge-overdue,
 .badge-danger {
-    background: rgba(239, 68, 68, 0.1);
-    color: #ef4444;
+    background: var(--badge-red-bg, #FCE4E4);
+    color: var(--badge-red-text, #A52222);
 }
 
 .badge-inuse {
-    background: rgba(139, 92, 246, 0.1);
-    color: #8b5cf6;
+    background: var(--badge-purple-bg, #EEE8F7);
+    color: var(--badge-purple-text, #65428B);
 }
 
 .badge-reallocated {
-    background: rgba(59, 130, 246, 0.1);
-    color: #3b82f6;
+    background: var(--badge-blue-bg, #E2EEFA);
+    color: var(--badge-blue-text, #245A91);
 }
 
 /* Priority badges */
 .priority-critical {
-    background: rgba(239, 68, 68, 0.15);
-    color: #ef4444;
+    background: var(--badge-red-bg, #FCE4E4);
+    color: var(--badge-red-text, #A52222);
 }
 
 .priority-high {
-    background: rgba(245, 158, 11, 0.15);
-    color: #f59e0b;
+    background: var(--badge-burgundy-bg, #F5E1E5);
+    color: var(--badge-burgundy-text, #780116);
 }
 
 .priority-medium {
-    background: rgba(59, 130, 246, 0.15);
-    color: #3b82f6;
+    background: var(--badge-gold-bg, #F5EBD8);
+    color: var(--badge-gold-text, #805B20);
 }
 
 .priority-low {
-    background: rgba(100, 116, 139, 0.15);
-    color: #64748b;
+    background: var(--badge-grey-bg, #ECEDEF);
+    color: var(--badge-grey-text, #50545C);
 }
 
 /* Priority & Badges - More Vibrant in Dark Mode */
@@ -659,13 +659,13 @@
 }
 
 .fd-category-pill.file {
-    background: rgba(59, 130, 246, 0.1);
-    color: #3b82f6;
+    background: var(--badge-blue-bg, #E2EEFA);
+    color: var(--badge-blue-text, #245A91);
 }
 
 .fd-category-pill.key {
-    background: rgba(139, 92, 246, 0.1);
-    color: #8b5cf6;
+    background: var(--badge-purple-bg, #EEE8F7);
+    color: var(--badge-purple-text, #65428B);
 }
 
 .fd-category-pill.it-asset {

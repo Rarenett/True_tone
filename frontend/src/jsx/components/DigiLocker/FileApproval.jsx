@@ -1249,7 +1249,7 @@ const FileApproval = () => {
           )}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClosePreviewModal}>
+          <Button variant="secondary" onClick={handleClosePreviewModal}> className="btn-close-custom"
             Close
           </Button>
         </Modal.Footer>
@@ -1282,7 +1282,7 @@ const FileApproval = () => {
             </Form.Group>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="light" onClick={() => setShowRejectModal(false)} disabled={rejectingLoading}>
+            <Button variant="light" className="btn-close-custom" onClick={() => setShowRejectModal(false)} disabled={rejectingLoading}>
               Cancel
             </Button>
             <Button variant="danger" type="submit" disabled={rejectingLoading}>
@@ -1350,7 +1350,7 @@ const FileApproval = () => {
           )}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" size="sm" onClick={() => setShowHistoryModal(false)}>
+          <Button variant="secondary" size="sm" className="btn-close-custom" onClick={() => setShowHistoryModal(false)}>
             Close
           </Button>
         </Modal.Footer>

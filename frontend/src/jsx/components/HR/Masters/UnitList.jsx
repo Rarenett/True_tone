@@ -225,10 +225,10 @@ const UnitList = () => {
                         </Form.Group>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="danger" onClick={handleCloseModal}>
+                        <Button variant="secondary" className="btn-close-custom" onClick={handleCloseModal}>
                             Cancel
                         </Button>
-                        <Button variant="primary" type="submit">
+                        <Button variant="primary" className="btn-save-custom" type="submit">
                             {editMode ? 'Update' : 'Save'}
                         </Button>
                     </Modal.Footer>

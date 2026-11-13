@@ -27,15 +27,15 @@ const formatDateTime = (iso) => {
 };
 
 const OUTCOME_META = {
-    'Contacted': { label: 'Contacted', color: '#0284c7', bg: 'rgba(2, 132, 199, 0.12)', icon: 'fa-phone' },
-    'Interested': { label: 'Interested', color: '#10b981', bg: 'rgba(16, 185, 129, 0.12)', icon: 'fa-star' },
-    'Call Back Later': { label: 'Call Back Later', color: '#f59e0b', bg: 'rgba(245, 158, 11, 0.12)', icon: 'fa-clock' },
-    'Converted': { label: 'Converted to Opportunity', color: '#16a34a', bg: 'rgba(22, 163, 74, 0.12)', icon: 'fa-trophy' },
-    'Converted to Opportunity': { label: 'Converted to Opportunity', color: '#16a34a', bg: 'rgba(22, 163, 74, 0.12)', icon: 'fa-trophy' },
-    'Busy': { label: 'Busy', color: '#eab308', bg: 'rgba(234, 179, 8, 0.12)', icon: 'fa-hourglass-half' },
-    'Not Answered': { label: 'Not Answered', color: '#64748b', bg: 'rgba(100, 116, 139, 0.12)', icon: 'fa-phone-slash' },
-    'Not Interested': { label: 'Not Interested', color: '#ef4444', bg: 'rgba(239, 68, 68, 0.12)', icon: 'fa-thumbs-down' },
-    'Wrong Number': { label: 'Wrong Number', color: '#dc2626', bg: 'rgba(220, 38, 38, 0.12)', icon: 'fa-times-circle' },
+    'Contacted': { label: 'Contacted', color: '#245A91', bg: '#E2EEFA', icon: 'fa-phone' },
+    'Interested': { label: 'Interested', color: '#176B3A', bg: '#DDF3E5', icon: 'fa-star' },
+    'Call Back Later': { label: 'Call Back Later', color: '#805B20', bg: '#F5EBD8', icon: 'fa-clock' },
+    'Converted': { label: 'Converted to Opportunity', color: '#176B3A', bg: '#DDF3E5', icon: 'fa-trophy' },
+    'Converted to Opportunity': { label: 'Converted to Opportunity', color: '#176B3A', bg: '#DDF3E5', icon: 'fa-trophy' },
+    'Busy': { label: 'Busy', color: '#99500C', bg: '#FCEBD9', icon: 'fa-hourglass-half' },
+    'Not Answered': { label: 'Not Answered', color: '#50545C', bg: '#ECEDEF', icon: 'fa-phone-slash' },
+    'Not Interested': { label: 'Not Interested', color: '#A52222', bg: '#FCE4E4', icon: 'fa-thumbs-down' },
+    'Wrong Number': { label: 'Wrong Number', color: '#A52222', bg: '#FCE4E4', icon: 'fa-times-circle' },
 };
 
 const getOutcomeBadgeClass = (outcome) => {
@@ -915,7 +915,7 @@ const CrmReports = () => {
                                     </div>
                                 </div>
                                 <div className="text-end">
-                                    <span className="badge" style={{ background: '#eef2ff', color: '#6366f1', fontSize: '12px', padding: '6px 12px', borderRadius: '8px', fontWeight: 600 }}>
+                                    <span className="badge" style={{ background: '#EEE8F7', color: '#65428B', fontSize: '12px', padding: '6px 12px', borderRadius: '8px', fontWeight: 600 }}>
                                         {historyModal.totalCalls} {historyModal.totalCalls === 1 ? 'Total Call' : 'Total Calls'}
                                     </span>
                                 </div>

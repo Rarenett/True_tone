@@ -736,26 +736,26 @@ const styles = `
         color: white !important;
     }
     .item-custom-modal .btn-close-custom {
-        background-color: #7E69B7 !important;
-        color: white !important;
-        border: none !important;
+        background-color: var(--cancel-btn-color, #f5e9dc) !important;
+        color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
+        border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
         border-radius: 8px !important;
         padding: 8px 20px !important;
         font-weight: 500;
     }
     .item-custom-modal .btn-close-custom:hover {
-        background-color: #6357a7 !important;
+        background-color: var(--cancel-btn-hover-color, #ebd8c5) !important;
     }
     .item-custom-modal .btn-save-custom {
-        background-color: #45D08B !important;
-        color: white !important;
+        background-color: var(--save-btn-color, #5b0111) !important;
+        color: var(--save-btn-text-color, #ffffff) !important;
         border: none !important;
         border-radius: 8px !important;
         padding: 8px 20px !important;
         font-weight: 500;
     }
     .item-custom-modal .btn-save-custom:hover:not(:disabled) {
-        background-color: #26b277 !important;
+        background-color: var(--save-btn-hover-color, #42010c) !important;
     }
     .item-custom-modal .btn-save-custom:disabled {
         opacity: 0.7;

@@ -21,10 +21,10 @@ const formatDate = (d) => {
 
 // result_status -> pill styling, shared by the summary table and the modal
 const STATUS_STYLES = {
-    pending: { bg: 'rgba(13, 110, 253, 0.15)', color: '#0d6efd', label: 'Voting Open', Icon: Clock },
-    approved: { bg: 'rgba(40, 167, 69, 0.15)', color: '#28a745', label: 'Approved', Icon: CheckCircle2 },
-    rejected: { bg: 'rgba(220, 53, 69, 0.15)', color: '#dc3545', label: 'Rejected', Icon: XCircle },
-    incomplete: { bg: 'rgba(255, 193, 7, 0.2)', color: '#d97706', label: 'Reschedule Required', Icon: Clock },
+    pending: { bg: '#E2EEFA', color: '#245A91', label: 'Voting Open', Icon: Clock },
+    approved: { bg: '#DDF3E5', color: '#176B3A', label: 'Approved', Icon: CheckCircle2 },
+    rejected: { bg: '#FCE4E4', color: '#A52222', label: 'Rejected', Icon: XCircle },
+    incomplete: { bg: '#FCEBD9', color: '#99500C', label: 'Reschedule Required', Icon: Clock },
 };
 
 const ResultStatusBadge = ({ status }) => {

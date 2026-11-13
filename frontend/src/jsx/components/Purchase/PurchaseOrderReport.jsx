@@ -165,7 +165,7 @@ const PODetailModal = ({ po, show, onHide }) => {
             </Modal.Body>
 
             <Modal.Footer style={{ borderTop: '1px solid #e9ecef', background: '#f8f9fa' }}>
-                <Button variant="secondary" size="sm" onClick={onHide} style={{ borderRadius: 8 }}>
+                <Button variant="secondary" size="sm" onClick={onHide} className="btn-close-custom" style={{ borderRadius: 8 }}>
                     Close
                 </Button>
             </Modal.Footer>

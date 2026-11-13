@@ -226,12 +226,12 @@ const CandidateLoginModal = ({ show, onHide, candidate, onSaved }) => {
                 .cfm-modal .modal-icon-circle {
                     width: 48px;
                     height: 48px;
-                    background-color: #2ece8a;
+                    background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    box-shadow: 0 4px 10px rgba(46, 206, 138, 0.2);
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
                 }
                 .cfm-modal .modal-close-x {
                     border: none;
@@ -257,20 +257,20 @@ const CandidateLoginModal = ({ show, onHide, candidate, onSaved }) => {
                     gap: 12px;
                 }
                 .cfm-modal .btn-close-custom {
-                    background-color: #7A70BA !important;
-                    color: white !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
-                    border: none !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     cursor: pointer;
                     transition: background-color 0.2s;
                 }
-                .cfm-modal .btn-close-custom:hover { background-color: #6357a7 !important; }
+                .cfm-modal .btn-close-custom:hover { background-color: var(--cancel-btn-hover-color, #ebd8c5) !important; }
                 .cfm-modal .btn-save-custom {
-                    background-color: #2ece8a !important;
-                    color: white !important;
+                    background-color: var(--save-btn-color, #5b0111) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
@@ -279,7 +279,7 @@ const CandidateLoginModal = ({ show, onHide, candidate, onSaved }) => {
                     cursor: pointer;
                     transition: background-color 0.2s;
                 }
-                .cfm-modal .btn-save-custom:hover { background-color: #26b277 !important; }
+                .cfm-modal .btn-save-custom:hover { background-color: var(--save-btn-hover-color, #42010c) !important; }
                 .cfm-modal .btn-save-custom:disabled { opacity: 0.65; cursor: not-allowed; }
             `}</style>
 
@@ -352,8 +352,8 @@ const CandidateLoginModal = ({ show, onHide, candidate, onSaved }) => {
                                     <span
                                         className="badge"
                                         style={{
-                                            backgroundColor: isActive ? '#22c55e' : '#ef4444',
-                                            color: '#fff',
+                                            backgroundColor: isActive ? '#F5E1E5' : '#FCE4E4',
+                                            color: isActive ? '#780116' : '#A52222',
                                             fontSize: '12px',
                                             fontWeight: 600,
                                             padding: '4px 10px',
@@ -424,7 +424,7 @@ const CandidateLoginModal = ({ show, onHide, candidate, onSaved }) => {
                             <Form.Label className="form-label font-w600">
                                 Email <span className="text-danger">*</span>
                                 {candidate?.has_login && (
-                                    <span className="ms-2 badge" style={{ background: '#e0f2fe', color: '#0284c7', fontSize: '11px', fontWeight: 500, borderRadius: '4px', padding: '2px 7px' }}>Existing</span>
+                                    <span className="ms-2 badge" style={{ background: '#E2EEFA', color: '#245A91', fontSize: '11px', fontWeight: 500, borderRadius: '4px', padding: '2px 7px' }}>Existing</span>
                                 )}
                             </Form.Label>
                             <div style={{ position: 'relative' }}>

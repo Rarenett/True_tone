@@ -263,19 +263,19 @@ const ChangePasswordModal = ({ show, onHide }) => {
                     display: flex; justify-content: flex-end; gap: 10px;
                 }
                 .cp-btn-cancel {
-                    background-color: #fff; color: #475569; border-radius: 10px;
+                    background-color: var(--cancel-btn-color, #f5e9dc); color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)); border-radius: 10px;
                     font-weight: 600; font-size: 13.5px; padding: 10px 20px;
-                    border: 1.5px solid #e2e8f0; cursor: pointer; transition: all 0.15s;
+                    border: 1.5px solid var(--cancel-btn-border-color, #e2cbba); cursor: pointer; transition: all 0.15s;
                 }
-                .cp-btn-cancel:hover { background-color: #f8fafc; border-color: #cbd5e1; }
+                .cp-btn-cancel:hover { background-color: var(--cancel-btn-hover-color, #ebd8c5); border-color: var(--cancel-btn-border-hover-color, #d5b69f); color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)); }
                 .cp-btn-save {
-                    background: linear-gradient(135deg, #6C5DD3 0%, #4A3FBF 100%);
-                    color: white; border-radius: 10px;
+                    background: var(--save-btn-color, #5b0111);
+                    color: var(--save-btn-text-color, #ffffff); border-radius: 10px;
                     font-weight: 600; font-size: 13.5px; padding: 10px 22px;
                     border: none; cursor: pointer; transition: filter 0.15s, transform 0.1s;
-                    box-shadow: 0 6px 16px rgba(108, 93, 211, 0.3);
+                    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14);
                 }
-                .cp-btn-save:hover:not(:disabled) { filter: brightness(1.08); }
+                .cp-btn-save:hover:not(:disabled) { background: var(--save-btn-hover-color, #42010c); color: var(--save-btn-text-color, #ffffff); }
                 .cp-btn-save:active:not(:disabled) { transform: translateY(1px); }
                 .cp-btn-save:disabled { opacity: 0.7; cursor: not-allowed; box-shadow: none; }
             `}</style>

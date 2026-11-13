@@ -158,10 +158,10 @@ const DriverOrdersScreen = () => {
                                                 {order.so_no}
                                             </div>
                                             <div style={{ 
-                                                background: order.status === 'Pending' ? '#fef3c7' : (order.status === 'In Transit' ? T.accentSoft : '#d1fae5'), 
-                                                color: order.status === 'Pending' ? '#b45309' : (order.status === 'In Transit' ? T.accent : '#047857'),
+                                                background: order.status === 'Pending' ? '#F5EBD8' : (order.status === 'In Transit' ? '#E2EEFA' : '#DDF3E5'), 
+                                                color: order.status === 'Pending' ? '#805B20' : (order.status === 'In Transit' ? '#245A91' : '#176B3A'),
                                                 padding: '2px 10px', borderRadius: '20px', fontSize: '0.75rem', fontWeight: '700',
-                                                border: `1px solid ${order.status === 'Pending' ? '#fde68a' : (order.status === 'In Transit' ? '#c3d2f8' : '#a7f3d0')}`
+                                                border: `1px solid ${order.status === 'Pending' ? '#e6d5b8' : (order.status === 'In Transit' ? '#b6d4fe' : '#b7e4c7')}`
                                             }}>
                                                 • {order.status || 'Pending'}
                                             </div>

@@ -1123,8 +1123,8 @@ const VisitorReallocation = ({ embedded = false }) => {
                                 <div 
                                     className="modal-icon-circle" 
                                     style={{ 
-                                        background: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)',
-                                        boxShadow: '0 4px 14px rgba(2, 132, 199, 0.3)',
+                                        background: 'var(--form-icon-color, var(--cc-primary, #5b0111))',
+                                        boxShadow: '0 4px 14px rgba(0, 0, 0, 0.14)',
                                         width: '52px',
                                         height: '52px'
                                     }}
@@ -1653,8 +1653,8 @@ const VisitorReallocation = ({ embedded = false }) => {
                                 <div 
                                     className="modal-icon-circle" 
                                     style={{ 
-                                        background: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
-                                        boxShadow: '0 4px 14px rgba(59, 130, 246, 0.3)',
+                                        background: 'var(--form-icon-color, var(--cc-primary, #5b0111))',
+                                        boxShadow: '0 4px 14px rgba(0, 0, 0, 0.14)',
                                         width: '52px',
                                         height: '52px'
                                     }}
@@ -1853,8 +1853,8 @@ const VisitorReallocation = ({ embedded = false }) => {
                                 <div 
                                     className="modal-icon-circle" 
                                     style={{ 
-                                        background: 'linear-gradient(135deg, #2ece8a 0%, #20b876 100%)',
-                                        boxShadow: '0 4px 14px rgba(46, 206, 138, 0.3)',
+                                        background: 'var(--form-icon-color, var(--cc-primary, #5b0111))',
+                                        boxShadow: '0 4px 14px rgba(0, 0, 0, 0.14)',
                                         width: '52px',
                                         height: '52px'
                                     }}
@@ -2171,8 +2171,8 @@ const VisitorReallocation = ({ embedded = false }) => {
                                 <div 
                                     className="modal-icon-circle" 
                                     style={{ 
-                                        background: 'linear-gradient(135deg, #2ece8a 0%, #20b876 100%)',
-                                        boxShadow: '0 4px 14px rgba(46, 206, 138, 0.3)',
+                                        background: 'var(--form-icon-color, var(--cc-primary, #5b0111))',
+                                        boxShadow: '0 4px 14px rgba(0, 0, 0, 0.14)',
                                         width: '52px',
                                         height: '52px'
                                     }}
@@ -2534,9 +2534,9 @@ const VisitorReallocation = ({ embedded = false }) => {
 
                 /* ── Theme Buttons matching CheckoutModal ── */
                 .btn-close-custom {
-                    background-color: #7A70BA !important;
-                    border: none !important;
-                    color: #ffffff !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
@@ -2549,8 +2549,8 @@ const VisitorReallocation = ({ embedded = false }) => {
                     justify-content: center !important;
                 }
                 .btn-close-custom:hover:not(:disabled) {
-                    background-color: #6357a7 !important;
-                    color: #ffffff !important;
+                    background-color: var(--cancel-btn-hover-color, #ebd8c5) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     transform: translateY(-1px) !important;
                 }
                 .btn-close-custom:disabled {

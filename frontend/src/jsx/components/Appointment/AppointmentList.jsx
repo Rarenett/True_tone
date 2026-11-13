@@ -106,11 +106,11 @@ const AppointmentList = () => {
             case 'rejected':
                 return 'badge badge-danger light';
             case 'completed':
-                return 'badge badge-info light';
+                return 'badge badge-success light';
             case 'cancelled':
-                return 'badge badge-secondary light';
+                return 'badge badge-danger light';
             default:
-                return 'badge bg-light text-dark';
+                return 'badge badge-light';
         }
     };
 

@@ -116,8 +116,8 @@ function Login(props) {
 
 	return (
 		<div className="login-wrapper">
-				{/* Dynamic colour for the left panel overlay */}
-				<style>{`
+			{/* Dynamic colour for the left panel overlay */}
+			<style>{`
 					.login-wrapper .login-aside-left::after {
 						background: linear-gradient(160deg,
 							${loginPanelColor}f7 0%,
@@ -365,7 +365,7 @@ function Login(props) {
 											<div style={{ color: '#596882', fontSize: '1.2rem', fontWeight: 500, marginBottom: '2px' }}>
 												Welcome to
 											</div>
-											<h1 style={{ color: '#1a3a72', fontWeight: 700, margin: 0 }}>
+											<h1 style={{ color: '#992d4dff', fontWeight: 700, margin: 0 }}>
 												{companyName || 'ERP'}
 											</h1>
 										</div>
@@ -422,14 +422,14 @@ function Login(props) {
 													disabled={props.showLoading}
 													className="btn btn-block"
 													style={{
-														background: 'linear-gradient(135deg, #0f2147 0%, #1a3a72 60%, #1e4587 100%)',
+														background: '#6F102A',
 														border: 'none',
 														color: '#fff',
 														fontWeight: 600,
 														fontSize: '1.1rem',
 														padding: '12px 24px',
 														letterSpacing: '0.04em',
-														boxShadow: '0 4px 15px rgba(26,58,114,0.4)',
+														boxShadow: '0 4px 15px rgba(111, 16, 42, 0.4)',
 														cursor: props.showLoading ? 'not-allowed' : 'pointer',
 														opacity: props.showLoading ? 0.75 : 1
 													}}

@@ -1339,7 +1339,7 @@ const CommentPattern = () => {
                             )}
                             
                             <div className="d-flex justify-content-end align-items-center gap-2 mt-5 pt-4 border-top">
-                                <Button type="button" onClick={handleClosePatternModal} style={{ borderRadius: '8px', fontWeight: 600, padding: '0.6rem 2rem', backgroundColor: '#7A70BA', borderColor: '#7A70BA', color: 'white' }}>
+                                <Button type="button" className="btn-close-custom" onClick={handleClosePatternModal} style={{ borderRadius: '8px', fontWeight: 600, padding: '0.6rem 2rem' }}>
                                     Cancel
                                 </Button>
                                 {/* {formStep > 1 && (
@@ -1348,11 +1348,11 @@ const CommentPattern = () => {
                                     </Button>
                                 )} */}
                                 {formStep < WIZARD_STEPS.length ? (
-                                    <Button type="button" onClick={() => goToStep(formStep + 1)} style={{ fontWeight: '700', padding: '0.6rem 2.2rem', borderRadius: '8px', backgroundColor: '#2ece8a', borderColor: '#2ece8a', color: 'white' }}>
+                                    <Button type="button" className="btn-save-custom" onClick={() => goToStep(formStep + 1)} style={{ fontWeight: '700', padding: '0.6rem 2.2rem', borderRadius: '8px' }}>
                                         Continue
                                     </Button>
                                 ) : (
-                                    <Button type="button" onClick={handleSavePattern} style={{ fontWeight: '700', padding: '0.6rem 2.2rem', borderRadius: '8px', backgroundColor: '#2ece8a', borderColor: '#2ece8a' }}>
+                                    <Button type="button" className="btn-save-custom" onClick={handleSavePattern} style={{ fontWeight: '700', padding: '0.6rem 2.2rem', borderRadius: '8px' }}>
                                         {editPatternId ? 'Update pattern' : 'Save pattern'}
                                     </Button>
                                 )}

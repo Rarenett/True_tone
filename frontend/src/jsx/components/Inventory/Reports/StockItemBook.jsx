@@ -787,7 +787,7 @@ const StockItemBook = () => {
                     </Form.Group>
                 </Modal.Body>
                 <Modal.Footer className="p-2">
-                    <Button variant="secondary" size="sm" onClick={() => setShowPeriodModal(false)}>Cancel</Button>
+                    <Button variant="secondary" size="sm" className="btn-close-custom" onClick={() => setShowPeriodModal(false)}>Cancel</Button>
                     <Button variant="primary" size="sm" onClick={handleApplyPeriod}>Apply Period</Button>
                 </Modal.Footer>
             </Modal>

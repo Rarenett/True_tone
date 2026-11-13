@@ -233,7 +233,7 @@ const LeadCreate = ({ embedded, id: propId, editMode: propEditMode }) => {
                 }
 
                 .crm-form-header h3 i {
-                    color: var(--crm-accent);
+                    color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     font-size: 1.1rem;
                 }
 

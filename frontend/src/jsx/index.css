@@ -675,14 +675,13 @@ button.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--r
 }
 
 .form-icon-circle,
-.modal-icon-circle {
-  background: var(--form-icon-color, var(--cc-primary, var(--primary, #2bc155))) !important;
-  background-color: var(--form-icon-color, var(--cc-primary, var(--primary, #2bc155))) !important;
-  color: #ffffff !important;
-}
-
-.form-icon-box {
-  background: var(--form-icon-color, var(--cc-primary, var(--primary, #2bc155))) !important;
+.modal-icon-circle,
+[class*="-modal"] .modal-icon-circle,
+.modal-header-custom .modal-icon-circle,
+.form-icon-box,
+.card-header .form-icon-box {
+  background: var(--form-icon-color, var(--cc-primary, var(--primary, #5b0111))) !important;
+  background-color: var(--form-icon-color, var(--cc-primary, var(--primary, #5b0111))) !important;
   color: #ffffff !important;
 }
 
@@ -873,18 +872,15 @@ body.has-custom-font-color .form-control-custom:disabled {
 /* ============================================================
    Buttons & Icons - Stick to Crisp White for Solid/Action Buttons
    ============================================================ */
-body.has-custom-font-color .btn:not([class*="btn-outline-"]):not(.btn-link):not(.btn-light):not(.page-link),
-body.has-custom-font-color button.btn:not([class*="btn-outline-"]):not(.btn-link):not(.btn-light):not(.page-link),
-body.has-custom-font-color .btn-primary,
-body.has-custom-font-color .btn-secondary,
+body.has-custom-font-color .btn:not([class*="btn-outline-"]):not(.btn-link):not(.btn-light):not(.page-link):not(.btn-secondary):not(.btn-close-custom):not(.btn-universal-close):not(.btn-cancel-custom):not(.pkg-close-btn):not(.btn-save-custom):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn),
+body.has-custom-font-color button.btn:not([class*="btn-outline-"]):not(.btn-link):not(.btn-light):not(.page-link):not(.btn-secondary):not(.btn-close-custom):not(.btn-universal-close):not(.btn-cancel-custom):not(.pkg-close-btn):not(.btn-save-custom):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn),
+body.has-custom-font-color .btn-primary:not(.btn-save-custom):not(.btn-close-custom):not(.btn-universal-save):not(.btn-universal-close):not(.btn-generate-custom):not(.pkg-submit-btn),
 body.has-custom-font-color .btn-success,
 body.has-custom-font-color .btn-danger,
 body.has-custom-font-color .btn-warning,
 body.has-custom-font-color .btn-info,
 body.has-custom-font-color .btn-dark,
 body.has-custom-font-color .btn-create-action,
-body.has-custom-font-color .btn-save-custom,
-body.has-custom-font-color .btn-close-custom,
 body.has-custom-font-color .lead-source-add-btn,
 body.has-custom-font-color .crm-export-btn,
 body.has-custom-font-color .quick-add-btn,
@@ -894,21 +890,18 @@ body.has-custom-font-color .btn-approve-action,
 body.has-custom-font-color .btn-details-action,
 body.has-custom-font-color .btn-history-action,
 body.has-custom-font-color .btn-reject-action,
-body.has-custom-font-color [class*="-custom-modal"] .btn-save-custom,
-body.has-custom-font-color [class*="-custom-modal"] .btn-close-custom,
-body.has-custom-font-color .modal-footer .btn:not([class*="btn-outline-"]):not(.btn-link):not(.btn-light),
+body.has-custom-font-color .modal-footer .btn:not([class*="btn-outline-"]):not(.btn-link):not(.btn-light):not(.btn-secondary):not(.btn-close-custom):not(.btn-universal-close):not(.btn-cancel-custom):not(.pkg-close-btn):not(.btn-save-custom):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn):not(.btn-primary),
 body.has-custom-font-color .table .btn:not([class*="btn-outline-"]):not(.btn-link):not(.btn-light) {
   color: #ffffff !important;
 }
 
-body.has-custom-font-color .btn:not([class*="btn-outline-"]):not(.btn-link):not(.btn-light):not(.page-link) i,
-body.has-custom-font-color .btn:not([class*="btn-outline-"]):not(.btn-link):not(.btn-light):not(.page-link) svg,
-body.has-custom-font-color .btn:not([class*="btn-outline-"]):not(.btn-link):not(.btn-light):not(.page-link) span:not(.badge),
-body.has-custom-font-color button.btn:not([class*="btn-outline-"]):not(.btn-link):not(.btn-light):not(.page-link) i,
-body.has-custom-font-color button.btn:not([class*="btn-outline-"]):not(.btn-link):not(.btn-light):not(.page-link) svg,
-body.has-custom-font-color .btn-primary i,
-body.has-custom-font-color .btn-primary svg,
-body.has-custom-font-color .btn-secondary i,
+body.has-custom-font-color .btn:not([class*="btn-outline-"]):not(.btn-link):not(.btn-light):not(.page-link):not(.btn-secondary):not(.btn-close-custom):not(.btn-universal-close):not(.btn-cancel-custom):not(.pkg-close-btn):not(.btn-save-custom):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn) i,
+body.has-custom-font-color .btn:not([class*="btn-outline-"]):not(.btn-link):not(.btn-light):not(.page-link):not(.btn-secondary):not(.btn-close-custom):not(.btn-universal-close):not(.btn-cancel-custom):not(.pkg-close-btn):not(.btn-save-custom):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn) svg,
+body.has-custom-font-color .btn:not([class*="btn-outline-"]):not(.btn-link):not(.btn-light):not(.page-link):not(.btn-secondary):not(.btn-close-custom):not(.btn-universal-close):not(.btn-cancel-custom):not(.pkg-close-btn):not(.btn-save-custom):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn) span:not(.badge),
+body.has-custom-font-color button.btn:not([class*="btn-outline-"]):not(.btn-link):not(.btn-light):not(.page-link):not(.btn-secondary):not(.btn-close-custom):not(.btn-universal-close):not(.btn-cancel-custom):not(.pkg-close-btn):not(.btn-save-custom):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn) i,
+body.has-custom-font-color button.btn:not([class*="btn-outline-"]):not(.btn-link):not(.btn-light):not(.page-link):not(.btn-secondary):not(.btn-close-custom):not(.btn-universal-close):not(.btn-cancel-custom):not(.pkg-close-btn):not(.btn-save-custom):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn) svg,
+body.has-custom-font-color .btn-primary:not(.btn-save-custom):not(.btn-close-custom):not(.btn-universal-save):not(.btn-universal-close):not(.btn-generate-custom):not(.pkg-submit-btn) i,
+body.has-custom-font-color .btn-primary:not(.btn-save-custom):not(.btn-close-custom):not(.btn-universal-save):not(.btn-universal-close):not(.btn-generate-custom):not(.pkg-submit-btn) svg,
 body.has-custom-font-color .btn-success i,
 body.has-custom-font-color .btn-danger i,
 body.has-custom-font-color .btn-warning i,
@@ -916,8 +909,6 @@ body.has-custom-font-color .btn-info i,
 body.has-custom-font-color .btn-dark i,
 body.has-custom-font-color .btn-create-action i,
 body.has-custom-font-color .btn-create-action svg,
-body.has-custom-font-color .btn-save-custom i,
-body.has-custom-font-color .btn-close-custom i,
 body.has-custom-font-color .lead-source-add-btn i,
 body.has-custom-font-color .crm-export-btn i,
 body.has-custom-font-color .quick-add-btn i,
@@ -927,9 +918,7 @@ body.has-custom-font-color .btn-approve-action i,
 body.has-custom-font-color .btn-details-action i,
 body.has-custom-font-color .btn-history-action i,
 body.has-custom-font-color .btn-reject-action i,
-body.has-custom-font-color [class*="-custom-modal"] .btn-save-custom i,
-body.has-custom-font-color [class*="-custom-modal"] .btn-close-custom i,
-body.has-custom-font-color .modal-footer .btn:not([class*="btn-outline-"]) i,
+body.has-custom-font-color .modal-footer .btn:not([class*="btn-outline-"]):not(.btn-secondary):not(.btn-close-custom):not(.btn-universal-close):not(.btn-cancel-custom):not(.pkg-close-btn):not(.btn-save-custom):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn):not(.btn-primary) i,
 body.has-custom-font-color .table .btn:not([class*="btn-outline-"]):not(.btn-link):not(.btn-light) i,
 body.has-custom-font-color .table .btn:not([class*="btn-outline-"]):not(.btn-link):not(.btn-light) svg {
   color: #ffffff !important;
@@ -1027,23 +1016,72 @@ input[type="color"]::-webkit-color-swatch {
 /* Primary Accent - buttons, links, active states */
 [data-primary="color_custom"] a:hover,
 [data-primary="color_custom"] .btn-link,
-[data-primary="color_custom"] .text-primary {
+[data-primary="color_custom"] .text-primary,
+[data-primary="color_custom"] .nav-tabs .nav-link:not(.active) {
   color: var(--cc-primary, #2bc155) !important;
 }
-[data-primary="color_custom"] .btn-primary,
-[data-primary="color_custom"] .badge-primary,
+[data-primary="color_custom"] .nav-tabs .nav-link:not(.active):hover,
+[data-primary="color_custom"] .nav-tabs .nav-link:not(.active):focus {
+  color: var(--cc-primary-dark, #22a844) !important;
+}
+[data-primary="color_custom"] .btn-primary:not(.btn-save-custom):not(.btn-close-custom):not(.btn-universal-save):not(.btn-universal-close):not(.btn-generate-custom):not(.pkg-submit-btn),
+[data-primary="color_custom"] .bg-primary:not(.badge),
+[data-primary="color_custom"] .header-right .notification_dropdown .nav-link .badge.bg-primary,
+[data-primary="color_custom"] .progress-bar,
+[data-primary="color_custom"] .progress-bar-primary,
+[data-primary="color_custom"] .nav-pills .nav-link.active,
+[data-primary="color_custom"] .nav-pills .show > .nav-link,
+[data-primary="color_custom"] .table-tabs .nav-tabs .nav-link.active,
+[data-primary="color_custom"] .dropdown-item.active,
+[data-primary="color_custom"] .dropdown-item:active,
+[data-primary="color_custom"] .form-check-input:checked,
+[data-primary="color_custom"] .custom-control-input:checked ~ .custom-control-label::before,
 [data-primary="color_custom"] .page-titles .breadcrumb .breadcrumb-item.active {
   background-color: var(--cc-primary, #2bc155) !important;
   border-color: var(--cc-primary, #2bc155) !important;
 }
-[data-primary="color_custom"] .btn-primary:hover,
-[data-primary="color_custom"] .btn-primary:focus {
+[data-primary="color_custom"] .btn-primary:not(.btn-save-custom):not(.btn-close-custom):not(.btn-universal-save):not(.btn-universal-close):not(.btn-generate-custom):not(.pkg-submit-btn):hover,
+[data-primary="color_custom"] .btn-primary:not(.btn-save-custom):not(.btn-close-custom):not(.btn-universal-save):not(.btn-universal-close):not(.btn-generate-custom):not(.pkg-submit-btn):focus,
+[data-primary="color_custom"] .btn-primary:not(.btn-save-custom):not(.btn-close-custom):not(.btn-universal-save):not(.btn-universal-close):not(.btn-generate-custom):not(.pkg-submit-btn):not(:disabled):not(.disabled):active,
+[data-primary="color_custom"] .btn-primary:not(.btn-save-custom):not(.btn-close-custom):not(.btn-universal-save):not(.btn-universal-close):not(.btn-generate-custom):not(.pkg-submit-btn):not(:disabled):not(.disabled).active {
   background-color: var(--cc-primary-dark, #22a844) !important;
   border-color: var(--cc-primary-dark, #22a844) !important;
 }
-[data-primary="color_custom"] .sidebar-right-trigger,
-[data-primary="color_custom"] .nav-control {
+[data-primary="color_custom"] .btn-primary.light {
+  background-color: rgba(var(--cc-primary-rgb, 43, 193, 85), 0.1) !important;
+  border-color: rgba(var(--cc-primary-rgb, 43, 193, 85), 0.1) !important;
+  color: var(--cc-primary, #2bc155) !important;
+}
+[data-primary="color_custom"] .btn-primary.light:hover {
   background-color: var(--cc-primary, #2bc155) !important;
+  border-color: var(--cc-primary, #2bc155) !important;
+  color: #ffffff !important;
+}
+[data-primary="color_custom"] .btn-outline-primary {
+  color: var(--cc-primary, #2bc155) !important;
+  border-color: var(--cc-primary, #2bc155) !important;
+}
+[data-primary="color_custom"] .btn-outline-primary:hover,
+[data-primary="color_custom"] .btn-outline-primary:focus,
+[data-primary="color_custom"] .btn-outline-primary:not(:disabled):not(.disabled):active,
+[data-primary="color_custom"] .btn-outline-primary:not(:disabled):not(.disabled).active {
+  background-color: var(--cc-primary, #2bc155) !important;
+  border-color: var(--cc-primary, #2bc155) !important;
+  color: #ffffff !important;
+}
+[data-primary="color_custom"] .border-primary {
+  border-color: var(--cc-primary, #2bc155) !important;
+}
+[data-primary="color_custom"] .sidebar-right-trigger,
+[data-primary="color_custom"] .hamburger .line {
+  background-color: var(--cc-primary, #2bc155) !important;
+}
+[data-primary="color_custom"] .header-right .notification_dropdown .nav-link .badge {
+  box-shadow: 0px 0px 10px 3px rgba(var(--cc-primary-rgb, 43, 193, 85), 0.3) !important;
+}
+[data-primary="color_custom"] .page-titles h4,
+[data-primary="color_custom"] .page-titles .h4 {
+  color: var(--cc-primary, #2bc155) !important;
 }
 [data-primary="color_custom"] ul.metismenu li a:hover,
 [data-primary="color_custom"] ul.metismenu li a:focus,
@@ -1053,11 +1091,15 @@ input[type="color"]::-webkit-color-swatch {
 [data-primary="color_custom"] ul.metismenu li.mm-active > a svg g [fill] {
   fill: var(--cc-primary, #2bc155) !important;
 }
-[data-primary="color_custom"] .pagination li.active .page-link {
+[data-primary="color_custom"] .pagination li.active .page-link,
+[data-primary="color_custom"] .pagination .page-item.active .page-link,
+[data-primary="color_custom"] .pagination .page-item .page-link:hover {
   background-color: var(--cc-primary, #2bc155) !important;
   border-color: var(--cc-primary, #2bc155) !important;
+  color: #ffffff !important;
 }
-[data-primary="color_custom"] .form-control:focus {
+[data-primary="color_custom"] .form-control:focus,
+[data-primary="color_custom"] .form-select:focus {
   border-color: var(--cc-primary, #2bc155) !important;
   box-shadow: 0 0 0 0.25rem rgba(var(--cc-primary-rgb, 43,193,85), 0.25) !important;
 }
@@ -1359,6 +1401,329 @@ div, ol, span, ul, .table-responsive, .custom-price-list-scrollbar {
 }
 
 /* ==========================================================================
+   GLOBAL DARK MODE CONTRAST & TEXT INVERSION SAFEGUARDS
+   Ensures all writings, tabs, outline/link buttons, sidebar links, tables,
+   cards, and inputs stay crisp white or light gray in Dark Mode.
+   ========================================================================== */
+body[data-theme-version="dark"],
+[data-theme-version="dark"] .content-body,
+[data-theme-version="dark"] .card,
+[data-theme-version="dark"] .card-body,
+[data-theme-version="dark"] .card-header,
+[data-theme-version="dark"] .modal-content,
+[data-theme-version="dark"] .modal-body {
+  color: #e2e8f0;
+}
+
+[data-theme-version="dark"] h1:not(.badge):not([class*="badge-"]),
+[data-theme-version="dark"] h2:not(.badge):not([class*="badge-"]),
+[data-theme-version="dark"] h3:not(.badge):not([class*="badge-"]),
+[data-theme-version="dark"] h4:not(.badge):not([class*="badge-"]),
+[data-theme-version="dark"] h5:not(.badge):not([class*="badge-"]),
+[data-theme-version="dark"] h6:not(.badge):not([class*="badge-"]),
+[data-theme-version="dark"] .h1,
+[data-theme-version="dark"] .h2,
+[data-theme-version="dark"] .h3,
+[data-theme-version="dark"] .h4,
+[data-theme-version="dark"] .h5,
+[data-theme-version="dark"] .h6,
+[data-theme-version="dark"] .card-title,
+[data-theme-version="dark"] .card-header h4,
+[data-theme-version="dark"] .card-header h5,
+[data-theme-version="dark"] .modal-title,
+[data-theme-version="dark"] .modal-header-custom .modal-title,
+[data-theme-version="dark"] .page-titles h4,
+[data-theme-version="dark"] .header-left .dashboard_bar {
+  color: #f8fafc !important;
+}
+
+[data-theme-version="dark"] label:not(.btn):not(.badge):not([class*="badge-"]),
+[data-theme-version="dark"] .form-label,
+[data-theme-version="dark"] .col-form-label,
+[data-theme-version="dark"] .form-label-custom {
+  color: #e2e8f0 !important;
+}
+
+[data-theme-version="dark"] .font-w500:not(.btn):not(.badge):not([class*="badge-"]):not(.text-danger):not(.text-success):not(.text-warning):not(.text-info),
+[data-theme-version="dark"] .font-w600:not(.btn):not(.badge):not([class*="badge-"]):not(.text-danger):not(.text-success):not(.text-warning):not(.text-info),
+[data-theme-version="dark"] .font-w700:not(.btn):not(.badge):not([class*="badge-"]):not(.text-danger):not(.text-success):not(.text-warning):not(.text-info) {
+  color: #e2e8f0;
+}
+
+[data-theme-version="dark"] .text-dark:not(.badge):not([class*="badge-"]):not(.btn) {
+  color: #e2e8f0 !important;
+}
+
+[data-theme-version="dark"] .text-black:not(.badge):not([class*="badge-"]):not(.btn),
+[data-theme-version="dark"] .text-body:not(.badge):not([class*="badge-"]):not(.btn) {
+  color: #f1f5f9 !important;
+}
+
+[data-theme-version="dark"] .text-secondary:not(.badge):not([class*="badge-"]):not(.btn) {
+  color: #cbd5e1 !important;
+}
+
+[data-theme-version="dark"] .text-muted:not(.badge):not([class*="badge-"]):not(.btn),
+[data-theme-version="dark"] .text-black-50:not(.badge):not([class*="badge-"]):not(.btn),
+[data-theme-version="dark"] .dataTables_info,
+[data-theme-version="dark"] .dataTables_length,
+[data-theme-version="dark"] .dataTables_filter label {
+  color: #94a3b8 !important;
+}
+
+[data-theme-version="dark"] .text-primary:not(.badge):not([class*="badge-"]):not(.btn) {
+  color: var(--cc-primary-on-dark, #e2e8f0) !important;
+}
+
+[data-theme-version="dark"] .breadcrumb-item,
+[data-theme-version="dark"] .breadcrumb-item a {
+  color: #cbd5e1 !important;
+}
+
+[data-theme-version="dark"] .card,
+[data-theme-version="dark"] .modal-content {
+  background-color: #2F363E;
+  border-color: #3d464e;
+}
+
+[data-theme-version="dark"] .card.bg-white,
+[data-theme-version="dark"] .card.bg-light,
+[data-theme-version="dark"] .card-header.bg-white,
+[data-theme-version="dark"] .card-header.bg-light,
+[data-theme-version="dark"] .card-body.bg-white,
+[data-theme-version="dark"] .card-body.bg-light,
+[data-theme-version="dark"] .card-footer.bg-white,
+[data-theme-version="dark"] .card-footer.bg-light,
+[data-theme-version="dark"] .modal-header.bg-white,
+[data-theme-version="dark"] .modal-header.bg-light,
+[data-theme-version="dark"] .modal-footer.bg-white,
+[data-theme-version="dark"] .modal-footer.bg-light {
+  background-color: #24292D !important;
+  color: #e2e8f0 !important;
+  border-color: #3d464e !important;
+}
+
+[data-theme-version="dark"] .table,
+[data-theme-version="dark"] .table th,
+[data-theme-version="dark"] .table td,
+[data-theme-version="dark"] .table strong {
+  color: #e2e8f0 !important;
+  border-color: #3d464e;
+}
+
+[data-theme-version="dark"] .table thead th,
+[data-theme-version="dark"] .table thead td,
+[data-theme-version="dark"] .table-light,
+[data-theme-version="dark"] .table-light th,
+[data-theme-version="dark"] .table-light td,
+[data-theme-version="dark"] .table thead.bg-light th {
+  background-color: #24292D !important;
+  color: #f8fafc !important;
+  border-color: #475569 !important;
+}
+
+[data-theme-version="dark"] .table-hover tbody tr:hover > * {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  color: #ffffff !important;
+}
+
+/* Tabs, Pills, Links, and Outline Buttons */
+[data-theme-version="dark"] .nav-tabs {
+  border-color: #475569 !important;
+}
+
+[data-theme-version="dark"] .nav-tabs .nav-link:not(.active),
+[data-theme-version="dark"] .nav-pills .nav-link:not(.active) {
+  color: #cbd5e1 !important;
+}
+
+[data-theme-version="dark"] .nav-tabs .nav-link:not(.active):hover,
+[data-theme-version="dark"] .nav-tabs .nav-link:not(.active):focus {
+  color: #ffffff !important;
+  border-color: #475569 #475569 transparent !important;
+}
+
+[data-theme-version="dark"] .nav-tabs .nav-link.active,
+[data-theme-version="dark"] .nav-tabs .nav-item.show .nav-link {
+  color: #ffffff !important;
+  background-color: #24292D !important;
+  border-color: #475569 #475569 #24292D !important;
+}
+
+[data-theme-version="dark"][data-primary="color_custom"] a:hover,
+[data-theme-version="dark"][data-primary="color_custom"] .btn-link,
+[data-theme-version="dark"][data-primary="color_custom"] .text-primary:not(.badge):not([class*="badge-"]):not(.btn),
+[data-theme-version="dark"][data-primary="color_custom"] .nav-tabs .nav-link:not(.active) {
+  color: var(--cc-primary-on-dark, #e2e8f0) !important;
+}
+
+[data-theme-version="dark"][data-primary="color_custom"] .nav-tabs .nav-link:not(.active):hover,
+[data-theme-version="dark"][data-primary="color_custom"] .nav-tabs .nav-link:not(.active):focus {
+  color: var(--cc-primary-on-dark-hover, #ffffff) !important;
+}
+
+[data-theme-version="dark"] .btn-link {
+  color: var(--cc-primary-on-dark, #e2e8f0) !important;
+}
+
+[data-theme-version="dark"] .btn-link.text-muted {
+  color: #cbd5e1 !important;
+}
+
+[data-theme-version="dark"] .btn-outline-primary,
+[data-theme-version="dark"][data-primary="color_custom"] .btn-outline-primary {
+  color: var(--cc-primary-on-dark, #e2e8f0) !important;
+  border-color: var(--cc-primary-border-on-dark, #94a3b8) !important;
+}
+
+[data-theme-version="dark"] .btn-outline-primary:hover,
+[data-theme-version="dark"] .btn-outline-primary:focus,
+[data-theme-version="dark"] .btn-outline-primary:active,
+[data-theme-version="dark"][data-primary="color_custom"] .btn-outline-primary:hover,
+[data-theme-version="dark"][data-primary="color_custom"] .btn-outline-primary:focus,
+[data-theme-version="dark"][data-primary="color_custom"] .btn-outline-primary:active {
+  background-color: var(--cc-primary, var(--primary, #2bc155)) !important;
+  border-color: var(--cc-primary, var(--primary, #2bc155)) !important;
+  color: #ffffff !important;
+}
+
+[data-theme-version="dark"][data-primary="color_custom"] .btn-primary.light {
+  background-color: rgba(var(--cc-primary-rgb, 43, 193, 85), 0.22) !important;
+  border-color: var(--cc-primary-border-on-dark, rgba(255, 255, 255, 0.25)) !important;
+  color: var(--cc-primary-on-dark, #e2e8f0) !important;
+}
+
+[data-theme-version="dark"][data-primary="color_custom"] .btn-primary.light:hover {
+  background-color: var(--cc-primary, #2bc155) !important;
+  border-color: var(--cc-primary, #2bc155) !important;
+  color: #ffffff !important;
+}
+
+[data-theme-version="dark"] .btn-outline-secondary,
+[data-theme-version="dark"] .btn-outline-dark {
+  color: #e2e8f0 !important;
+  border-color: #64748b !important;
+}
+
+[data-theme-version="dark"] .btn-outline-secondary:hover,
+[data-theme-version="dark"] .btn-outline-secondary:focus,
+[data-theme-version="dark"] .btn-outline-secondary:active,
+[data-theme-version="dark"] .btn-outline-dark:hover,
+[data-theme-version="dark"] .btn-outline-dark:focus,
+[data-theme-version="dark"] .btn-outline-dark:active {
+  background-color: #475569 !important;
+  border-color: #64748b !important;
+  color: #ffffff !important;
+}
+
+[data-theme-version="dark"] .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Sidebar contrast in Dark Mode */
+[data-theme-version="dark"][data-primary="color_custom"] ul.metismenu li.mm-active > a,
+[data-theme-version="dark"][data-primary="color_custom"] ul.metismenu li.mm-active > a i,
+[data-theme-version="dark"][data-primary="color_custom"] ul.metismenu li.mm-active > a svg {
+  color: var(--cc-primary-on-dark, #ffffff) !important;
+}
+
+body[data-theme-version="dark"].has-custom-sidebar-font .deznav .metismenu li.mm-active > a,
+body[data-theme-version="dark"].has-custom-sidebar-font .deznav .metismenu li:hover > a,
+body[data-theme-version="dark"].has-custom-sidebar-font .deznav .metismenu li a:hover,
+body[data-theme-version="dark"].has-custom-sidebar-font .deznav .metismenu li a:focus {
+  color: #ffffff !important;
+}
+
+/* Dropdowns, List Groups, Pagination, and Form Controls */
+[data-theme-version="dark"] .dropdown-menu {
+  background-color: #24292D !important;
+  border: 1px solid #475569 !important;
+}
+
+[data-theme-version="dark"] .dropdown-item {
+  color: #e2e8f0 !important;
+}
+
+[data-theme-version="dark"] .dropdown-item:hover,
+[data-theme-version="dark"] .dropdown-item:focus {
+  background-color: #334155 !important;
+  color: #ffffff !important;
+}
+
+[data-theme-version="dark"] .list-group-item:not(.active) {
+  background-color: #2F363E !important;
+  color: #e2e8f0 !important;
+  border-color: #475569 !important;
+}
+
+[data-theme-version="dark"] .pagination .page-item:not(.active) .page-link {
+  background-color: #24292D !important;
+  border-color: #475569 !important;
+  color: #e2e8f0 !important;
+}
+
+[data-theme-version="dark"] .form-control:not([type="color"]),
+[data-theme-version="dark"] .form-select,
+[data-theme-version="dark"] .form-control-custom,
+[data-theme-version="dark"] .modal-body input:not([type="color"]):not([type="checkbox"]):not([type="radio"]),
+[data-theme-version="dark"] .modal-body select,
+[data-theme-version="dark"] .modal-body textarea,
+[data-theme-version="dark"] .sof-input,
+[data-theme-version="dark"] .sof-table-input,
+[data-theme-version="dark"] .sof-modal-ctrl,
+[data-theme-version="dark"] .sof-cell-input,
+[data-theme-version="dark"] .sof-cell-select {
+  background-color: #24292D !important;
+  border-color: #475569 !important;
+  color: #f1f5f9 !important;
+}
+
+[data-theme-version="dark"] .form-control::placeholder,
+[data-theme-version="dark"] .form-control-custom::placeholder,
+[data-theme-version="dark"] .modal-body input::placeholder,
+[data-theme-version="dark"] .modal-body textarea::placeholder {
+  color: #94a3b8 !important;
+  opacity: 1 !important;
+}
+
+[data-theme-version="dark"] select option {
+  background-color: #24292D !important;
+  color: #f1f5f9 !important;
+}
+
+[data-theme-version="dark"] .input-group-text {
+  background-color: #334155 !important;
+  border-color: #475569 !important;
+  color: #e2e8f0 !important;
+}
+
+[data-theme-version="dark"] .react-select__control {
+  background-color: #24292D !important;
+  border-color: #475569 !important;
+  color: #f1f5f9 !important;
+}
+
+[data-theme-version="dark"] .react-select__single-value,
+[data-theme-version="dark"] .react-select__input-container,
+[data-theme-version="dark"] .react-select__input-container input {
+  color: #f1f5f9 !important;
+}
+
+[data-theme-version="dark"] .react-select__placeholder {
+  color: #94a3b8 !important;
+}
+
+[data-theme-version="dark"] .react-select__menu {
+  background-color: #24292D !important;
+  border: 1px solid #475569 !important;
+}
+
+[data-theme-version="dark"] .react-select__option:not(.react-select__option--is-selected):not(.react-select__option--is-focused) {
+  background-color: #24292D !important;
+  color: #e2e8f0 !important;
+}
+
+/* ==========================================================================
    GLOBAL PRINT STYLES - HIDE NAVIGATION & MAKE REPORTS FULL WIDTH
    ========================================================================== */
 @media print {
@@ -1564,4 +1929,535 @@ div, ol, span, ul, .table-responsive, .custom-price-list-scrollbar {
         width: 14px !important;
         height: 14px !important;
     }
+}
+
+/* ==========================================================================
+   GLOBAL DYNAMIC SAVE / SUBMIT & CANCEL / CLOSE BUTTON THEME COLORS
+   ========================================================================== */
+
+/* Save / Submit Buttons */
+.btn-save-custom:not(.return):not(.reallocate),
+[class*="-custom-modal"] .btn-save-custom:not(.return):not(.reallocate),
+[class*="-modal"] .btn-save-custom:not(.return):not(.reallocate),
+[class*="-container"] .btn-save-custom:not(.return):not(.reallocate),
+.btn-save,
+.btn-form-save,
+.btn-universal-save,
+.btn-generate-custom,
+.pkg-submit-btn,
+.modal-footer .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn),
+.modal-footer button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn),
+.modal-footer-custom .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn),
+.modal-footer-custom button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn),
+.modal-actions .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn),
+.modal-actions button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn),
+.form-actions .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn),
+.form-actions button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn),
+.card-footer .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn),
+.card-footer button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn),
+.swal2-actions .swal2-confirm {
+  background: var(--save-btn-color, #5b0111) !important;
+  background-color: var(--save-btn-color, #5b0111) !important;
+  border-color: var(--save-btn-color, #5b0111) !important;
+  color: var(--save-btn-text-color, #ffffff) !important;
+}
+
+.btn-save-custom:not(.return):not(.reallocate):hover:not(:disabled),
+[class*="-custom-modal"] .btn-save-custom:not(.return):not(.reallocate):hover:not(:disabled),
+[class*="-modal"] .btn-save-custom:not(.return):not(.reallocate):hover:not(:disabled),
+[class*="-container"] .btn-save-custom:not(.return):not(.reallocate):hover:not(:disabled),
+.btn-save:hover:not(:disabled),
+.btn-form-save:hover:not(:disabled),
+.btn-universal-save:hover:not(:disabled),
+.btn-generate-custom:hover:not(:disabled),
+.pkg-submit-btn:hover:not(:disabled),
+.modal-footer .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):hover:not(:disabled),
+.modal-footer button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):hover:not(:disabled),
+.modal-footer-custom .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):hover:not(:disabled),
+.modal-footer-custom button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):hover:not(:disabled),
+.modal-actions .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):hover:not(:disabled),
+.modal-actions button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):hover:not(:disabled),
+.form-actions .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):hover:not(:disabled),
+.form-actions button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):hover:not(:disabled),
+.card-footer .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):hover:not(:disabled),
+.card-footer button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):hover:not(:disabled),
+.swal2-actions .swal2-confirm:hover:not(:disabled) {
+  background: var(--save-btn-hover-color, #42010c) !important;
+  background-color: var(--save-btn-hover-color, #42010c) !important;
+  border-color: var(--save-btn-hover-color, #42010c) !important;
+  color: var(--save-btn-text-color, #ffffff) !important;
+}
+
+.btn-save-custom:not(.return):not(.reallocate):active:not(:disabled),
+[class*="-custom-modal"] .btn-save-custom:not(.return):not(.reallocate):active:not(:disabled),
+.btn-save:active:not(:disabled),
+.btn-form-save:active:not(:disabled),
+.btn-universal-save:active:not(:disabled),
+.btn-generate-custom:active:not(:disabled),
+.pkg-submit-btn:active:not(:disabled),
+.modal-footer .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):active:not(:disabled),
+.modal-footer button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):active:not(:disabled),
+.modal-footer-custom .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):active:not(:disabled),
+.modal-footer-custom button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):active:not(:disabled),
+.modal-actions .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):active:not(:disabled),
+.modal-actions button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):active:not(:disabled),
+.form-actions .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):active:not(:disabled),
+.form-actions button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):active:not(:disabled),
+.card-footer .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):active:not(:disabled),
+.card-footer button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):active:not(:disabled),
+.swal2-actions .swal2-confirm:active:not(:disabled) {
+  background: var(--save-btn-active-color, #330109) !important;
+  background-color: var(--save-btn-active-color, #330109) !important;
+  border-color: var(--save-btn-active-color, #330109) !important;
+  color: var(--save-btn-text-color, #ffffff) !important;
+}
+
+.btn-save-custom:not(.return):not(.reallocate):disabled,
+[class*="-custom-modal"] .btn-save-custom:not(.return):not(.reallocate):disabled,
+.btn-save:disabled,
+.btn-form-save:disabled,
+.btn-universal-save:disabled,
+.btn-generate-custom:disabled,
+.pkg-submit-btn:disabled,
+.modal-footer .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):disabled,
+.modal-footer button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):disabled,
+.modal-footer-custom .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):disabled,
+.modal-footer-custom button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):disabled,
+.modal-actions .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):disabled,
+.modal-actions button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):disabled,
+.form-actions .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):disabled,
+.form-actions button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):disabled,
+.card-footer .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):disabled,
+.card-footer button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn):disabled {
+  background: var(--save-btn-color, #5b0111) !important;
+  background-color: var(--save-btn-color, #5b0111) !important;
+  border-color: var(--save-btn-color, #5b0111) !important;
+  color: var(--save-btn-text-color, #ffffff) !important;
+  opacity: 0.65 !important;
+}
+
+.btn-save-custom:not(.return):not(.reallocate) i,
+.btn-save-custom:not(.return):not(.reallocate) svg,
+[class*="-custom-modal"] .btn-save-custom:not(.return):not(.reallocate) i,
+[class*="-custom-modal"] .btn-save-custom:not(.return):not(.reallocate) svg,
+.btn-save i,
+.btn-save svg,
+.btn-form-save i,
+.btn-form-save svg,
+.btn-universal-save i,
+.btn-universal-save svg,
+.btn-generate-custom i,
+.btn-generate-custom svg,
+.pkg-submit-btn i,
+.pkg-submit-btn svg,
+.modal-footer .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn) i,
+.modal-footer .btn-primary:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn) svg,
+.modal-footer button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn) i,
+.modal-footer button[type="submit"]:not(.btn-close-custom):not(.btn-cancel):not(.btn-cancel-custom):not(.btn-universal-close):not(.pkg-close-btn) svg,
+.modal-footer-custom button[type="submit"] i,
+.modal-footer-custom button[type="submit"] svg,
+.modal-actions button[type="submit"] i,
+.modal-actions button[type="submit"] svg,
+.form-actions button[type="submit"] i,
+.form-actions button[type="submit"] svg,
+.card-footer button[type="submit"] i,
+.card-footer button[type="submit"] svg,
+.swal2-actions .swal2-confirm i,
+.swal2-actions .swal2-confirm svg {
+  color: var(--save-btn-text-color, #ffffff) !important;
+}
+
+/* Cancel / Close Buttons */
+.btn-close-custom,
+[class*="-custom-modal"] .btn-close-custom,
+[class*="-modal"] .btn-close-custom,
+[class*="-container"] .btn-close-custom,
+.btn-universal-close,
+.btn-cancel,
+.btn-cancel-custom,
+.btn-form-cancel,
+.pkg-close-btn,
+.modal-footer .btn-secondary,
+.modal-footer .btn-light,
+.modal-footer .btn-outline-secondary,
+.modal-footer button[type="button"]:not(.btn-save):not(.btn-save-custom):not(.btn-form-save):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn):not(.btn-primary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info):not(.btn-close),
+.modal-footer-custom .btn-secondary,
+.modal-footer-custom .btn-light,
+.modal-footer-custom .btn-outline-secondary,
+.modal-footer-custom button[type="button"]:not(.btn-save):not(.btn-save-custom):not(.btn-form-save):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn):not(.btn-primary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info),
+.modal-actions .btn-secondary,
+.modal-actions .btn-light,
+.modal-actions .btn-outline-secondary,
+.modal-actions button[type="button"]:not(.btn-save):not(.btn-save-custom):not(.btn-form-save):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn):not(.btn-primary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info),
+.form-actions .btn-secondary,
+.form-actions .btn-light,
+.form-actions .btn-outline-secondary,
+.form-actions button[type="button"]:not(.btn-save):not(.btn-save-custom):not(.btn-form-save):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn):not(.btn-primary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info),
+.card-footer .btn-secondary,
+.card-footer .btn-light,
+.card-footer .btn-outline-secondary,
+.swal2-actions .swal2-cancel {
+  background: var(--cancel-btn-color, #f5e9dc) !important;
+  background-color: var(--cancel-btn-color, #f5e9dc) !important;
+  border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
+  border-color: var(--cancel-btn-border-color, #e2cbba) !important;
+  color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
+}
+
+.btn-close-custom:hover:not(:disabled),
+[class*="-custom-modal"] .btn-close-custom:hover:not(:disabled),
+[class*="-modal"] .btn-close-custom:hover:not(:disabled),
+[class*="-container"] .btn-close-custom:hover:not(:disabled),
+.btn-universal-close:hover:not(:disabled),
+.btn-cancel:hover:not(:disabled),
+.btn-cancel-custom:hover:not(:disabled),
+.btn-form-cancel:hover:not(:disabled),
+.pkg-close-btn:hover:not(:disabled),
+.modal-footer .btn-secondary:hover:not(:disabled),
+.modal-footer .btn-light:hover:not(:disabled),
+.modal-footer .btn-outline-secondary:hover:not(:disabled),
+.modal-footer button[type="button"]:not(.btn-save):not(.btn-save-custom):not(.btn-form-save):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn):not(.btn-primary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info):not(.btn-close):hover:not(:disabled),
+.modal-footer-custom .btn-secondary:hover:not(:disabled),
+.modal-footer-custom .btn-light:hover:not(:disabled),
+.modal-footer-custom .btn-outline-secondary:hover:not(:disabled),
+.modal-footer-custom button[type="button"]:not(.btn-save):not(.btn-save-custom):not(.btn-form-save):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn):not(.btn-primary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info):hover:not(:disabled),
+.modal-actions .btn-secondary:hover:not(:disabled),
+.modal-actions .btn-light:hover:not(:disabled),
+.modal-actions .btn-outline-secondary:hover:not(:disabled),
+.modal-actions button[type="button"]:not(.btn-save):not(.btn-save-custom):not(.btn-form-save):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn):not(.btn-primary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info):hover:not(:disabled),
+.form-actions .btn-secondary:hover:not(:disabled),
+.form-actions .btn-light:hover:not(:disabled),
+.form-actions .btn-outline-secondary:hover:not(:disabled),
+.form-actions button[type="button"]:not(.btn-save):not(.btn-save-custom):not(.btn-form-save):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn):not(.btn-primary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info):hover:not(:disabled),
+.card-footer .btn-secondary:hover:not(:disabled),
+.card-footer .btn-light:hover:not(:disabled),
+.card-footer .btn-outline-secondary:hover:not(:disabled),
+.swal2-actions .swal2-cancel:hover:not(:disabled) {
+  background: var(--cancel-btn-hover-color, #ebd8c5) !important;
+  background-color: var(--cancel-btn-hover-color, #ebd8c5) !important;
+  border-color: var(--cancel-btn-border-hover-color, #d6baa4) !important;
+  color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
+}
+
+.btn-close-custom:active:not(:disabled),
+[class*="-custom-modal"] .btn-close-custom:active:not(:disabled),
+.btn-universal-close:active:not(:disabled),
+.btn-cancel:active:not(:disabled),
+.btn-cancel-custom:active:not(:disabled),
+.btn-form-cancel:active:not(:disabled),
+.pkg-close-btn:active:not(:disabled),
+.modal-footer .btn-secondary:active:not(:disabled),
+.modal-footer .btn-light:active:not(:disabled),
+.modal-footer .btn-outline-secondary:active:not(:disabled),
+.modal-footer button[type="button"]:not(.btn-save):not(.btn-save-custom):not(.btn-form-save):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn):not(.btn-primary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info):not(.btn-close):active:not(:disabled),
+.modal-footer-custom .btn-secondary:active:not(:disabled),
+.modal-footer-custom .btn-light:active:not(:disabled),
+.modal-footer-custom .btn-outline-secondary:active:not(:disabled),
+.modal-footer-custom button[type="button"]:not(.btn-save):not(.btn-save-custom):not(.btn-form-save):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn):not(.btn-primary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info):active:not(:disabled),
+.modal-actions .btn-secondary:active:not(:disabled),
+.modal-actions .btn-light:active:not(:disabled),
+.modal-actions .btn-outline-secondary:active:not(:disabled),
+.modal-actions button[type="button"]:not(.btn-save):not(.btn-save-custom):not(.btn-form-save):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn):not(.btn-primary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info):active:not(:disabled),
+.form-actions .btn-secondary:active:not(:disabled),
+.form-actions .btn-light:active:not(:disabled),
+.form-actions .btn-outline-secondary:active:not(:disabled),
+.form-actions button[type="button"]:not(.btn-save):not(.btn-save-custom):not(.btn-form-save):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn):not(.btn-primary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info):active:not(:disabled),
+.card-footer .btn-secondary:active:not(:disabled),
+.card-footer .btn-light:active:not(:disabled),
+.card-footer .btn-outline-secondary:active:not(:disabled),
+.swal2-actions .swal2-cancel:active:not(:disabled) {
+  background: var(--cancel-btn-active-color, #e2cbba) !important;
+  background-color: var(--cancel-btn-active-color, #e2cbba) !important;
+  border-color: var(--cancel-btn-border-hover-color, #d6baa4) !important;
+  color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
+}
+
+.btn-close-custom i,
+.btn-close-custom svg,
+[class*="-custom-modal"] .btn-close-custom i,
+[class*="-custom-modal"] .btn-close-custom svg,
+.btn-universal-close i,
+.btn-universal-close svg,
+.btn-cancel i,
+.btn-cancel svg,
+.btn-cancel-custom i,
+.btn-cancel-custom svg,
+.btn-form-cancel i,
+.btn-form-cancel svg,
+.pkg-close-btn i,
+.pkg-close-btn svg,
+.modal-footer .btn-secondary i,
+.modal-footer .btn-light i,
+.modal-footer .btn-outline-secondary i,
+.modal-footer button[type="button"]:not(.btn-save):not(.btn-save-custom):not(.btn-form-save):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn):not(.btn-primary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info):not(.btn-close) i,
+.modal-footer-custom .btn-secondary i,
+.modal-footer-custom .btn-light i,
+.modal-footer-custom .btn-outline-secondary i,
+.modal-footer-custom button[type="button"]:not(.btn-save):not(.btn-save-custom):not(.btn-form-save):not(.btn-universal-save):not(.btn-generate-custom):not(.pkg-submit-btn):not(.btn-primary):not(.btn-success):not(.btn-danger):not(.btn-warning):not(.btn-info) i,
+.modal-actions .btn-secondary i,
+.modal-actions .btn-light i,
+.modal-actions .btn-outline-secondary i,
+.form-actions .btn-secondary i,
+.form-actions .btn-light i,
+.form-actions .btn-outline-secondary i,
+.card-footer .btn-secondary i,
+.card-footer .btn-light i,
+.card-footer .btn-outline-secondary i,
+.swal2-actions .swal2-cancel i {
+  color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
+}
+
+/* ============================================================
+   GLOBAL BADGE COLOR SYSTEM (8 Semantic Palettes)
+   ============================================================ */
+:root {
+  --badge-burgundy-bg: #F5E1E5;
+  --badge-burgundy-text: #780116;
+  --badge-gold-bg: #F5EBD8;
+  --badge-gold-text: #805B20;
+  --badge-green-bg: #DDF3E5;
+  --badge-green-text: #176B3A;
+  --badge-red-bg: #FCE4E4;
+  --badge-red-text: #A52222;
+  --badge-blue-bg: #E2EEFA;
+  --badge-blue-text: #245A91;
+  --badge-orange-bg: #FCEBD9;
+  --badge-orange-text: #99500C;
+  --badge-grey-bg: #ECEDEF;
+  --badge-grey-text: #50545C;
+  --badge-purple-bg: #EEE8F7;
+  --badge-purple-text: #65428B;
+}
+
+/* Burgundy: Active, Important, Priority */
+.badge-primary,
+.badge.bg-primary,
+.light.badge-primary,
+.badge-primary.light,
+.badge.bg-primary-subtle,
+[data-primary] .badge-primary,
+[data-theme-version="dark"] .light.badge-primary,
+.badge-burgundy,
+.badge.badge-burgundy,
+.badge.bg-primary.text-white,
+.badge.bg-primary-subtle.text-primary {
+  background-color: var(--badge-burgundy-bg) !important;
+  color: var(--badge-burgundy-text) !important;
+  border-color: rgba(120, 1, 22, 0.14) !important;
+}
+.badge-primary i,
+.badge.bg-primary i,
+.badge-burgundy i {
+  color: var(--badge-burgundy-text) !important;
+}
+
+/* Gold: Pending Review, Special */
+.badge-warning,
+.badge.bg-warning,
+.light.badge-warning,
+.badge-warning.light,
+.badge.bg-warning-subtle,
+[data-theme-version="dark"] .light.badge-warning,
+.badge-gold,
+.badge.badge-gold,
+.badge.bg-warning.text-dark,
+.badge.bg-warning.text-white,
+.badge.bg-warning-subtle.text-warning {
+  background-color: var(--badge-gold-bg) !important;
+  color: var(--badge-gold-text) !important;
+  border-color: rgba(128, 91, 32, 0.14) !important;
+}
+.badge-warning i,
+.badge.bg-warning i,
+.badge-gold i {
+  color: var(--badge-gold-text) !important;
+}
+
+/* Green: Approved, Completed, Success */
+.badge-success,
+.badge.bg-success,
+.light.badge-success,
+.badge-success.light,
+.badge.bg-success-subtle,
+.badge.bg-success-light,
+[data-theme-version="dark"] .light.badge-success,
+.badge-green,
+.badge.badge-green,
+.badge.bg-success.text-white,
+.badge.bg-success-subtle.text-success {
+  background-color: var(--badge-green-bg) !important;
+  color: var(--badge-green-text) !important;
+  border-color: rgba(23, 107, 58, 0.14) !important;
+}
+.badge-success i,
+.badge.bg-success i,
+.badge-green i {
+  color: var(--badge-green-text) !important;
+}
+
+/* Red: Rejected, Cancelled, Failed */
+.badge-danger,
+.badge.bg-danger,
+.light.badge-danger,
+.badge-danger.light,
+.badge.bg-danger-subtle,
+[data-theme-version="dark"] .light.badge-danger,
+.badge-red,
+.badge.badge-red,
+.badge.bg-danger.text-white,
+.badge.bg-danger-subtle.text-danger {
+  background-color: var(--badge-red-bg) !important;
+  color: var(--badge-red-text) !important;
+  border-color: rgba(165, 34, 34, 0.14) !important;
+}
+.badge-danger i,
+.badge.bg-danger i,
+.badge-red i {
+  color: var(--badge-red-text) !important;
+}
+
+/* Blue: Information, Processing */
+.badge-info,
+.badge.bg-info,
+.light.badge-info,
+.badge-info.light,
+.badge.bg-info-subtle,
+[data-theme-version="dark"] .light.badge-info,
+.badge-blue,
+.badge.badge-blue,
+.badge-reallocated,
+.badge.bg-info.text-dark,
+.badge.bg-info.text-white,
+.badge.bg-info-subtle.text-info {
+  background-color: var(--badge-blue-bg) !important;
+  color: var(--badge-blue-text) !important;
+  border-color: rgba(36, 90, 145, 0.14) !important;
+}
+.badge-info i,
+.badge.bg-info i,
+.badge-blue i {
+  color: var(--badge-blue-text) !important;
+}
+
+/* Orange: Waiting, Attention */
+.badge-orange,
+.badge.badge-orange,
+.light.badge-orange,
+.badge-orange.light,
+.badge.bg-orange,
+.badge.bg-orange-subtle {
+  background-color: var(--badge-orange-bg) !important;
+  color: var(--badge-orange-text) !important;
+  border-color: rgba(153, 80, 12, 0.14) !important;
+}
+.badge-orange i,
+.badge.bg-orange i {
+  color: var(--badge-orange-text) !important;
+}
+
+/* Grey: Inactive, Draft, Disabled */
+.badge-light,
+.badge.bg-light,
+.badge.bg-light.text-dark,
+.badge.bg-light.text-secondary,
+.badge.bg-light-subtle,
+.badge-dark,
+.badge.bg-dark,
+.badge.bg-dark.text-white,
+.light.badge-dark,
+.badge-dark.light,
+[data-theme-version="dark"] .light.badge-dark,
+.badge-default,
+.light.badge-default,
+.badge-grey,
+.badge.badge-grey,
+.badge-gray,
+.badge.badge-gray {
+  background-color: var(--badge-grey-bg) !important;
+  color: var(--badge-grey-text) !important;
+  border-color: rgba(80, 84, 92, 0.14) !important;
+}
+.badge-light i,
+.badge.bg-light i,
+.badge-dark i,
+.badge.bg-dark i,
+.badge-grey i,
+.badge-gray i {
+  color: var(--badge-grey-text) !important;
+}
+
+/* Purple: Assigned, Special category */
+.badge-secondary,
+.badge.bg-secondary,
+.light.badge-secondary,
+.badge-secondary.light,
+.badge.bg-secondary-subtle,
+[data-theme-version="dark"] .light.badge-secondary,
+.badge-purple,
+.badge.badge-purple,
+.badge-inuse,
+.badge.bg-secondary.text-white,
+.badge.bg-secondary-subtle.text-secondary {
+  background-color: var(--badge-purple-bg) !important;
+  color: var(--badge-purple-text) !important;
+  border-color: rgba(101, 66, 139, 0.14) !important;
+}
+.badge-secondary i,
+.badge.bg-secondary i,
+.badge-purple i {
+  color: var(--badge-purple-text) !important;
+}
+
+/* Outline Badge Variants */
+.badge-outline-primary {
+  background-color: transparent !important;
+  border: 1px solid var(--badge-burgundy-text) !important;
+  color: var(--badge-burgundy-text) !important;
+}
+.badge-outline-warning {
+  background-color: transparent !important;
+  border: 1px solid var(--badge-gold-text) !important;
+  color: var(--badge-gold-text) !important;
+}
+.badge-outline-success {
+  background-color: transparent !important;
+  border: 1px solid var(--badge-green-text) !important;
+  color: var(--badge-green-text) !important;
+}
+.badge-outline-danger {
+  background-color: transparent !important;
+  border: 1px solid var(--badge-red-text) !important;
+  color: var(--badge-red-text) !important;
+}
+.badge-outline-info {
+  background-color: transparent !important;
+  border: 1px solid var(--badge-blue-text) !important;
+  color: var(--badge-blue-text) !important;
+}
+.badge-outline-secondary {
+  background-color: transparent !important;
+  border: 1px solid var(--badge-purple-text) !important;
+  color: var(--badge-purple-text) !important;
+}
+.badge-outline-light,
+.badge-outline-dark {
+  background-color: transparent !important;
+  border: 1px solid var(--badge-grey-text) !important;
+  color: var(--badge-grey-text) !important;
+}
+
+/* Preserve Top Header notification count pills themed to Template Primary Color */
+.header-right .notification_dropdown .nav-link .badge,
+.header-right .notification_dropdown .nav-link .badge.bg-primary,
+.header-right .notification_dropdown .nav-link .badge.light.bg-primary {
+  background-color: var(--primary, #43dc80) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+}
+[data-primary="color_custom"] .header-right .notification_dropdown .nav-link .badge,
+[data-primary="color_custom"] .header-right .notification_dropdown .nav-link .badge.bg-primary,
+[data-primary="color_custom"] .header-right .notification_dropdown .nav-link .badge.light.bg-primary {
+  background-color: var(--cc-primary, #2bc155) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
 }

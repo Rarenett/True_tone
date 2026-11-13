@@ -1282,7 +1282,7 @@ const ItemEntryPopup = ({ item, isInterState, godowns, stockItems, units, onSave
                                 width: '48px',
                                 height: '48px',
                                 borderRadius: '50%',
-                                background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+                                background: 'var(--form-icon-color, var(--cc-primary, #5b0111))',
                                 display: 'flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
@@ -1550,11 +1550,11 @@ const ItemEntryPopup = ({ item, isInterState, godowns, stockItems, units, onSave
                             </span>
                         ) : <span />}
                         <div className="d-flex gap-2">
-                            <button type="button" className="btn btn-secondary" style={{ padding: '6px 20px' }} onClick={onClose}>Cancel</button>
+                            <button type="button" className="btn btn-secondary btn-close-custom" style={{ padding: '6px 20px' }} onClick={onClose}>Cancel</button>
                             <button
                                 ref={saveBtnRef}
                                 type="button"
-                                className="btn btn-primary"
+                                className="btn btn-primary btn-save-custom"
                                 style={{ padding: '6px 20px' }}
                                 onClick={handleSave}
                                 disabled={item.gstResolving}
@@ -1603,7 +1603,7 @@ const ItemViewPopup = ({ item, isInterState, onClose, productConfig, stockItems 
                             width: '48px',
                             height: '48px',
                             borderRadius: '50%',
-                            background: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
+                            background: 'var(--form-icon-color, var(--cc-primary, #5b0111))',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
@@ -3472,8 +3472,6 @@ const PurchaseReturnForm = ({ formData = {}, setFormData, onSave, onCancel, isEd
                             className="sof-btn-save"
                             disabled={isSubmitting}
                             style={{
-                                background: 'linear-gradient(135deg, #10b981, #059669)',
-                                boxShadow: '0 4px 16px rgba(16, 185, 129, 0.35)',
                                 opacity: isSubmitting ? 0.7 : 1,
                                 cursor: isSubmitting ? 'not-allowed' : 'pointer'
                             }}
@@ -3791,17 +3789,17 @@ const PurchaseReturnForm = ({ formData = {}, setFormData, onSave, onCancel, isEd
                 }
                 .sof-btn-cancel {
                     display: inline-flex; align-items: center; gap: 8px;
-                    background: #fff; color: #64748b;
-                    border: 1.5px solid #e2e8f0;
+                    background: var(--cancel-btn-color, #f5e9dc); color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111));
+                    border: 1.5px solid var(--cancel-btn-border-color, #e2cbba);
                     border-radius: 10px; padding: 11px 22px;
                     font-size: 0.88rem; font-weight: 700;
                     cursor: pointer; transition: all 0.2s ease;
                     font-family: inherit;
                 }
-                .sof-btn-cancel:hover { background: #f8fafc; color: #334155; border-color: #94a3b8; }
+                .sof-btn-cancel:hover { background: var(--cancel-btn-hover-color, #ebd8c5); color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)); border-color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)); }
                 .sof-btn-save {
                     display: inline-flex; align-items: center; gap: 8px;
-                    color: #fff; border: none;
+                    background: var(--save-btn-color, #5b0111); color: var(--save-btn-text-color, #ffffff); border: none;
                     border-radius: 10px; padding: 12px 30px;
                     font-size: 0.9rem; font-weight: 700;
                     cursor: pointer;
@@ -3813,7 +3811,7 @@ const PurchaseReturnForm = ({ formData = {}, setFormData, onSave, onCancel, isEd
                 .sof-btn-save:hover {
                     transform: translateY(-2px);
                     animation-play-state: paused;
-                }
+                 background: var(--save-btn-hover-color, #42010c); color: var(--save-btn-text-color, #ffffff); }
                 .sof-btn-save:active { transform: translateY(0); }
                 .sof-btn-save:focus-visible,
                 .sof-btn-save:focus {
@@ -3971,9 +3969,9 @@ const PurchaseReturnForm = ({ formData = {}, setFormData, onSave, onCancel, isEd
                     display: inline-flex;
                     align-items: center;
                     gap: 6px;
-                    background: #ffffff;
-                    color: #64748b;
-                    border: 1.5px solid #e2e8f0;
+                    background: var(--cancel-btn-color, #f5e9dc);
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111));
+                    border: 1.5px solid var(--cancel-btn-border-color, #e2cbba);
                     border-radius: 8px;
                     padding: 8px 18px;
                     font-size: 0.82rem;
@@ -3983,16 +3981,16 @@ const PurchaseReturnForm = ({ formData = {}, setFormData, onSave, onCancel, isEd
                     font-family: inherit;
                 }
                 .sof-popup-btn-cancel:hover {
-                    background: #f8fafc;
-                    color: #334155;
-                    border-color: #cbd5e1;
+                    background: var(--cancel-btn-hover-color, #ebd8c5);
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111));
+                    border-color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111));
                 }
                 .sof-popup-btn-save {
                     display: inline-flex;
                     align-items: center;
                     gap: 6px;
-                    background: linear-gradient(135deg, #0d9488, #0f766e);
-                    color: #ffffff;
+                    background: var(--save-btn-color, #5b0111);
+                    color: var(--save-btn-text-color, #ffffff);
                     border: none;
                     border-radius: 8px;
                     padding: 9px 24px;
@@ -4006,7 +4004,7 @@ const PurchaseReturnForm = ({ formData = {}, setFormData, onSave, onCancel, isEd
                 .sof-popup-btn-save:hover {
                     transform: translateY(-1px);
                     box-shadow: 0 6px 16px rgba(13, 148, 136, 0.35);
-                    background: linear-gradient(135deg, #0f766e, #115e59);
+                    background: var(--save-btn-hover-color, #42010c); color: var(--save-btn-text-color, #ffffff);
                 }
                 .sof-popup-btn-save:active {
                     transform: translateY(0);

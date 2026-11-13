@@ -113,10 +113,10 @@ const CandidateList = () => {
             'Pending': 'warning',
             'Selected': 'success',
             'Rejected': 'danger',
-            'Waitlisted': 'info',
-            'Resigned': 'secondary'
+            'Waitlisted': 'orange',
+            'Resigned': 'light'
         };
-        return <Badge bg={badgeMap[status] || 'secondary'}>{status}</Badge>;
+        return <Badge bg={badgeMap[status] || 'light'}>{status}</Badge>;
     };
 
     // Pagination state

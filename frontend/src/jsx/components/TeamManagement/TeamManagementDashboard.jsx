@@ -808,7 +808,7 @@ const TeamManagementDashboard = () => {
                         <style>{`
                             .pkg-custom-modal .modal-content { border-radius: 16px !important; border: none !important; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12) !important; overflow: hidden; }
                             .pkg-custom-modal .modal-header-custom { display: flex; align-items: center; justify-content: space-between; padding: 24px 28px 16px 28px; border-bottom: 1px solid #f1f5f9; background-color: #fff; }
-                            .pkg-custom-modal .modal-icon-circle { width: 48px; height: 48px; background-color: #2ece8a; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(46, 206, 138, 0.2); }
+                            .pkg-custom-modal .modal-icon-circle { width: 48px; height: 48px; background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12); }
                             .pkg-custom-modal .modal-close-x { border: none; background: transparent; font-size: 24px; color: #aaa; cursor: pointer; transition: color 0.2s; display: flex; align-items: center; justify-content: center; padding: 4px; line-height: 1; }
                             .pkg-custom-modal .modal-close-x:hover { color: #555; }
                             .pkg-custom-modal .modal-body-custom { padding: 24px 28px; overflow-y: auto; max-height: 400px; background-color: #fff; }
@@ -817,8 +817,8 @@ const TeamManagementDashboard = () => {
                             .pkg-custom-modal .modal-footer-custom { display: flex; align-items: center; justify-content: flex-end; padding: 20px 28px 24px 28px; border-top: 1px solid #f1f5f9; background-color: #fafbfc; gap: 12px; }
                             .pkg-custom-modal .form-label-custom { font-size: 13px; font-weight: 500; color: #4a5568; margin-bottom: 6px; display: block; }
                             .pkg-custom-modal .trip-value { font-size: 14px; color: #334155; margin-bottom: 0; font-weight: 600; }
-                            .pkg-custom-modal .btn-close-custom { background-color: #7A70BA !important; color: white !important; border-radius: 8px !important; font-weight: 500 !important; font-size: 14px !important; padding: 10px 24px !important; border: none !important; cursor: pointer; transition: background-color 0.2s, transform 0.1s; }
-                            .pkg-custom-modal .btn-close-custom:hover { background-color: #6357a7 !important; }
+                            .pkg-custom-modal .btn-close-custom { background-color: var(--cancel-btn-color, #f5e9dc) !important; color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important; border-radius: 8px !important; font-weight: 500 !important; font-size: 14px !important; padding: 10px 24px !important; border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important; cursor: pointer; transition: background-color 0.2s, transform 0.1s; }
+                            .pkg-custom-modal .btn-close-custom:hover { background-color: var(--cancel-btn-hover-color, #ebd8c5) !important; }
                         `}</style>
                         
                         <div className="modal-header-custom">
@@ -986,22 +986,22 @@ const TeamManagementDashboard = () => {
                     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25) !important;
                 }
                 .btn-cancel-custom {
-                    background-color: #7A70BA !important;
-                    color: white !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
-                    border: none !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     cursor: pointer;
                     transition: background-color 0.2s;
                 }
                 .btn-cancel-custom:hover {
-                    background-color: #6357a7 !important;
+                    background-color: var(--cancel-btn-hover-color, #ebd8c5) !important;
                 }
                 .btn-generate-custom {
-                    background-color: #2ece8a !important;
-                    color: white !important;
+                    background-color: var(--save-btn-color, #5b0111) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
@@ -1011,7 +1011,7 @@ const TeamManagementDashboard = () => {
                     transition: background-color 0.2s;
                 }
                 .btn-generate-custom:hover {
-                    background-color: #26b277 !important;
+                    background-color: var(--save-btn-hover-color, #42010c) !important;
                 }
                 .team-department-select:focus {
                     border-color: #d7d7d7 !important;

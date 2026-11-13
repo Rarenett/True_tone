@@ -337,7 +337,7 @@ const CalculationTypeList = () => {
                     width: 44px;
                     height: 44px;
                     border-radius: 12px;
-                    background: linear-gradient(135deg, #6d4aff 0%, #5233ea 100%);
+                    background: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -371,20 +371,20 @@ const CalculationTypeList = () => {
                     color: #475569;
                 }
                 .btn-close-custom {
-                    background-color: #7A70BA !important;
-                    color: white !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
                     padding: 10px 24px !important;
-                    border: none !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     cursor: pointer;
-                    transition: background-color 0.2s;
+                    transition: background-color 0.2s, border-color 0.2s;
                 }
-                .btn-close-custom:hover { background-color: #6357a7 !important; }
+                .btn-close-custom:hover { background-color: var(--cancel-btn-hover-color, #ebd8c5) !important; border-color: var(--cancel-btn-border-hover-color, #d6baa4) !important; }
                 .btn-save-custom {
-                    background-color: #2ece8a !important;
-                    color: white !important;
+                    background-color: var(--save-btn-color, #5b0111) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                     border-radius: 8px !important;
                     font-weight: 500 !important;
                     font-size: 14px !important;
@@ -393,7 +393,7 @@ const CalculationTypeList = () => {
                     cursor: pointer;
                     transition: background-color 0.2s;
                 }
-                .btn-save-custom:hover:not(:disabled) { background-color: #26b277 !important; }
+                .btn-save-custom:hover:not(:disabled) { background-color: var(--save-btn-hover-color, #42010c) !important; }
                 .btn-save-custom:disabled {
                     opacity: 0.6 !important;
                 }

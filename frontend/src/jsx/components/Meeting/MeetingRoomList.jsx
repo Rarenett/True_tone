@@ -535,12 +535,12 @@ const MeetingRoomList = () => {
                     width: 48px;
                     height: 48px;
                     border-radius: 12px;
-                    background: #2ece8a;
+                    background: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     flex-shrink: 0;
-                    box-shadow: 0 4px 12px rgba(46, 206, 138, 0.25);
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
                 }
                 .mc-modal .modal-close-x {
                     width: 36px;
@@ -600,32 +600,32 @@ const MeetingRoomList = () => {
                     height: 42px;
                     padding: 0 24px;
                     border-radius: 10px;
-                    border: none;
-                    background: #7A70BA;
-                    color: white;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
+                    background: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                     font-weight: 600;
                     font-size: 14px;
                     transition: all 0.2s;
                 }
                 .mc-modal .btn-close-custom:hover {
-                    background: #685ea6;
-                    color: white;
+                    background: var(--cancel-btn-hover-color, #ebd8c5) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
                 }
                 .mc-modal .btn-save-custom {
                     height: 42px;
                     padding: 0 28px;
                     border-radius: 10px;
-                    border: none;
-                    background: #2ece8a;
-                    color: white;
+                    border: none !important;
+                    background: var(--save-btn-color, #5b0111) !important;
+                    color: var(--save-btn-text-color, #ffffff) !important;
                     font-weight: 600;
                     font-size: 14px;
-                    box-shadow: 0 4px 12px rgba(46, 206, 138, 0.25);
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
                     transition: all 0.2s;
                 }
                 .mc-modal .btn-save-custom:hover {
-                    background: #26b277;
-                    box-shadow: 0 2px 8px rgba(46, 206, 138, 0.2);
+                    background: var(--save-btn-hover-color, #42010c) !important;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
                 }
             `}</style>
 

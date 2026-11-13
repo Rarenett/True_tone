@@ -99,18 +99,22 @@ const MarketingExecutiveVisitReport = () => {
     const getStatusBadge = (status) => {
         if (!status || status === '-') return '-';
         const s = status.toLowerCase();
-        let bg = '#e8fdf4';
-        let color = '#16a34a';
-        let border = '#bbf7d0';
+        let bg = '#DDF3E5';
+        let color = '#176B3A';
+        let border = '#b7e4c7';
 
         if (s.includes('escalat')) {
-            bg = '#ffe4e6';
-            color = '#e11d48';
-            border = '#fecdd3';
-        } else if (s.includes('work') || s.includes('deal') || s.includes('active')) {
-            bg = '#eff6ff';
-            color = '#2563eb';
-            border = '#bfdbfe';
+            bg = '#FCE4E4';
+            color = '#A52222';
+            border = '#f5c2c7';
+        } else if (s.includes('active')) {
+            bg = '#F5E1E5';
+            color = '#780116';
+            border = '#e8c2ca';
+        } else if (s.includes('work') || s.includes('deal')) {
+            bg = '#E2EEFA';
+            color = '#245A91';
+            border = '#b6d4fe';
         }
 
         return (

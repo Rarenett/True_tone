@@ -143,7 +143,7 @@ const ItemMovementModal = ({ show, onHide }) => {
                 )}
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="secondary" onClick={onHide}>Close</Button>
+                <Button variant="secondary" onClick={onHide}> className="btn-close-custom"Close</Button>
             </Modal.Footer>
         </Modal>
     );

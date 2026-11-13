@@ -1018,7 +1018,7 @@ const GateEntryDetail = () => {
                                     <h5 className="mb-0" style={{ fontSize: '0.95rem', fontWeight: 700, color: '#92400e' }}>
                                         0 Persons Inside • Campus Custody (Unclosed Entry)
                                     </h5>
-                                    <span className="badge font-monospace" style={{ background: '#fde68a', color: '#92400e', fontSize: '0.72rem' }}>
+                                    <span className="badge font-monospace" style={{ background: '#FCEBD9', color: '#99500C', fontSize: '0.72rem' }}>
                                         Physical Pass Surrendered at Gate
                                     </span>
                                 </div>
@@ -1634,7 +1634,7 @@ const GateEntryDetail = () => {
                     </Form.Group>
                 </Modal.Body>
                 <Modal.Footer className="py-2">
-                    <Button variant="secondary" size="sm" onClick={() => setShowCompleteModal(false)} disabled={completeSubmitting}>
+                    <Button variant="secondary" size="sm" className="btn-close-custom" onClick={() => setShowCompleteModal(false)} disabled={completeSubmitting}>
                         Cancel
                     </Button>
                     <Button variant="success" size="sm" onClick={handleConfirmCompleteMovement} disabled={completeSubmitting}>
@@ -1716,7 +1716,7 @@ const GateEntryDetail = () => {
                         </Form.Group>
                     </Modal.Body>
                     <Modal.Footer className="py-2">
-                        <Button variant="secondary" size="sm" onClick={() => setShowReallocModal(false)} disabled={reallocSubmitting}>
+                        <Button variant="secondary" size="sm" className="btn-close-custom" onClick={() => setShowReallocModal(false)} disabled={reallocSubmitting}>
                             Cancel
                         </Button>
                         <Button variant="primary" size="sm" type="submit" disabled={reallocSubmitting}>

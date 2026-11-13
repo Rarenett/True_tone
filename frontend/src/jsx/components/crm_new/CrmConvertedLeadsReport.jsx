@@ -991,7 +991,7 @@ const CrmConvertedLeadsReport = () => {
                     )}
                 </Modal.Body>
                 <Modal.Footer className="border-top py-2 px-4">
-                    <Button variant="secondary" size="sm" onClick={handleCloseLeadHistory}>
+                    <Button variant="secondary" size="sm" onClick={handleCloseLeadHistory}> className="btn-close-custom"
                         Close
                     </Button>
                 </Modal.Footer>

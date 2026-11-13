@@ -319,10 +319,10 @@ const RevokeDuty = () => {
                     </Form.Group>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={() => setRevokeModal({ ...revokeModal, show: false })}>
+                    <Button variant="secondary" className="btn-close-custom" onClick={() => setRevokeModal({ ...revokeModal, show: false })}>
                         Cancel
                     </Button>
-                    <Button variant="primary" onClick={confirmRevoke} style={{ backgroundColor: '#6366f1', borderColor: '#6366f1' }}>
+                    <Button variant="primary" className="btn-save-custom" onClick={confirmRevoke}>
                         Confirm
                     </Button>
                 </Modal.Footer>

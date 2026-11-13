@@ -1325,7 +1325,7 @@ const ItemEntryPopup = ({ item, isInterState, warehouses, stockItems, units = []
                     <div className="d-flex align-items-center gap-3">
                         <div style={{
                             width: '48px', height: '48px', borderRadius: '50%',
-                            background: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)',
+                            background: 'var(--form-icon-color, var(--cc-primary, #5b0111))',
                             display: 'flex', alignItems: 'center', justifyContent: 'center',
                             flexShrink: 0,
                         }}>
@@ -1688,8 +1688,8 @@ const ItemEntryPopup = ({ item, isInterState, warehouses, stockItems, units = []
                 {/* footer */}
                 <div className="sof-modal-footer">
                     <div className="d-flex justify-content-end w-100 gap-2">
-                        <button type="button" className="btn btn-secondary" style={{ padding: '6px 20px' }} onClick={onClose}>Cancel</button>
-                        <button type="button" className="btn btn-primary" style={{ padding: '6px 20px' }} onClick={handleSave}>Save</button>
+                        <button type="button" className="btn btn-secondary btn-close-custom" style={{ padding: '6px 20px' }} onClick={onClose}>Cancel</button>
+                        <button type="button" className="btn btn-primary btn-save-custom" style={{ padding: '6px 20px' }} onClick={handleSave}>Save</button>
                     </div>
                 </div>
             </form>
@@ -1718,7 +1718,7 @@ const ItemViewPopup = ({ item, isInterState, onClose, productConfig }) => {
                     <div className="d-flex align-items-center gap-3">
                         <div style={{
                             width: '48px', height: '48px', borderRadius: '50%',
-                            background: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)',
+                            background: 'var(--form-icon-color, var(--cc-primary, #5b0111))',
                             display: 'flex', alignItems: 'center', justifyContent: 'center',
                             flexShrink: 0,
                         }}>
@@ -4275,23 +4275,23 @@ const SalesInvoiceForm = ({ formData, setFormData, onSave, onCancel, isEditing }
                 }
                 .sof-btn-cancel {
                     display: inline-flex; align-items: center; gap: 8px;
-                    background: #fff; color: #64748b;
-                    border: 1.5px solid #e2e8f0;
+                    background: var(--cancel-btn-color, #f5e9dc); color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111));
+                    border: 1.5px solid var(--cancel-btn-border-color, #e2cbba);
                     border-radius: 10px; padding: 10px 20px;
                     font-size: 0.82rem; font-weight: 700;
                     cursor: pointer; transition: all 0.2s ease;
                     font-family: inherit;
                 }
                 .sof-btn-cancel:hover {
-                    background: #f8fafc; color: #334155;
-                    border-color: #94a3b8;
+                    background: var(--cancel-btn-hover-color, #ebd8c5); color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111));
+                    border-color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111));
                     transform: translateY(-1px);
                     box-shadow: 0 4px 12px rgba(0,0,0,0.06);
                 }
                 .sof-btn-save {
                     display: inline-flex; align-items: center; gap: 8px;
-                    background: linear-gradient(135deg, #4f46e5, #3730a3);
-                    color: #fff; border: none;
+                    background: var(--save-btn-color, #5b0111);
+                    color: var(--save-btn-text-color, #ffffff); border: none;
                     border-radius: 10px; padding: 10px 24px;
                     font-size: 0.84rem; font-weight: 700;
                     cursor: pointer;
@@ -4303,7 +4303,7 @@ const SalesInvoiceForm = ({ formData, setFormData, onSave, onCancel, isEditing }
                 .sof-btn-save:hover {
                     transform: translateY(-2px);
                     box-shadow: 0 10px 28px rgba(79, 70, 229, 0.5);
-                    background: linear-gradient(135deg, #4338ca, #3730a3);
+                    background: var(--save-btn-hover-color, #42010c); color: var(--save-btn-text-color, #ffffff);
                 }
                 .sof-btn-save:active { transform: translateY(0); box-shadow: 0 4px 12px rgba(79,70,229,0.3); }
 
@@ -4688,9 +4688,9 @@ const SalesInvoiceForm = ({ formData, setFormData, onSave, onCancel, isEditing }
                     display: inline-flex;
                     align-items: center;
                     gap: 6px;
-                    background: #ffffff;
-                    color: #64748b;
-                    border: 1.5px solid #e2e8f0;
+                    background: var(--cancel-btn-color, #f5e9dc);
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111));
+                    border: 1.5px solid var(--cancel-btn-border-color, #e2cbba);
                     border-radius: 8px;
                     padding: 8px 18px;
                     font-size: 0.82rem;
@@ -4700,16 +4700,16 @@ const SalesInvoiceForm = ({ formData, setFormData, onSave, onCancel, isEditing }
                     font-family: inherit;
                 }
                 .sof-popup-btn-cancel:hover {
-                    background: #f8fafc;
-                    color: #334155;
-                    border-color: #cbd5e1;
+                    background: var(--cancel-btn-hover-color, #ebd8c5);
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111));
+                    border-color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111));
                 }
                 .sof-popup-btn-save {
                     display: inline-flex;
                     align-items: center;
                     gap: 6px;
-                    background: linear-gradient(135deg, #10b981, #059669);
-                    color: #ffffff;
+                    background: var(--save-btn-color, #5b0111);
+                    color: var(--save-btn-text-color, #ffffff);
                     border: none;
                     border-radius: 8px;
                     padding: 9px 24px;
@@ -4723,7 +4723,7 @@ const SalesInvoiceForm = ({ formData, setFormData, onSave, onCancel, isEditing }
                 .sof-popup-btn-save:hover {
                     transform: translateY(-1px);
                     box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35);
-                    background: linear-gradient(135deg, #059669, #047857);
+                    background: var(--save-btn-hover-color, #42010c); color: var(--save-btn-text-color, #ffffff);
                 }
                 .sof-popup-btn-save:active {
                     transform: translateY(0);

@@ -395,12 +395,12 @@ const WalletLedgerModal = ({ wallet, ledgerData: initialLedgerData, loading: ini
                 .wallet-ledger-modal .modal-icon-circle {
                     width: 44px;
                     height: 44px;
-                    background-color: #2ece8a;
+                    background-color: var(--form-icon-color, var(--cc-primary, #5b0111)) !important;
                     border-radius: 50%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    box-shadow: 0 4px 10px rgba(46, 206, 138, 0.2);
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
                     flex-shrink: 0;
                 }
                 .wallet-ledger-modal .modal-close-x {
@@ -433,19 +433,19 @@ const WalletLedgerModal = ({ wallet, ledgerData: initialLedgerData, loading: ini
                     background-color: #fafbfc;
                 }
                 .wallet-ledger-modal .btn-close-custom {
-                    background-color: #7A70BA !important;
-                    color: #ffffff !important;
-                    border: none !important;
+                    background-color: var(--cancel-btn-color, #f5e9dc) !important;
+                    color: var(--cancel-btn-text-color, var(--cc-primary, #5b0111)) !important;
+                    border: 1px solid var(--cancel-btn-border-color, #e2cbba) !important;
                     border-radius: 8px !important;
                     padding: 9px 24px !important;
                     font-size: 13.5px !important;
                     font-weight: 500 !important;
                     cursor: pointer !important;
                     transition: all 0.2s !important;
-                    box-shadow: 0 2px 4px rgba(122, 112, 186, 0.2) !important;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
                 }
                 .wallet-ledger-modal .btn-close-custom:hover {
-                    background-color: #6a60a8 !important;
+                    background-color: var(--cancel-btn-hover-color, #ebd8c5) !important;
                     transform: translateY(-1px);
                 }
                 .wallet-ledger-modal .summary-card {
